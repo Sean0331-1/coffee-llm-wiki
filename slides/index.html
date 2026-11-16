@@ -20,7 +20,7 @@
   --cup-h:clamp(120px,24vh,220px);
 }
 *{box-sizing:border-box}
-html{font-size:clamp(14px,min(1.42vw,2.55vh),25px);-webkit-text-size-adjust:100%}
+html{font-size:clamp(14px,min(1.42vw,2.55vh),24px);-webkit-text-size-adjust:100%}
 html,body{margin:0;height:100%}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow:hidden}
 a{color:inherit}
@@ -136,12 +136,12 @@ figcaption{font-size:.78rem;color:var(--muted);text-align:center}
 .slide.dark .small,.slide.dark .lede{color:#D9C4AA}
 .slide.dark .tag.advice{background:#3E4A33;color:#D7E8C8}
 
-.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.4rem}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
 .trio .step{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(240,196,137,.25)}
 .trio svg{width:2.6rem;height:2.6rem;flex:none;color:var(--crema)}
 .trio .step b{display:block;font-family:var(--serif);font-size:1.05rem;color:#FBF1E2}
 .trio .step span{font-size:.78rem;color:#D9C4AA}
-.hint{font-size:.76rem;color:#C9B297;margin-top:1rem}
+.hint{font-size:.76rem;color:#C9B297;margin:.6rem 0 0}
 .hint kbd{font-family:var(--sans);border:1px solid #6A4B38;border-bottom-width:2px;border-radius:4px;padding:0 .35rem;color:#F3E6D4}
 
 /* summary cards */
@@ -244,8 +244,16 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
 
 /* flavor wheel */
 .wheelwrap{display:flex;flex-direction:column;align-items:center}
-.wheelwrap svg{width:min(100%,27rem,56vh)}
+.wheelwrap svg{width:min(100%,27rem,50vh)}
 
+.split.hero{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.split.hero figure.viz svg{max-height:36vh;width:auto}
+.slide.dark h1{font-size:2.6rem}
+.board{padding:.8rem 1.1rem}
+.board h3{margin-bottom:.35rem}
+.board table{font-size:.82rem}
+.board td{padding:.24rem .4rem}
+#slide-7 ul.points{gap:.6rem}
 /* ---------- mobile ---------- */
 @media (max-width:760px), (max-aspect-ratio:4/5){
   html{font-size:16px}
@@ -268,7 +276,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
   .board{border-width:7px;padding:.9rem .8rem}
   .board td:first-child{white-space:normal}
 }
-@media (max-width:760px){ :root{--cup-h:140px} }
+@media (max-width:760px){ :root{--cup-h:140px} .leaf .src,.logaxis .tl,.small,figcaption,.legend,.tl-band,.tl-axis,.tag,.board th,footer.cite,.roastdir span,.beans3 span,.brew3 span,.cupitem .name small,ol.callouts small,.leaf .if,.chip,.chip small{font-size:max(.72rem,11.5px)} .split.hero figure.viz svg{max-height:none;width:100%} }
 @media (max-width:380px){ .leaves{grid-template-columns:1fr} }
 
 @media (prefers-reduced-motion:reduce){
@@ -310,21 +318,16 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
 <div class="slide-inner">
   <header>
     <p class="kicker"><b>00</b>咖啡入門 · 走進精品咖啡店的第一課</p>
-    <h1>菜單上的字，<br>為什麼看不懂？</h1>
+    <h1>菜單上的字，為什麼看不懂？</h1>
   </header>
-  <div class="body split">
+  <div class="body">
+  <div class="split hero">
     <div>
       <ul class="points">
         <li>菜單上的拿鐵、卡布奇諾、馥列白，多半是<strong>同樣三樣東西換比例</strong>做成的。</li>
         <li>豆袋上的產區、處理法、烘焙日期看起來很多，但<strong>每一項都有用意</strong>。</li>
         <li>精品咖啡和超市咖啡最大的差別之一是<strong>新鮮烘焙</strong>；烘焙商把生產者資訊揭露得越多，也是精品咖啡和大宗商品咖啡（commodity coffee）的差別之一。</li>
       </ul>
-      <div class="trio" role="list" aria-label="今天學三件事">
-        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-cup"/></svg><div><b>看懂菜單</b><span>濃縮、蒸奶、奶泡</span></div></div>
-        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-bag"/></svg><div><b>看懂豆袋</b><span>產區、處理法、日期</span></div></div>
-        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-chat"/></svg><div><b>知道點什麼</b><span>說出你的偏好</span></div></div>
-      </div>
-      <p class="hint">翻頁：<kbd>←</kbd> <kbd>→</kbd>、點畫面左右兩半，或在手機上左右滑動。</p>
     </div>
     <figure class="viz">
       <svg viewBox="0 0 520 380" role="img" aria-labelledby="t1">
@@ -358,6 +361,13 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
         </g>
       </svg>
     </figure>
+  </div>
+    <div class="trio" role="list" aria-label="今天學三件事">
+      <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-cup"/></svg><div><b>看懂菜單</b><span>濃縮、蒸奶、奶泡</span></div></div>
+      <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-bag"/></svg><div><b>看懂豆袋</b><span>產區、處理法、日期</span></div></div>
+      <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-chat"/></svg><div><b>知道點什麼</b><span>說出你的偏好</span></div></div>
+    </div>
+    <p class="hint">翻頁：<kbd>←</kbd> <kbd>→</kbd>、點畫面左右兩半，或在手機上左右滑動。</p>
   </div>
   <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a><span class="sep">·</span><a href="../wiki/concepts/reading-coffee-bags.md" title="wiki/concepts/reading-coffee-bags.md">豆袋標籤怎麼讀</a><span class="sep">·</span><a href="../wiki/concepts/roast-date.md" title="wiki/concepts/roast-date.md">烘焙日期與新鮮度</a><span class="sep">·</span><a href="../wiki/overview.md" title="wiki/overview.md">咖啡入門總覽</a></footer>
 </div>
