@@ -26,6 +26,7 @@ updated: 2026-11-16
 - [Coffee Hero：水洗、日曬、蜜處理三種處理法](sources/coffee-hero-processing-methods.md)（簡稱：Coffee Hero）：澳洲烘焙商的教學文，說明三種處理法的流程、風味、黃紅黑蜜色階、比較表與豆袋上的寫法。
 - [Wikipedia：咖啡品種（Coffee varieties）](sources/wikipedia-coffee-varieties.md)（簡稱：Wikipedia 品種）：維基百科條目，說明 variety／cultivar 詞彙、阿拉比卡與羅巴斯塔、Bourbon、Typica、Caturra、Geisha、SL28 等豆袋上常見名字的來歷，以及哪些名字其實不是品種。
 - [About Coffee（美國國家咖啡協會）：烘焙度](sources/about-coffee-roasts.md)（簡稱：NCA 烘焙）：咖啡協會教育頁，說明淺、中、深焙的外觀與酸苦方向、包裝上常見的烘焙名稱，以及「Espresso roast」不是一個烘焙度。
+- [About Coffee（美國國家咖啡協會）：沖煮方式](sources/about-coffee-brewing.md)（簡稱：NCA 沖煮）：協會的沖煮教學五頁，收滴濾、手沖、義式濃縮、冷萃各是什麼、杯中差別，以及冷萃不是冰咖啡；器材與步驟不收。
 
 ## 概念
 
@@ -40,7 +41,7 @@ updated: 2026-11-16
 - [馥列白（Flat White）](concepts/flat-white.md)：較小杯、含微細奶泡的奶咖啡。
 - [拿鐵（Latte）](concepts/latte.md)：濃縮加大量蒸奶。
 - [摩卡（Mocha）](concepts/mocha.md)：加了巧克力的拿鐵。
-- [冷萃與冰滴](concepts/cold-brew.md)：冷萃浸泡超過 12 小時、冰滴慢滴至少 2 小時，皆偏低酸低苦。
+- [冷萃與冰滴](concepts/cold-brew.md)：冷萃浸泡超過 12 小時、冰滴慢滴至少 2 小時，皆偏低酸低苦；另列冷萃與冰咖啡的差別。
 
 ### 豆子標籤
 
@@ -57,6 +58,11 @@ updated: 2026-11-16
 ### 烘焙度
 
 - [烘焙度（Roast Level）](concepts/roast-level.md)：淺到深的分級、舊稱、各家標準不一的問題，淺中深焙的風味方向與搭配牛奶的建議，並列四個來源的說法。
+
+### 沖煮方式
+
+- [沖煮方式：菜單上的差別](concepts/brewing-methods.md)：滴濾、手沖、義式濃縮、冷萃在菜單上的差別，冷萃與冰咖啡不同，並列各來源說法（入口頁）。
+- [手沖咖啡（Pour-over）](concepts/pour-over.md)：手沖與滴濾的差別、點手沖時的選豆。
 
 ## 產出
 
