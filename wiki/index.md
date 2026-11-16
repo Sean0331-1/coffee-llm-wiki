@@ -27,6 +27,7 @@ updated: 2026-11-16
 - [Wikipedia：咖啡品種（Coffee varieties）](sources/wikipedia-coffee-varieties.md)（簡稱：Wikipedia 品種）：維基百科條目，說明 variety／cultivar 詞彙、阿拉比卡與羅巴斯塔、Bourbon、Typica、Caturra、Geisha、SL28 等豆袋上常見名字的來歷，以及哪些名字其實不是品種。
 - [About Coffee（美國國家咖啡協會）：烘焙度](sources/about-coffee-roasts.md)（簡稱：NCA 烘焙）：咖啡協會教育頁，說明淺、中、深焙的外觀與酸苦方向、包裝上常見的烘焙名稱，以及「Espresso roast」不是一個烘焙度。
 - [About Coffee（美國國家咖啡協會）：沖煮方式](sources/about-coffee-brewing.md)（簡稱：NCA 沖煮）：協會的沖煮教學五頁，收滴濾、手沖、義式濃縮、冷萃各是什麼、杯中差別，以及冷萃不是冰咖啡；器材與步驟不收。
+- [SCA：用八個步驟使用咖啡品嚐者風味輪](sources/sca-flavor-wheel-eight-steps.md)（簡稱：SCA 風味輪）：精品咖啡協會的官方使用說明，講風味輪由中心往外的讀法、與感官詞彙表的關係、相鄰格子與顏色的意思。
 
 ## 概念
 
@@ -58,6 +59,10 @@ updated: 2026-11-16
 ### 烘焙度
 
 - [烘焙度（Roast Level）](concepts/roast-level.md)：淺到深的分級、舊稱、各家標準不一的問題，淺中深焙的風味方向與搭配牛奶的建議，並列四個來源的說法。
+
+### 風味輪
+
+- [風味輪（Flavor Wheel）](concepts/flavor-wheel.md)：風味輪是什麼、由中心往外怎麼讀。
 
 ### 沖煮方式
 

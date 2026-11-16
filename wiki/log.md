@@ -290,3 +290,14 @@ updated: 2026-11-16
 - Claude 提議刪掉兩篇尚未 ingest 的來源：Urnex〈Reinventing the Coffee Taster's Flavor Wheel〉（廠商部落格，與 Trade 內容重疊、權威性較低）、World Coffee Research〈Sensory Lexicon〉（只擷取到簡介，詞彙表本體是另外下載的檔案，對初學者太技術）。已 ingest 的來源保留，因為移除會需要重做既有頁面的連結與引用。
 - 處理：從 `raw/SOURCES.md` 刪除這兩列；`raw/` 內的擷取檔留在硬碟上（已被 gitignore）。刪除後 SOURCES.md 共 11 列（已 ingest 9 篇加待 ingest 的 SCA 與 Trade 2 篇；其中 Nespresso 一列含三篇專文）。
 - 流程變更：從本批次起，每批次只做一次審查，較小的措辭問題延後到 lint 處理。
+
+## [2026-11-16] ingest | sca-flavor-wheel-eight-steps
+
+- 來源：SCA〈How to Use the Coffee Taster’s Flavor Wheel in Eight Steps〉（簡稱 SCA 風味輪，`raw/sca-flavor-wheel-eight-steps.md`），英文官方使用說明。
+- 重點：(1) 風味輪是 SCAA 與 WCR 合作的品嚐工具；(2) 可用在隨意品嚐或杯測，依序觀察乾香、注水香氣、入口風味；(3) 風味是味道加氣味，輪上涵蓋純味覺到純香氣；(4) 由中心往外，越外越具體，可隨時停下，衣索比亞果香→柑橘→葡萄柚的例子；(5) 輪以 WCR Sensory Lexicon 為基礎，詞彙表每個屬性有定義與參照物；(6) 參照物可嚐可聞，香氣類不可入口；(7) 格子相連表示專業品嚐者認為關係近；(8) 共同語言與顏色的用途。
+- 新增頁面（2）：`sources/sca-flavor-wheel-eight-steps.md`；`concepts/flavor-wheel.md`（風味輪，目前一個來源）。
+- 更新頁面（2）：`concepts/tasting-notes.md`（新增風味輪一條與相關概念連結，並改寫差異段最後一句）、`index.md`（來源 1 行、新增風味輪小節）。
+- 差異：目前概念頁只有一個來源，無衝突；與 Seattle 豆袋的風味描述面向不同（SCA 談品嚐者用輪描述，沒有談豆袋標示）。
+- 判斷：詞彙表參照物的取得與嗅聞方式只收一句；步驟 4 到 6 屬進階，不細寫；沒有輪上詞彙的完整清單。
+- 忠實度核對：發現 1 處，處理方式：來源頁初稿在「與其他來源的關係」寫了尚未存在的 Trade 頁連結與「兩者說法不同」，在 Trade ingest 前屬於預寫，刪除，留待 Trade 那篇再補。其餘句子逐句對回原文；「風味輪（flavor wheel）」概念頁「杯測」用 ＊ 並加頁尾說明；沒有跨來源肯定或負面句。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 36 pages`；index 與 log 已更新，已重讀 tasting-notes 重點與相關概念清單、index 新增的清單與標題。
