@@ -1,7 +1,7 @@
 ---
 title: 產區（Origin）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/wikipedia-coffee-varieties.md]
 updated: 2026-11-16
 ---
 
@@ -21,6 +21,8 @@ updated: 2026-11-16
 - 另一個來源說，點手沖時店家通常讓你選單品咖啡豆（單一產區的咖啡豆）（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 - 同一來源列出更細的產區資訊：微產區、莊園、批次（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 - 處理法與產區常一起印在豆袋上；該文舉的常見對應：水洗多見東非（衣索比亞、肯亞、盧安達）與中美（哥倫比亞、瓜地馬拉），日曬多見衣索比亞、巴西、葉門，蜜處理多見中美（哥斯大黎加、薩爾瓦多、瓜地馬拉）與巴西（[Coffee Hero](../sources/coffee-hero-processing-methods.md)）。
+- 衣索比亞的 Yirgacheffe（耶加雪菲）、Sidamo、Harar：品種表中把三者列為衣索比亞擁有權利的商標名稱，Yirgacheffe 來自 Gedeo Zone 的 Yirgachefe 地區，Harar 以複雜的果香、像不甜紅酒的風味聞名（[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)）。
+- 其他名字：Java 是區域風格、Sulawesi 本身不是品種，Lintong 是有特定處理風格的地區，Santos 通常是巴西咖啡的分級用語（[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)）。
 - 對初學者來說，產區和[處理法](processing-methods.md)是最該先看的兩個欄位（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 
 ## 相關概念
@@ -32,6 +34,6 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明產區可寫到國家、國內產區、農場或合作社、水洗站，並給了衣索比亞、哥倫比亞、肯亞的風味傾向；[HK01 手沖](../sources/hk01-pour-over-five-things.md)提到「單品咖啡豆（單一產區）」與微產區、莊園、批次，沒有給各產區的風味傾向。[Coffee Hero](../sources/coffee-hero-processing-methods.md)不談產區風味，只列處理法常見的產地，細節見[處理法](processing-methods.md)的來源間的差異。[HK01 手沖](../sources/hk01-pour-over-five-things.md)舉的例子「耶加雪菲」在這篇裡是菜單上的產區標示，沒有說明它的風味。
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明產區可寫到國家、國內產區、農場或合作社、水洗站，並給了衣索比亞、哥倫比亞、肯亞的風味傾向；[HK01 手沖](../sources/hk01-pour-over-five-things.md)提到「單品咖啡豆（單一產區）」與微產區、莊園、批次，沒有給各產區的風味傾向。[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)談的是名字的來歷與品種，把 Yirgacheffe 等列在品種表中並說明其所屬地區；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)把 Yirgacheffe 當作國內產區的例子；[HK01 手沖](../sources/hk01-pour-over-five-things.md)把耶加雪菲寫在菜單的標示例子裡，三者歸類方式不同，並列。[Coffee Hero](../sources/coffee-hero-processing-methods.md)不談產區風味，只列處理法常見的產地，細節見[處理法](processing-methods.md)的來源間的差異。[HK01 手沖](../sources/hk01-pour-over-five-things.md)舉的例子「耶加雪菲」在這篇裡是菜單上的產區標示，沒有說明它的風味。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

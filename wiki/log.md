@@ -241,3 +241,14 @@ updated: 2026-11-16
 - 判斷：選豆建議（水洗從衣索比亞或肯亞開始等）屬單一來源建議，標明「該文」；文末導向自家文章的句子不收；沒有新增概念頁（處理法已有頁）。
 - 忠實度核對：發現 1 處，處理方式：來源間的差異段原有「前三個來源之間原有的比較」一句舊的比較，在加入 HK01 手沖後標題已不準確，改標為「前三個來源的原有比較」。其餘跨來源句（水洗酸度、日曬酸與果味、產地、蜜處理色階）逐一對回四個來源原文：Seattle 豆袋與 HK01 手沖未談日曬酸度、Seattle 豆袋未談水洗酸，都明寫為「沒有提」，沒有寫成多來源一致。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 28 pages`；index 與 log 已更新。
+
+## [2026-11-16] ingest | wikipedia-coffee-varieties
+
+- 來源：Wikipedia〈List of coffee varieties〉（Coffee varieties 轉址；簡稱 Wikipedia 品種，`raw/wikipedia-coffee-varieties.md`）。條目長而偏育種史，只收初學者看豆袋用得上的部分。
+- 重點：(1) variety 與 cultivar 的詞彙，專業咖啡界熟知的品種大多是 cultivar，Bourbon、Typica 最知名；(2) 杯測品質是農民選品種最重視的特性；(3) 阿拉比卡約占全球產量 61%（2004–2010），羅巴斯塔高產抗病但品質較低，越南是最大羅巴斯塔產國；(4) Bourbon、Typica、Caturra、Geisha（Gesha）、SL28／SL34 的來歷；(5) 名字不一定是品種（Java、Sulawesi、Lintong、Santos、Mocha；Yirgacheffe、Sidamo、Harar 是衣索比亞商標名）；(6) Timor 為阿拉比卡與羅巴斯塔的雜交種。
+- 新增頁面（2）：`sources/wikipedia-coffee-varieties.md`；`concepts/species.md`（豆種：阿拉比卡與羅巴斯塔；Nespresso 台灣與 Wikipedia 品種都有實質內容，原本放在品種頁，移出另立並兩來源並列）。
+- 更新頁面（3）：`concepts/variety.md`（三個豆種的 bullet 移到 species，新增詞彙、品種來歷、名字不是品種；來源間的差異重寫為三來源）、`concepts/origin.md`（Yirgacheffe 等名字與歸類並列）；`index.md`（來源 1 行、新增 species、品種摘要更新）。`altitude`、`tasting-notes`、`reading-coffee-bags`、`roast-level` 沒有動：條目沒有給海拔門檻或風味描述，沒有可併入的內容。
+- 差異（並列「A 說…，B 說…」）：品種層級（Seattle 豆袋的栽培品種、Nespresso 台灣的三大豆種、Wikipedia 品種的 variety／cultivar 詞彙，層級不同不衝突）；Geisha 風味（Seattle 豆袋說花香，Wikipedia 品種沒給風味，只說價格與拍賣）；Geisha 拼法 Geisha／Gesha／藝妓；阿拉比卡產量（Nespresso 台灣說最多，Wikipedia 品種給 61%）；羅巴斯塔（Nespresso 台灣說苦、咖啡因高，Wikipedia 品種說高產抗病但品質較低，面向不同）；Yirgacheffe 的歸類（Wikipedia 品種列在品種表並說是商標名稱，Seattle 豆袋當國內產區、HK01 手沖當菜單標示例）。沒有發現直接矛盾。杯測分數、海拔門檻本篇沒有談。
+- 判斷：不收 40 多個品種的完整清單與育種史；Brutte、Starmaya 等罕見品種不收；原文標 citation needed 的句子（SL28 的選育年份與來源、Bergendal）不收；Geisha 拍賣價只收「條目稱最貴品種」，不寫每磅金額。
+- 忠實度核對：發現 4 處，處理方式：(1) 豆種頁與品種頁原寫「更上一層的分類」，是階層推論、原文沒有，改為只引兩來源的各自用詞（Nespresso 稱三大品種、Wikipedia 在 Species 標題下用學名）；(2) Caturra 原寫「Bourbon 的天然突變」，原文是「由 Bourbon Red 天然突變出的兩個品種發展而來」，改為原文說法；(3) 原寫「Mandheling 與 Lintong 是地區」，原文只有 Lintong 說是地區，Mandheling 是名稱由來，改為只寫 Lintong；(4) 豆種頁差異原寫「兩者都沒有給對方那一種說法」，語意不清，改為「說法不同，並列」。其餘跨來源句（Bourbon／Typica／Geisha 都是阿拉比卡、Yirgacheffe 的三種歸類）已逐一對回 Seattle 豆袋、Nespresso 台灣、HK01 手沖與 Wikipedia 品種原文。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 30 pages`；index 與 log 已更新。
