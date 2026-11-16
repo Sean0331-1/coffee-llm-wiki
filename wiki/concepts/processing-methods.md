@@ -1,7 +1,7 @@
 ---
 title: 處理法（Processing）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/hk01-pour-over-five-things.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/coffee-hero-processing-methods.md, sources/trade-flavor-wheel-explained.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/trade-flavor-wheel-explained.md]
 updated: 2026-11-16
 ---
 
@@ -24,7 +24,7 @@ updated: 2026-11-16
 - 對初學者來說，處理法和產區是讀標籤時最該先看的兩個欄位（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 處理法是在產地端把咖啡豆從咖啡果實中取出並乾燥，之後才能烘焙（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 日曬法（Natural）又稱乾式處理法，是古老傳統的方法，常見於日照充足、雨量少的產地，如衣索比亞、肯亞；把咖啡果實連同果肉與黏液層一起乾燥，所以甜感豐富、果香甜味濃、口感醇厚（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
-- 水洗法（Washed）又稱濕式處理法，目前較為常見，常見於哥倫比亞、哥斯大黎加、墨西哥、瓜地馬拉；過程耗時、用大量清水，成本較高：先去除果皮果肉，經一到數次發酵與水洗，靜置水槽發酵後再乾燥；果香通常乾淨鮮明、酸度較明亮（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
+- 水洗法（Washed）又稱濕式處理法，目前較為常見，常見於哥倫比亞、哥斯大黎加、墨西哥、瓜地馬拉；過程耗時、用大量清水，成本較高：先去除果皮果肉，經一到數次發酵與水洗，靜置水槽發酵後再乾燥；果香通常乾淨鮮明、酸度（acidity，喝起來的酸味明亮程度＊）較明亮（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 蜜處理法（Honey）介於日曬法與水洗法之間，依果膠層殘留在豆子外的程度，再分成白蜜、黃蜜、紅蜜、黑蜜；過程耗時耗力，要控管發酵程度以維持風味穩定；風味兼具甜香與果香，酸度較平衡（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 濕剝法是印尼為因應潮濕氣候發展出的獨特半水洗法：去除果皮果肉的豆子過夜發酵，在豆子仍濕潤時去殼，使豆子帶有獨特的木質香氣（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 日曬（Dry process）與水洗（Wet process）是最大宗的兩種處理法；選哪種依產地狀況決定：水源充足的地方用水洗，缺水但陽光普照的地方用日曬（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
@@ -86,7 +86,7 @@ updated: 2026-11-16
 
 **選擇處理法的理由**：[HK01 手沖](../sources/hk01-pour-over-five-things.md)說處理法依產地條件決定（水源充足用水洗、缺水陽光足用日曬）；[Coffee Hero](../sources/coffee-hero-processing-methods.md)沒有談產地條件，只談風味與適合的沖法。
 
-**其他**：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明厭氧處理，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說明濕剝法，[Coffee Hero](../sources/coffee-hero-processing-methods.md)兩者都沒有提；[Coffee Hero](../sources/coffee-hero-processing-methods.md)給了水洗發酵 24–72 小時、日曬 3–6 週的時間；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)在衣索比亞日曬的例子裡說果實在高架床上翻動約四週。
+**其他**：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明厭氧處理，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說明濕剝法，[Coffee Hero](../sources/coffee-hero-processing-methods.md)兩者都沒有提；[Coffee Hero](../sources/coffee-hero-processing-methods.md)給了水洗發酵 24–72 小時、日曬 3–6 週的時間；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)在衣索比亞日曬的例子裡說果實在高架床上翻動長達四週。
 
 **水洗與日曬的風味詞**：日曬方面，[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)說像藍莓或燉煮過的草莓，[Coffee Hero](../sources/coffee-hero-processing-methods.md)說常被形容為藍莓、草莓、熱帶水果或葡萄酒感，兩者都提到藍莓與草莓。水洗方面，[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)說可能清脆、帶核果類水果味，[Coffee Hero](../sources/coffee-hero-processing-methods.md)列的是花香、柑橘、茶感，用詞不同，並列不選邊。
 

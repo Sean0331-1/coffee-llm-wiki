@@ -42,8 +42,8 @@ updated: 2026-11-16
 ## 來源間的差異
 
 - 冷萃的浸泡時間：[NCA 沖煮](../sources/about-coffee-brewing.md)說浸泡時間可以從幾分鐘到 12–18 小時以上，典型約 12 小時；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說冷萃需浸泡超過 12 小時。兩者並列，不選邊。
-- 冷萃的口感：[NCA 沖煮](../sources/about-coffee-brewing.md)說更順、更柔和，比冰咖啡不苦；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說酸度與苦度都偏低、口感偏柔和。兩者都用柔和、偏低的苦來描述冷萃。
+- 冷萃的口感：[NCA 沖煮](../sources/about-coffee-brewing.md)說更順、更柔和，比冰咖啡不苦；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說酸度（acidity，喝起來的酸味明亮程度＊）與苦度都偏低、口感偏柔和。兩者都用柔和、偏低的苦來描述冷萃。
 - 義式濃縮的做法：[NCA 沖煮](../sources/about-coffee-brewing.md)說用高壓把近沸的水壓過細研磨的咖啡粉，約 20–30 秒；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說透過具有高壓 bar 數蒸氣的義式濃縮咖啡機萃取。另見[濃縮咖啡](espresso.md)的差異段，不重複展開。
-- 「手沖」一詞：[HK01 手沖](../sources/hk01-pour-over-five-things.md)從台灣菜單點手沖切入，[NCA 沖煮](../sources/about-coffee-brewing.md)把滴濾與手沖分成兩種，並說手沖適合單一產區咖啡；[HK01 手沖](../sources/hk01-pour-over-five-things.md)說點手沖時店家通常讓你選單品豆，兩者在這點上方向一致。
+- 「手沖」一詞：[HK01 手沖](../sources/hk01-pour-over-five-things.md)（轉載 GQ Taiwan）從點手沖咖啡切入，[NCA 沖煮](../sources/about-coffee-brewing.md)把滴濾與手沖分成兩種，並說手沖適合單一產區咖啡；[HK01 手沖](../sources/hk01-pour-over-five-things.md)說點手沖時店家通常讓你選單品豆，兩者在這點上方向一致。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

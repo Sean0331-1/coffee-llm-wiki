@@ -318,3 +318,61 @@ updated: 2026-11-16
 - 做：把 `wiki/overview.md` 的占位頁改寫成導覽，依學習目標分三組：看懂菜單（菜單飲品與沖煮方式入口頁及子頁）、看懂豆袋（豆袋入口頁、各欄位頁、豆種、杯測分數）、喝出差別（烘焙度、風味輪、風味描述）；每項只有連結加一句該頁講什麼。`index.md` 的總覽一行同步改寫。
 - 忠實度核對：發現 0 處；總覽沒有新的事實主張，只有導覽，每句描述對回 index.md 該頁摘要。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；index 與 log 已更新。
+
+## [2026-11-16] lint | 全站檢查
+
+- 範圍：`wiki/` 37 頁（concepts 23、sources 11、index、overview、log），只讀不改。完整報告存於 `.superpowers/sdd/2026-11-16-coffee-llm-wiki-plan/task-6-lint-report.md`。
+- 機械檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；沒有壞連結、孤兒頁、frontmatter 缺漏。
+- 矛盾盤點：共 34 項，真的不一致 6 項、範圍／單位／情境不同 14 項、互補不衝突 14 項。6 項真不一致：瑪奇朵的定義（Seattle、La Marzocco、Nespresso 三種做法）、濃縮萃取是「蒸氣」還是「熱水加壓」、烘焙日期最佳期間（NCA 約 2–7 天、Seattle 約 2–4 週）、肯亞處理法（Nespresso 把日曬常見產地列到肯亞，Coffee Hero 把肯亞列在水洗）、風味輪與詞彙表誰以誰為基礎（SCA 與 Trade 說法相反）、以及 La Marzocco 自己的比例前後不一致（見下）。
+- La Marzocco 自相矛盾：該文說現代卡布奇諾牛奶與濃縮約 1:4、拿鐵約 1:5 以上，但它自己的配方是雙份濃縮（約 2 盎司）配 4 盎司牛奶（卡布奇諾，約 1:2）、配 8 盎司牛奶（拿鐵，約 1:4）；也說現代卡布奇諾奶泡很少，配方卻寫奶泡約占全杯三分之一。Wiki 忠實照錄，並列說法，沒有選邊。
+- 學習目標缺口：共 7 項，最大的是「知道點什麼」（沒有任何來源直接給「喜歡酸或苦、加不加奶 -> 點什麼」的建議，只有零散偏好建議，多數來自 Nespresso）；其餘為酸度一詞沒有白話解釋、單品 vs 綜合豆沒有說明、ristretto／lungo 等菜單名字未說明、咖啡因資訊散在 4 頁、冰熱甜度與植物奶無來源、HK01 圖卡未擷取與台灣豆袋範例少。
+- 格式問題：1 處（`processing-methods.md` frontmatter `sources:` 重複兩筆）；另有 `tasting-notes.md` 清單間多空行（外觀，不影響渲染）。
+- 沒標來源的陳述：4 處（macchiato／cappuccino 的點餐建議、roast-level 的綜合推論、roast-level 的初學者概括、mocha 的「牛奶很少」）。沒有「本 Wiki 補充說明」標記殘留。
+- 先前審查留下的 deferred minors：14 條全部仍在。建議 12 條現在修、2 條留著。
+- 缺頁：沒有被 2 頁以上提到卻完全沒內容的概念；候選（單品 vs 綜合、咖啡因、微細奶泡）都可併入現有頁，不需新增頁面。
+
+## [2026-11-16] discuss | 檢查點3：lint 結果處理
+
+使用者回覆「全部照 A」，四項決定都採選項 A：
+
+- 決定 1（矛盾怎麼上簡報）：選 A。只在 log 記下這個決定，簡報怎麼呈現留到 N6 之後；本次不改 Wiki 裡的「A 說…，B 說…」段落。後續簡報只正面呈現瑪奇朵同名不同杯、烘焙日期各家範圍不同、處理法以袋上標示為準三項，其餘用「各家說法不一」帶過或不放。
+- 決定 2（deferred minors）：選 A。現在修報告標「現在修」的 12 條（含 processing-methods `sources:` 重複與 4 處無來源陳述），2 條留著，修完重跑 check_wiki。
+- 決定 3（缺口）：選 A。不找新來源；酸度加 ＊ 白話解釋；單品 vs 綜合先查 raw，有支撐才補 `origin.md`，沒有就不動；咖啡因不另立頁；ristretto、lungo、冰飲、植物奶不改 Wiki。
+- 決定 4（點餐決策樹）：選 A。`ordering-guide.md` 用 synthesis 頁，分「怕不怕苦／酸、加不加奶、手沖或義式」，建議標「根據以上整理的建議」，並註明很多建議只來自 Nespresso 單一來源。本步驟不做，留到 N6。
+
+## [2026-11-16] lint | 修正
+
+依檢查點3 的決定修正。每項內容修改都逐句對回 `raw/` 原文（忠實度核對）。
+
+已修正：
+1. `espresso-drinks.md`、`flat-white.md`：Nespresso 馥列白奶泡厚度從「不超過約 0.5 公分」改成「約 0.5 公分」（La Marzocco 仍是「不超過約」）；原文 Nespresso 為「約 0.5 公分的薄奶泡」。
+2. `cold-brew.md`：定義不再用「低溫、長時間」籠統帶過兩者，改成各自的定義：冷萃是冷水或常溫水浸泡超過 12 小時、冰滴是低溫慢滴至少 2 小時以上（Nespresso 原文）。
+3. `espresso-drinks.md`：摩卡差異段刪掉推論「牛奶很少」，只留 Nespresso 配方原話（濃縮 40、熱可可 40、熱奶泡 20 毫升）。
+4. 各飲品頁（americano、cappuccino、cortado、espresso、espresso-drinks、flat-white、latte、macchiato、mocha）的「相關概念」：拿掉「源自澳洲與紐西蘭」「傳統上三等分」「含微細奶泡」等無來源的短描述，只留「該頁講什麼」。
+5. `CLAUDE.md` N3 第 6 步：刪掉多餘的「。；」成「；」（只是標點，不是規則變更）。
+6. `processing-methods.md`：frontmatter `sources:` 重複的 hk01、coffee-hero 各刪一筆。
+7. `species.md`：產量差異段原寫「兩者的說法不同」，改成角度不同（一個說三者中最多、一個給 61%）、並不矛盾。
+8. `variety.md`、`sources/wikipedia-coffee-varieties.md`：SL28 來歷在 Wikipedia 原文那一列標了 citation needed，兩處補註這件事。
+9. `processing-methods.md`：Nespresso 衣索比亞日曬例子「約四週」改為「長達四週」（原文如此）。
+10. `roast-level.md`：舊差異段「兩個來源」改成明指 Seattle 豆袋與 Nespresso 台灣；中焙「NCA 只說…」改為「NCA 說…」，並補上 NCA 原文有的「常稱美式烘焙（American roast）」，避免「只說」變成沒核對過的負面句。
+11. `espresso.md`：兩個沒有主詞的條目補上「濃縮咖啡」；另外「特色是濃烈…」一條也補主詞。
+12. `brewing-methods.md`：「HK01 從台灣菜單點手沖切入」改成「HK01（轉載 GQ Taiwan）從點手沖咖啡切入」。
+13. `sources/sca-flavor-wheel-eight-steps.md`：「沒有列出輪上具體的詞」改成「沒有逐一列出輪上所有的詞」，並註明例子（莓果、柑橘、葡萄柚；SCA 原文第 31 行有）。`flavor-wheel.md` 與 `sources/trade-flavor-wheel-explained.md`：Ted Lingle 的「執行長」改為「執行總監（executive director）」（Trade 原文）。
+
+沒有來源的陳述（4 處，其中摩卡一處已在上面第 3 項）：
+- `macchiato.md`、`cappuccino.md`：「點餐時可直接問店家」兩句，查 raw 沒有來源說這件事，刪除；這類點餐建議留給之後的 ordering-guide（synthesis 頁）。
+- `roast-level.md`：「本 Wiki 因此把兩者合起來看…」綜合推論刪除；「初學者容易混在一起」刪除。
+
+缺口處理（決定 3）：
+- 酸度／酸質（acidity）：在 `processing-methods`、`roast-level`、`cold-brew`、`species`、`variety`、`altitude`、`brewing-methods` 各頁第一次出現處加 ＊ 白話解釋「喝起來的酸味明亮程度」（只說詞義、不含主張），沒有頁尾說明的頁面（cold-brew、species、variety、altitude）補上頁尾 ＊ 說明。
+- 單品 vs 綜合：搜尋 `raw/*.md`，原文只在 HK01 用括號說「單品咖啡豆（單一產區的咖啡豆）」，Seattle 說單一產區豆袋上產區最醒目，NCA 提到 espresso blend 與 breakfast blend 這些名稱；沒有任何來源說明單品與綜合的差別。`origin.md` 本來就有單一產區的 ＊ 解釋與 HK01 那句。結果：沒有足夠來源支撐新的一節，`origin.md` 不動。
+- 咖啡因不另立頁；ristretto、lungo、冰飲、植物奶不改 Wiki。
+
+刻意留著：
+- 舊 deferred minor 9（processing-methods 舊比較段混了 Seattle 與 Nespresso 的一致意見）：舊段落已被各主題段取代，不影響簡報。
+- 舊 deferred minor 14 的第三子項（log 最後一筆 overview 記為 `ingest`）：log 只增不改，該筆維持原樣，在此註記：它實際是導覽頁改寫，不是 ingest 新來源。
+- `tasting-notes.md` 清單間的空行（外觀，不影響渲染）。
+- 所有「A 說…，B 說…」段落（包含 La Marzocco 自己比例不一致的並列），依決定 1 不改。
+
+忠實度核對：發現 0 處新問題；修改過程中修正 1 處自己的初稿措辭（cold-brew 定義曾寫「不用熱水」，原文沒有，改回「咖啡萃取方式」）。
+檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；已重讀所有改動的「相關概念」清單、標題與頁尾。

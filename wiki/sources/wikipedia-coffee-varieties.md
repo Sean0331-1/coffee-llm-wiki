@@ -29,7 +29,7 @@ updated: 2026-11-16
    - Typica：源自葉門的種源，經印度馬拉巴、荷蘭人帶到印尼、西班牙人帶到菲律賓，再傳到加勒比海；演化出的新特性常被視為新品種，例如 Kona（夏威夷）、Blue Mountain（牙買加、巴布亞紐幾內亞）。
    - Caturra：由 Bourbon Red 天然突變出的兩個品種發展而來，植株矮、成熟快、抗病較強，產量比 Bourbon 高，但杯測品質較差（條目說主因是產量較高）；被列為遺傳上與 Bourbon 很相近。
    - Geisha／Gesha：原產衣索比亞 Gesha 村，1950 年代被當作抗葉鏽病作物種植、2000 年代初被重新發現；巴拿馬 Boquete 高地的 Geisha 在拍賣會價格極高，條目稱它是拍賣會上最貴的品種，2018 年「Best of Panama」拍賣中日曬 Geisha 創下每磅 803 美元的紀錄。
-   - SL28、SL34：肯亞的選育品種（Scott Labs 選出）；條目說 SL34 的杯測品質不如 SL28，且不抗 CBD、CLR、BBC。
+   - SL28、SL34：肯亞的選育品種（Scott Labs 選出；條目在 SL28 那一列的來歷說明後標了 citation needed）；條目說 SL34 的杯測品質不如 SL28，且不抗 CBD、CLR、BBC。
    - 其他：Catuai（Mundo Novo × Caturra，巴西 1940 年代末）、Mundo Novo（Bourbon × Typica）、Pacas（Bourbon 突變，薩爾瓦多）、Maragogipe（Typica 突變，以大顆豆聞名）、Pacamara（Pacas × Maragogipe）。
 5. 名稱不一定是品種：條目表中把 Yirgacheffe、Sidamo、Harar 列為衣索比亞的名字，並說三者都是衣索比亞擁有權利的商標名稱；說 Java 是區域風格而不是品種，Sulawesi 本身不是品種，Lintong 不是特定品種而是有特定處理風格的地區（Mandheling 條目只說明名稱由來）；Santos 通常是巴西咖啡的分級用語而非品種；Mocha 指經葉門的摩卡港交易的咖啡，不要與加巧克力的摩卡飲品混淆。
 6. Timor（Hybrido de Timor）是阿拉比卡與羅巴斯塔的雜交種，不是阿拉比卡的品種；因抗葉鏽病被栽培。

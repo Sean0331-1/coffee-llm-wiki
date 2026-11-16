@@ -14,7 +14,7 @@ updated: 2026-11-16
 ### 由來
 
 - 1990 年代精品咖啡業常向葡萄酒界取經；加州大學戴維斯分校 Ann C. Noble 教授在 1984 年首次發表 Wine Aroma Wheel，用來整理紅白酒常見香氣，讓人描述得更具體，也可能追溯到香氣的根源（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
-- 第一版咖啡風味輪由當時的 SCAA 在 1995 年正式發布，用於品質管控，以及精品咖啡的辨識、杯測評分與交易；是當時執行長 Ted Lingle 的心血（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
+- 第一版咖啡風味輪由當時的 SCAA 在 1995 年正式發布，用於品質管控，以及精品咖啡的辨識、杯測評分與交易；是當時執行總監（executive director）Ted Lingle 的心血（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
 - 2016 年協會大幅重新設計：更多細節、更新過的詞與新的設計（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
 
 ### 怎麼讀

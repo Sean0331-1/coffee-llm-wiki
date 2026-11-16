@@ -26,11 +26,11 @@ updated: 2026-11-16
 ## 相關概念
 
 - [菜單飲品怎麼看](espresso-drinks.md)：各款飲品的比較表與看菜單的方法（入口頁）。
-- [拿鐵](latte.md)：濃縮加較大量蒸奶的飲品。
-- [馥列白](flat-white.md)：源自澳洲與紐西蘭、含微細奶泡的飲品。
+- [拿鐵](latte.md)：拿鐵的定義與各來源的說法。
+- [馥列白](flat-white.md)：馥列白的定義、來歷與各來源的說法。
 
 ## 來源間的差異
 
-[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說卡布奇諾的特色是上面厚而密的奶泡，三等分、傳統上約 5 至 6 盎司；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)則說義大利傳統才是三等分，現代精品咖啡店多半是約 6 盎司、奶泡很少、牛奶與濃縮約 1:4 的奶咖啡。[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)沒有談現代店的做法；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)沒有說傳統版的杯量。本 Wiki 並列各自說法，不判斷哪個才算「正確的」卡布奇諾；點餐時可以直接問店家做法。
+[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說卡布奇諾的特色是上面厚而密的奶泡，三等分、傳統上約 5 至 6 盎司；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)則說義大利傳統才是三等分，現代精品咖啡店多半是約 6 盎司、奶泡很少、牛奶與濃縮約 1:4 的奶咖啡。[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)沒有談現代店的做法；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)沒有說傳統版的杯量。本 Wiki 並列各自說法，不判斷哪個才算「正確的」卡布奇諾。
 
 [Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)的卡布奇諾是濃縮、牛奶、奶泡 1:1:1（各 40 毫升），與[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)的傳統三等分、[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)的義大利傳統三等分一致。[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)另說現代精品店的卡布奇諾多半奶泡很少、牛奶與濃縮約 1:4；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)沒有談現代店的做法，所以對這點沒有意見。因此目前是：三個來源都有「三等分」的說法，只有[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)提到現代店不同，本 Wiki 並列，不判斷哪種才是菜單上的標準。

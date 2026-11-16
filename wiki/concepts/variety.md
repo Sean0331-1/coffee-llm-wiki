@@ -15,7 +15,7 @@ updated: 2026-11-16
 - 幾個常見品種的風味印象（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）：
   - Geisha：以花香出名。
   - Bourbon：常偏甜、層次多。
-  - SL28：以明亮的酸質（acidity）出名。
+  - SL28：以明亮的酸質（acidity，喝起來的酸味明亮程度＊）出名。
 - Trade 的例子：Gesha 常有茉莉、忍冬般的花香；Bourbon 花香較少、較甜，像奶油糖或黑糖（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
 - 品種資訊要等喝過幾支、知道自己喜歡什麼之後才比較有用；剛入門建議先看[產區](origin.md)和[處理法](processing-methods.md)（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 阿拉比卡、羅巴斯塔、賴比瑞亞三大豆種的說明，見[豆種：阿拉比卡與羅巴斯塔](species.md)。
@@ -26,7 +26,7 @@ updated: 2026-11-16
   - Typica：源自葉門的種源，經印度馬拉巴、荷蘭人帶到印尼、西班牙人帶到菲律賓，再傳到加勒比海；Kona（夏威夷）與 Blue Mountain（牙買加、巴布亞紐幾內亞）被列為 Typica 演化出的新特性。
   - Caturra：由 Bourbon Red 天然突變出的兩個品種發展而來，植株矮、成熟快、抗病較強，產量比 Bourbon 高，但杯測品質較差；條目說主因是產量較高。
   - Geisha（也寫 Gesha）：原產衣索比亞的 Gesha 村，1950 年代被當作抗葉鏽病作物種植、2000 年代初被重新發現；巴拿馬 Boquete 高地的 Geisha 在拍賣會價格極高，條目稱它是拍賣會上最貴的品種。
-  - SL28、SL34：肯亞（Scott Labs）選育的品種；條目說 SL34 的杯測品質不如 SL28。
+  - SL28、SL34：肯亞（Scott Labs）選育的品種；條目說 SL34 的杯測品質不如 SL28。條目在 SL28 那一列的來歷說明後標了 citation needed（缺少出處）。
 - 豆袋或菜單上的名字不一定是品種：條目說 Java 是區域風格而不是品種，Sulawesi 本身不是品種，Lintong 不是特定品種而是有特定處理風格的地區，Santos 通常是巴西咖啡的分級用語，Mocha 指經葉門摩卡港交易的咖啡，與加巧克力的摩卡飲品不同（[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)）。
 
 ## 相關概念
@@ -49,3 +49,5 @@ updated: 2026-11-16
 拼法：[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)寫「Geisha or Gesha」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)寫藝妓（Geisha）；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)寫 Geisha。[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說這個品種原產自衣索比亞的 Gesha 村，並沒有說兩種拼法在袋上有何不同。
 
 Yirgacheffe、Sidamo、Harar 這些名字：[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)在品種表裡列出，並說它們是衣索比亞擁有權利的商標名稱；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)把 Yirgacheffe 當作國內產區的例子。兩者怎麼歸類不同，詳見[產區](origin.md)。
+
+＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

@@ -12,7 +12,7 @@ updated: 2026-11-16
 ## 重點
 
 - 標準的雙份（double shot）用 14 至 18 克咖啡粉，萃出約 28 至 36 毫升濃縮咖啡；文章稱這是家用與咖啡店的基準量（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)）。
-- 特色是濃烈、濃縮，用小杯盛裝（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)）。
+- 濃縮咖啡的特色是濃烈、濃縮，用小杯盛裝（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)）。
 - 美式、瑪奇朵、Cortado、卡布奇諾、拿鐵等飲品都從濃縮咖啡出發，差別在加什麼、加多少（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)）。
 - 機器以 9 bar（巴，壓力單位＊）的壓力把水壓過咖啡粉（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）。
 - 咖啡與水的比例約 1:2，比一般濾泡咖啡（約 1:15）稀釋得少很多；味道濃（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）。
@@ -24,17 +24,17 @@ updated: 2026-11-16
 - 該文把濃縮說成透過具有高壓 bar 數蒸氣的義式濃縮咖啡機萃取；建議的濃縮量是 40 毫升（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 飲品中濃縮所占的比例決定咖啡的濃度與香氣厚度：比例過高口感偏苦、厚重，比例過低咖啡香氣被稀釋（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 標示「Espresso roast」或「Espresso blend」的豆子，這個名稱不是一個特定的烘焙度：烘焙師依自己認為最適合義式沖煮的方式烘，常見是中到深焙（[NCA 烘焙](../sources/about-coffee-roasts.md)）。
-- 不是一種豆子，也不是一種烘焙度，而是以沖煮方式命名的咖啡飲品；用高壓把近沸的水壓過細研磨的咖啡粉，約 20–30 秒，得到濃縮的一小杯，分兩層：crema（絲絨般的金棕色上層）與液體本體（甜而帶酸）（[NCA 沖煮](../sources/about-coffee-brewing.md)）。
-- 可單喝，也是卡布奇諾、拿鐵等飲品的基底；各種烘焙度都能用，但專為義式烘焙的豆子最能表現其特色（[NCA 沖煮](../sources/about-coffee-brewing.md)）。
+- 濃縮咖啡不是一種豆子，也不是一種烘焙度，而是以沖煮方式命名的咖啡飲品；用高壓把近沸的水壓過細研磨的咖啡粉，約 20–30 秒，得到濃縮的一小杯，分兩層：crema（絲絨般的金棕色上層）與液體本體（甜而帶酸）（[NCA 沖煮](../sources/about-coffee-brewing.md)）。
+- 濃縮咖啡可單喝，也是卡布奇諾、拿鐵等飲品的基底；各種烘焙度都能用，但專為義式烘焙的豆子最能表現其特色（[NCA 沖煮](../sources/about-coffee-brewing.md)）。
 - 味道上，濃縮比一般沖煮咖啡更濃稠、更濃縮，風味更強；咖啡因不一定更多：文章引用 USDA 資料，一份濃縮約 63 毫克，沖煮咖啡每盎司約 12 到 16 毫克，一杯 8 盎司的滴濾咖啡很可能比一份濃縮含更多咖啡因（[NCA 沖煮](../sources/about-coffee-brewing.md)）。
 
 ## 相關概念
 
 - [菜單飲品怎麼看](espresso-drinks.md)：各款飲品的比較表與看菜單的方法（入口頁）。
-- [美式](americano.md)：濃縮加熱水的飲品。
+- [美式](americano.md)：美式的定義與各來源的說法。
 - [烘焙度](roast-level.md)：淺、中、深焙的分級與風味方向。
 - [沖煮方式：菜單上的差別](brewing-methods.md)：滴濾、手沖、義式濃縮、冷萃的比較。
-- [拿鐵](latte.md)：濃縮加大量蒸奶的飲品。
+- [拿鐵](latte.md)：拿鐵的定義與各來源的說法。
 
 ## 來源間的差異
 

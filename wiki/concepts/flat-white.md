@@ -31,13 +31,13 @@ updated: 2026-11-16
 ## 相關概念
 
 - [菜單飲品怎麼看](espresso-drinks.md)：各款飲品的比較表與看菜單的方法（入口頁）。
-- [拿鐵](latte.md)：濃縮加較大量蒸奶的飲品。
-- [卡布奇諾](cappuccino.md)：傳統上三等分的飲品。
-- [Cortado](cortado.md)：等份濃縮與蒸奶的小杯飲品。
+- [拿鐵](latte.md)：拿鐵的定義與各來源的說法。
+- [卡布奇諾](cappuccino.md)：卡布奇諾的定義與各來源的說法。
+- [Cortado](cortado.md)：Cortado 的定義與各來源的說法。
 - [烘焙度](roast-level.md)：淺、中、深焙的風味，以及與牛奶搭配的建議。
 
 ## 來源間的差異
 
 兩篇都說它源自澳洲／紐西蘭。[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)把它定位為「類似拿鐵但更小、咖啡比例更高」，並說微細奶泡融在牛奶裡；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)則說杯量與比例接近現代卡布奇諾，並給了奶泡厚度（不超過約 0.5 公分，拿鐵約 1 公分）。[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)沒有講奶泡的厚度。兩者並不互相否定，但參照物不同（拿鐵 vs. 現代卡布奇諾），本 Wiki 並列記錄。
 
-三篇都把源頭指向澳洲（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)寫「澳洲或紐西蘭」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)只寫澳洲），奶泡層薄這點一致：[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)與[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)都是不超過約 0.5 公分。與拿鐵的關係：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說「類似拿鐵但更小、咖啡比例更高」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說牛奶比拿鐵少、介於拿鐵與卡布奇諾之間，[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說杯量與比例接近現代卡布奇諾、店員形容是卡布奇諾與拿鐵的混合；說法不同但沒有互相否定。比例：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)給咖啡 1：牛奶 2 或 3；[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)只給杯量（約 5–6 盎司）；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)的配方約 4 盎司牛奶對雙份濃縮，單位不同，本 Wiki 不換算。[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)同一篇裡拿鐵是 1:3、馥列白是 1:2 或 1:3，兩者的牛奶比例在 1:3 時相同，該文仍說馥列白牛奶比例較少，來源沒有進一步說明。
+三篇都把源頭指向澳洲（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)寫「澳洲或紐西蘭」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)只寫澳洲），奶泡層薄這點一致：[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說不超過約 0.5 公分，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說約 0.5 公分。與拿鐵的關係：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說「類似拿鐵但更小、咖啡比例更高」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說牛奶比拿鐵少、介於拿鐵與卡布奇諾之間，[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說杯量與比例接近現代卡布奇諾、店員形容是卡布奇諾與拿鐵的混合；說法不同但沒有互相否定。比例：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)給咖啡 1：牛奶 2 或 3；[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)只給杯量（約 5–6 盎司）；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)的配方約 4 盎司牛奶對雙份濃縮，單位不同，本 Wiki 不換算。[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)同一篇裡拿鐵是 1:3、馥列白是 1:2 或 1:3，兩者的牛奶比例在 1:3 時相同，該文仍說馥列白牛奶比例較少，來源沒有進一步說明。

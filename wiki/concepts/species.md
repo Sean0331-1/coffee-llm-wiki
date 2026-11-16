@@ -11,7 +11,7 @@ updated: 2026-11-16
 
 ## 重點
 
-- 阿拉比卡：三者中產量最多，通常長在高海拔，以明亮的酸度聞名，下有藝妓（Geisha）、鐵比卡（Typica）、波旁（Bourbon）等分支品種；風味以鮮明的花果香調聞名（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
+- 阿拉比卡：三者中產量最多，通常長在高海拔，以明亮的酸度（acidity，喝起來的酸味明亮程度＊）聞名，下有藝妓（Geisha）、鐵比卡（Typica）、波旁（Bourbon）等分支品種；風味以鮮明的花果香調聞名（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 阿拉比卡在 2004–2010 年約占全球咖啡產量 61%（引用國際貿易中心數字）；條目說若不是它容易感染病害，比例還會更高（[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)）。
 - 羅巴斯塔：普遍種在低海拔，與阿拉比卡相比苦味較重、風味濃烈、咖啡因含量高；常混豆用於製作濃縮咖啡，可增添口感層次（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 - 羅巴斯塔的果實產量高、對咖啡葉鏽病的抗性強，但產出的咖啡品質較低（[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)）。
@@ -28,7 +28,9 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-- 產量：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說阿拉比卡的產量是三者中最多，[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)給出的是 2004–2010 年約 61% 的數字；兩者的說法不同，並列。
+- 產量：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說阿拉比卡的產量是三者中最多，[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)給出的是 2004–2010 年約 61% 的數字；兩者角度不同（一個說三者中最多，一個給具體百分比），並不矛盾，並列。
 - 羅巴斯塔：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說羅巴斯塔苦味較重、咖啡因含量高、常混入濃縮咖啡豆；[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說羅巴斯塔果實產量高、抗病強但咖啡品質較低，沒有提苦味、咖啡因或濃縮咖啡。兩者談的面向不同，沒有直接衝突。
 - 賴比瑞亞：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說賴比瑞亞稀有、咖啡因最低，產地包括菲律賓；[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說 Barako 是菲律賓的 Liberica 品種，其他物種商業價值不及阿拉比卡與羅巴斯塔，沒有談賴比瑞亞的咖啡因。
 - 產地：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)舉羅巴斯塔的產地為烏干達、印度、越南、巴西、墨西哥；[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)只說越南是最大產國，沒有列其他產地。
+
+＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

@@ -87,15 +87,15 @@ updated: 2026-11-16
 
 ## 相關概念
 
-- [濃縮咖啡](espresso.md)：單份與雙份濃縮的基準。
-- [美式](americano.md)：濃縮加熱水。
-- [瑪奇朵](macchiato.md)：濃縮加一小坨奶泡。
-- [Cortado](cortado.md)：濃縮加輕度加熱的牛奶。
-- [卡布奇諾](cappuccino.md)：濃縮、蒸奶、奶泡三等分。
-- [馥列白](flat-white.md)：含微細奶泡、源自澳洲與紐西蘭的飲品。
-- [拿鐵](latte.md)：濃縮加大量蒸奶。
-- [摩卡](mocha.md)：加了巧克力的拿鐵。
-- [冷萃與冰滴](cold-brew.md)：冷萃（浸泡）與冰滴（慢滴）的定義、時間與比例。
+- [濃縮咖啡](espresso.md)：濃縮咖啡的定義與份量。
+- [美式](americano.md)：美式的定義與各來源的說法。
+- [瑪奇朵](macchiato.md)：瑪奇朵的定義與各來源的說法。
+- [Cortado](cortado.md)：Cortado 的定義與各來源的說法。
+- [卡布奇諾](cappuccino.md)：卡布奇諾的定義與各來源的說法。
+- [馥列白](flat-white.md)：馥列白的定義、來歷與各來源的說法。
+- [拿鐵](latte.md)：拿鐵的定義與各來源的說法。
+- [摩卡](mocha.md)：摩卡的定義與各來源的說法。
+- [冷萃與冰滴](cold-brew.md)：冷萃與冰滴的定義、時間與比例。
 - [烘焙度](roast-level.md)：淺、中、深焙的風味，以及與牛奶搭配的建議。
 - [豆袋標籤怎麼讀](reading-coffee-bags.md)：另一個點餐前要看的資訊——豆袋標籤。
 
@@ -106,10 +106,10 @@ updated: 2026-11-16
 - **瑪奇朵（差別最大）**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說傳統版是一份濃縮加一小坨奶泡、約 2 盎司，並提醒不要與星巴克式焦糖瑪奇朵混淆；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說義大利式也是濃縮加一點奶泡，但現代咖啡店常加蒸奶與微細奶泡，奶量大致等於或略少於濃縮；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)把「拿鐵瑪奇朵」寫成在 125 毫升熱牛奶與奶泡中加入 40 毫升濃縮，以牛奶為主。
 - **卡布奇諾**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說傳統上三等分、約 5 至 6 盎司，厚奶泡是特色；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)也是 1:1:1（各 40 毫升）；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說三等分是義大利傳統，現代精品店多半是約 6 盎司、牛奶與濃縮約 1:4、奶泡很少的奶咖啡。
 - **拿鐵的牛奶量**：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說咖啡 1：牛奶 3；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說牛奶與濃縮約 1:5 以上；[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)只說「較大量的蒸奶」、杯量 8 至 12 盎司或更大。
-- **摩卡**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說是拿鐵加巧克力（牛奶量大，[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說 6 盎司以上）；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)的建議配方是濃縮 40、熱可可 40、奶泡 20 毫升，牛奶很少。
+- **摩卡**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說是拿鐵加巧克力（牛奶量大，[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說 6 盎司以上）；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)的建議配方是濃縮 40、熱可可 40、熱奶泡 20 毫升。
 - **Cortado**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說通常 1 份濃縮加約 2 盎司牛奶；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)的配方是雙份濃縮（約 2 盎司液體）加 2 盎司牛奶，並給了 4.5 盎司的杯子；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)沒有談。
 - **濃縮與美式**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說雙份用 14–18 克粉、約 28–36 毫升，美式總量約 6–8 盎司；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說 18 克粉、約 28–36 克，美式是約 8 盎司熱水；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說濃縮 40 毫升、美式加水依喜好。[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)對萃取是「蒸氣」還是「熱水加壓」說法不同。
-- **馥列白**：沒有直接衝突；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)與[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)都說奶泡層不超過約 0.5 公分，[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)沒有給厚度。
+- **馥列白**：沒有直接衝突；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說奶泡層不超過約 0.5 公分，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說約 0.5 公分，[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)沒有給厚度。
 - **單位**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)、[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)用盎司與克，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)用毫升；本 Wiki 照各自單位記錄，不換算。能直接比較的是倍數與比例。
 - **性質**：[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)是膠囊機品牌文章，量是配合膠囊的定量；[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)、[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)是器材商文章，比例是「通常」或「配方」。本 Wiki 不選邊，也不平均；三個來源都不是統一標準。
 
