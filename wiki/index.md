@@ -18,7 +18,7 @@ updated: 2026-11-16
 
 ## 來源
 
-- [Seattle Coffee Gear：精品咖啡豆袋怎麼讀](sources/seattle-read-coffee-bag.md)：逐欄說明豆袋上的產區、品種、處理法、海拔、風味描述、烘焙日期、烘焙度與生產者資訊。
+- [Seattle Coffee Gear：精品咖啡豆袋怎麼讀](sources/seattle-read-coffee-bag.md)（簡稱：Seattle 豆袋）：逐欄說明豆袋上的產區、品種、處理法、海拔、風味描述、烘焙日期、烘焙度與生產者資訊。
 
 ## 概念
 
