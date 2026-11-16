@@ -178,3 +178,13 @@ updated: 2026-11-16
 ## [2026-11-16] check | 補充說明標記簡化
 
 - 依 controller 對檢查點2 後續的裁定：術語白話解釋（只說明詞義、不含事實主張）由「（英文；本 Wiki 補充說明：……）」改為括號內解釋結尾加全形 ＊，並在用到的頁面頁尾加一行說明；「（本 Wiki 補充說明）」只保留給原文沒有的事實補充。共改 16 處 ＊（origin 4、processing-methods 1、roast-date 2、roast-level 1、tasting-notes 1、來源頁 7），6 個頁面加頁尾說明；目前 wiki 內沒有事實補充標記。CLAUDE.md 第 3 節、N3 第 6 步與第 10 節 Graph 修改紀錄同步更新。原因：嚴格版標記讓解釋長度約變三倍，而術語定義不是來源主張。`python scripts/check_wiki.py` 為 `OK: 12 pages`。
+
+## [2026-11-16] ingest | seattle-espresso-drinks-guide
+
+- 來源：Seattle Coffee Gear〈Espresso Drinks: A Written and Visual Guide〉（簡稱 Seattle 飲品，`raw/seattle-espresso-drinks-guide.md`）。16 款飲品圖表在擷取時只剩替代文字，圖內比例看不到。
+- 重點：(1) 義式飲品由濃縮、蒸奶、奶泡三組件構成，差別在比例與牛奶質地；(2) 文字詳述八款：濃縮咖啡、美式、瑪奇朵、Cortado、卡布奇諾、馥列白、拿鐵、摩卡；(3) 雙份濃縮 14–18 克粉、約 28–36 毫升；(4) 各款杯量（oz）：美式 6–8、瑪奇朵約 2、卡布奇諾 5–6、馥列白 5–6、拿鐵 8–12 以上；(5) 傳統瑪奇朵與星巴克式焦糖瑪奇朵是不同飲品；(6) ristretto、lungo 等只在圖表文字被提到，沒有說明。
+- 新增頁面（10）：`sources/seattle-espresso-drinks-guide.md`；`concepts/espresso-drinks.md`（入口頁，含比較表）、`espresso.md`、`americano.md`、`macchiato.md`、`cortado.md`、`cappuccino.md`、`flat-white.md`、`latte.md`、`mocha.md`。
+- 更新頁面：`index.md`（來源 1 行、新增「菜單飲品」概念組 9 行）。沒有更動既有概念頁（此來源不談烘焙度或豆子標籤）。`overview.md` 依指示暫不寫（批次 D）。
+- 判斷：ristretto／lungo 未另立頁，因來源沒有解釋它們；「在家做」段落不收（非目標）；盎司不換算。
+- 忠實度核對：發現 3 處，處理方式：(1) 美式頁「倒水到濃縮是美式」原文只說兩種倒法不同、後者像 long black，改為原文說法；(2) 7 處「相關概念」寫了比較性的主張（如「奶量更少」「杯量相近」），改為中性的一句導覽；(3) 入口頁術語「蒸奶」「奶泡」加 ＊ 標記與頁尾說明，並把馥列白／拿鐵奶泡的差別改為原文說法（融在蒸奶裡／蓋薄薄一層）。其餘每個掛來源的句子都已對回原文。
+- 檢查：`python scripts/check_wiki.py`、index 與 log 更新，結果 `OK: 22 pages`，一次通過，沒有失敗。
