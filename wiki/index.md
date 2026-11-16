@@ -20,12 +20,13 @@ updated: 2026-11-16
 
 - [Seattle Coffee Gear：精品咖啡豆袋怎麼讀](sources/seattle-read-coffee-bag.md)（簡稱：Seattle 豆袋）：逐欄說明豆袋上的產區、品種、處理法、海拔、風味描述、烘焙日期、烘焙度與生產者資訊。
 - [Seattle Coffee Gear：義式咖啡飲品圖文指南](sources/seattle-espresso-drinks-guide.md)（簡稱：Seattle 飲品）：把義式飲品拆成濃縮、蒸奶、奶泡三組件，逐款說明八種飲品的比例與杯量。
+- [La Marzocco Home：義式咖啡飲品入門指南](sources/la-marzocco-espresso-drinks.md)（簡稱：La Marzocco 飲品）：義式咖啡機廠商的入門文章，逐款附起源與配方，並指出瑪奇朵、卡布奇諾在傳統與現代店做法不同。
 
 ## 概念
 
 ### 菜單飲品
 
-- [菜單飲品怎麼看](concepts/espresso-drinks.md)：義式飲品的組件、八款飲品比較表（入口頁）。
+- [菜單飲品怎麼看](concepts/espresso-drinks.md)：義式飲品的組件、兩個來源的八款飲品比較表、牛奶質地與 café au lait（入口頁）。
 - [濃縮咖啡（Espresso）](concepts/espresso.md)：單份、雙份的基準量，所有義式飲品的基底。
 - [美式（Americano）](concepts/americano.md)：濃縮加熱水。
 - [瑪奇朵（Macchiato）](concepts/macchiato.md)：濃縮加一小坨奶泡，與焦糖瑪奇朵不同。

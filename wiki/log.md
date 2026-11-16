@@ -188,3 +188,14 @@ updated: 2026-11-16
 - 判斷：ristretto／lungo 未另立頁，因來源沒有解釋它們；「在家做」段落不收（非目標）；盎司不換算。
 - 忠實度核對：發現 3 處，處理方式：(1) 美式頁「倒水到濃縮是美式」原文只說兩種倒法不同、後者像 long black，改為原文說法；(2) 7 處「相關概念」寫了比較性的主張（如「奶量更少」「杯量相近」），改為中性的一句導覽；(3) 入口頁術語「蒸奶」「奶泡」加 ＊ 標記與頁尾說明，並把馥列白／拿鐵奶泡的差別改為原文說法（融在蒸奶裡／蓋薄薄一層）。其餘每個掛來源的句子都已對回原文。
 - 檢查：`python scripts/check_wiki.py`、index 與 log 更新，結果 `OK: 22 pages`，一次通過，沒有失敗。
+
+## [2026-11-16] ingest | la-marzocco-espresso-drinks
+
+- 來源：La Marzocco Home〈The Beginner's Guide to Espresso Drinks〉（簡稱 La Marzocco 飲品，`raw/la-marzocco-espresso-drinks.md`），義式咖啡機廠商的部落格文章，2020 年刊登。
+- 重點：(1) espresso 是一種沖煮方式，咖啡與水約 1:2（濾泡約 1:15）；(2) 瑪奇朵義大利式是濃縮加一點奶泡，現代店常加蒸奶；(3) 卡布奇諾傳統三等分，現代精品店約 6 oz、牛奶:濃縮約 1:4、奶泡很少；(4) 拿鐵約 8–12 oz，牛奶:濃縮約 1:5+，latte 在歐洲只是加牛奶的濃縮；(5) 馥列白奶泡層不超過約 0.5 公分、拿鐵約 1 公分；(6) Cortado 等量濃縮與牛奶、4.5 oz gibraltar 杯；(7) 摩卡、美式（雙份加約 8 oz 水）、café au lait；(8) 蒸奶質地與 dry 卡布奇諾。
+- 新增頁面（1）：`sources/la-marzocco-espresso-drinks.md`。
+- 更新頁面（10）：`concepts/espresso-drinks.md`（新增表二、牛奶質地、café au lait、來源間的差異）；`espresso`、`americano`、`macchiato`、`cortado`、`cappuccino`、`flat-white`、`latte`、`mocha` 八個概念頁（加入 La Marzocco 事實，改寫「來源間的差異」，frontmatter 的 sources 加入此來源）；`index.md`（來源 1 行，入口頁摘要更新）。沒有更動烘焙度等既有概念頁（此來源不談）。
+- 矛盾／差異（皆並列「A 說…，B 說…」，沒有選邊或平均）：雙份粉量 14–18 克／毫升（Seattle）對 18 克／克（La Marzocco）；美式總量 6–8 oz 對水約 8 oz；瑪奇朵傳統 vs 現代加蒸奶；卡布奇諾厚奶泡三等分 vs 現代奶泡很少；Cortado 1 份 vs 雙份濃縮。
+- 判斷：蒸奶溫度、操作步驟、課程推廣、Sprudge 引文不收；café au lait 只放在入口頁，不另立頁（原文只有一小段且自稱不屬濃縮系）。
+- 忠實度核對：發現 4 處，處理方式：(1) 馥列白原寫「兩篇都說比拿鐵咖啡味強」，La Marzocco 並沒有比較強度，改為只說兩篇都說源自澳洲／紐西蘭；(2) 濃縮頁原寫「所以味道濃」是推論，改成分開陳述；(3) 卡布奇諾差異段原有一句我自己的杯量比較與一句雜訊，改為各自說法；(4) 入口頁表二標題原寫「配方皆以雙份濃縮計」，但瑪奇朵配方只寫一份，改為「除瑪奇朵外」並註明現代店未說份數。美式「以稀釋濃縮聞名」改為原文的「加牛奶是拿鐵、加水是美式」。無來源的術語（bar、crema、demitasse）已用 ＊ 並加頁尾說明。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 23 pages`，一次通過，沒有失敗；index 與 log 已更新。
