@@ -1,7 +1,7 @@
 ---
 title: 濃縮咖啡（Espresso）
 type: concept
-sources: [sources/seattle-espresso-drinks-guide.md, sources/la-marzocco-espresso-drinks.md]
+sources: [sources/seattle-espresso-drinks-guide.md, sources/la-marzocco-espresso-drinks.md, sources/nespresso-tw-coffee-types.md]
 updated: 2026-11-16
 ---
 
@@ -20,6 +20,9 @@ updated: 2026-11-16
 - 如果濃縮帶淡淡的甜、餘韻持久，並且酸、甜、苦平衡，就是萃得很好（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）。
 - 單喝時不加奶，用小的 demitasse 杯（小型濃縮咖啡杯＊）盛裝（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）。
 - 雙份配方：18 克細研磨咖啡粉，約 25 至 30 秒萃出約 28 至 36 克濃縮（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）。
+- 義式濃縮咖啡（Espresso）起源於義大利，是拿鐵、卡布奇諾、康寶藍等飲品的基底；用較細研磨的咖啡粉，口感濃稠如糖漿，表面有一層細致的「咖啡油脂」（crema），入口醇厚濃郁（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
+- 該文把濃縮說成透過具有高壓 bar 數蒸氣的義式濃縮咖啡機萃取；建議的濃縮量是 40 毫升（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
+- 飲品中濃縮所占的比例決定咖啡的濃度與香氣厚度：比例過高口感偏苦、厚重，比例過低咖啡香氣被稀釋（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。
 
 ## 相關概念
 
@@ -30,5 +33,7 @@ updated: 2026-11-16
 ## 來源間的差異
 
 兩篇的雙份配方不完全一樣。[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說雙份用 14 至 18 克粉、萃出約 28 至 36「毫升」；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說用 18 克粉、約 25 至 30 秒萃出約 28 至 36「克」。兩者產出的數字相同、單位不同，前者的粉量是一個範圍，後者是單一數字；本 Wiki 照各自的單位記錄，不換算。壓力、咖啡與水的比例，只有[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)提到。
+
+[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)建議的濃縮量是 40 毫升，數字上比[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)（雙份約 28–36 毫升）與[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)（雙份約 28–36 克）的範圍大；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)也沒有分單份、雙份，只給單一建議量。該文是膠囊咖啡機的品牌文章，並說每款膠囊有設計好的粉量與水量（定量咖啡），本 Wiki 不把它當標準。另外，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說是「高壓蒸氣」萃取，[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說是以泵浦打出穩定溫度的近沸熱水、用 9 bar 的壓力把水壓過咖啡粉；兩者對「蒸氣」或「熱水」的說法不同，本 Wiki 並列，不選邊。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。
