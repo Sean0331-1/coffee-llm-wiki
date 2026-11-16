@@ -1,7 +1,7 @@
 ---
 title: 豆袋標籤怎麼讀
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md]
 updated: 2026-11-16
 ---
 
@@ -19,6 +19,7 @@ updated: 2026-11-16
 - 該文認為在包裝或菜單上找得到的資訊越多，咖啡豆是高品質的機會越高（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 - 若菜單只寫「耶加雪菲、中焙、日曬」，該文建議多問咖啡師豆子的狀況，因為產地、焙度、處理方式都相同，也不見得是同樣的風味（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 - 買豆時可請店家讓你看豆子與聞香：好的豆子大小相似、沒有碎豆，聞起來有新鮮自然的咖啡香（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
+- 處理法通常與產區、品種、風味描述印在一起；若沒有寫處理法，值得問烘焙商，因為處理法的透明是精品咖啡的特徵之一（[Coffee Hero](../sources/coffee-hero-processing-methods.md)）。
 - 生產者資訊（Producer Info）指農場、農民、合作社或水洗站的名稱；烘焙商揭露得越多，越能讓人對品質與生產條件有信心，這也是精品咖啡和大宗商品咖啡（commodity coffee）的差別之一（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 
 ## 各欄位速查
@@ -47,4 +48,4 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)列出八個欄位（含品種、烘焙日期）；[HK01 手沖](../sources/hk01-pour-over-five-things.md)說最基本的標示是產區、焙度、處理法，進階才有微產區、莊園、海拔、批次、預期風味、生產履歷，沒有提到品種與烘焙日期。兩者面向不同，沒有直接衝突。[HK01 手沖](../sources/hk01-pour-over-five-things.md)把焙度列為最基本的標示之一，[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)則說不是每包都會標烘焙度，並列。
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)列出八個欄位（含品種、烘焙日期）；[HK01 手沖](../sources/hk01-pour-over-five-things.md)說最基本的標示是產區、焙度、處理法，進階才有微產區、莊園、海拔、批次、預期風味、生產履歷，沒有提到品種與烘焙日期。兩者面向不同，沒有直接衝突。[HK01 手沖](../sources/hk01-pour-over-five-things.md)把焙度列為最基本的標示之一，[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)則說不是每包都會標烘焙度，並列。[Coffee Hero](../sources/coffee-hero-processing-methods.md)說處理法通常與產區、品種、風味描述一起印在袋上，並列出處理法在袋上的常見寫法（見[處理法](processing-methods.md)）；[HK01 手沖](../sources/hk01-pour-over-five-things.md)也說單品豆一般都會標示處理法。

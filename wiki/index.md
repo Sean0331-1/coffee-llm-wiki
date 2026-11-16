@@ -23,7 +23,7 @@ updated: 2026-11-16
 - [La Marzocco Home：義式咖啡飲品入門指南](sources/la-marzocco-espresso-drinks.md)（簡稱：La Marzocco 飲品）：義式咖啡機廠商的入門文章，逐款附起源與配方，並指出瑪奇朵、卡布奇諾在傳統與現代店做法不同。
 - [Nespresso 台灣：咖啡種類、Flat White、拿鐵三篇專文](sources/nespresso-tw-coffee-types.md)（簡稱：Nespresso 台灣）：膠囊咖啡機品牌的繁中文章，用毫升列出 10 款飲品的建議比例與台灣常用名稱，並補充烘焙度、處理法、品種、海拔與冷萃冰滴。
 - [香港01（轉載 GQ Taiwan）：手沖咖啡必知5件事](sources/hk01-pour-over-five-things.md)（簡稱：HK01 手沖）：生活媒體文章，從點手沖切入，談焙度、日曬水洗、豆子標示、挑豆與杯測分數區間（五點圖卡未擷取）。
-
+- [Coffee Hero：水洗、日曬、蜜處理三種處理法](sources/coffee-hero-processing-methods.md)（簡稱：Coffee Hero）：澳洲烘焙商的教學文，說明三種處理法的流程、風味、黃紅黑蜜色階、比較表與豆袋上的寫法。
 ## 概念
 
 ### 菜單飲品
@@ -43,7 +43,7 @@ updated: 2026-11-16
 
 - [豆袋標籤怎麼讀](concepts/reading-coffee-bags.md)：豆袋八個常見欄位的速查表與初學者閱讀順序（入口頁）。
 - [產區（Origin）](concepts/origin.md)：咖啡種在哪裡、標示層級，以及幾個產區的風味傾向。
-- [處理法（Processing）](concepts/processing-methods.md)：水洗、日曬、蜜處理、厭氧與濕剝法的風味差異。
+- [處理法（Processing）](concepts/processing-methods.md)：水洗、日曬、蜜處理（含黃紅黑蜜色階）、厭氧與濕剝法的流程與風味差異，並列四個來源的說法。
 - [海拔（Elevation）](concepts/altitude.md)：為什麼高海拔咖啡通常較密、風味較複雜。
 - [品種（Variety）](concepts/variety.md)：咖啡樹品種、幾個常見品種的風味印象，以及阿拉比卡、羅巴斯塔、賴比瑞亞三大豆種。
 - [風味描述（Tasting Notes）](concepts/tasting-notes.md)：袋上的「藍莓、巧克力」是品嚐印象，不是添加物。

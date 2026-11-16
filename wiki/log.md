@@ -230,3 +230,14 @@ updated: 2026-11-16
 - 判斷：酸甜與苦的描述不與 Nespresso 合併成「多來源一致」，只並列；SCAA 只被點名為杯測方法，沒有給分數，不補；沖煮技巧、咖啡營養文章連結不收。
 - 忠實度核對：發現 2 處，處理方式：(1) 來源頁原寫「處理法、焙度與 Seattle 豆袋、Nespresso 台灣大致同向」，但 Seattle 豆袋並未談焙度風味，改為只指向概念頁；(2) 來源頁原寫分數區間是「本 Wiki 唯一給出具體數字的來源」，是對整個 Wiki 的主張，改為「目前只有這篇給出」。處理法差異段的跨來源敘述逐一對回 Seattle、Nespresso、HK01 原文（水洗酸度、日曬口感、Dry/Wet 與乾式/濕式用詞）後保留。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 27 pages`；index 與 log 已更新。
+
+## [2026-11-16] ingest | coffee-hero-processing-methods
+
+- 來源：Coffee Hero〈Coffee Processing Methods: Washed, Natural and Honey Explained〉（簡稱 Coffee Hero，`raw/coffee-hero-processing-methods.md`），澳洲烘焙商的英文教學文。
+- 重點：(1) 處理法是採收後去除果肉的方式，決定果實糖分與風味轉移多少；(2) 水洗：去果肉機、水槽發酵 24–72 小時、洗淨乾燥，風味乾淨明亮酸度高；(3) 日曬：整顆果實乾燥 3–6 週，口感厚、酸度低、果味強；(4) 蜜處理：黃蜜（去除最多、近水洗）、紅蜜、黑蜜（留最多、近日曬）三級；(5) 比較表（口感、酸度、甜感、用水量）；(6) 各處理法的常見產地與適合的沖法；(7) 豆袋上的寫法（washed、fully washed、natural、pulped natural、yellow honey 等），沒寫就問烘焙商。
+- 新增頁面（1）：`sources/coffee-hero-processing-methods.md`。
+- 更新頁面（5）：`concepts/processing-methods.md`（新增流程、色階表、比較表、選豆建議、袋上寫法；來源間的差異重寫為四來源並列）；`origin`（處理法與常見產地對應）、`reading-coffee-bags`（處理法袋上寫法與詢問）、`tasting-notes`（處理法對應的風味詞）；`index.md`（來源 1 行、處理法摘要）。`roast-level`、`altitude`、`variety`、`cupping-score` 不動（此來源未談）。
+- 差異（皆並列「A 說…，B 說…」，沒有選邊）：蜜處理分級，Nespresso 台灣四種（含白蜜）對 Coffee Hero 三種（黃紅黑）；蜜處理口感，Seattle 豆袋說「比日曬更有結構」、Coffee Hero 表中說中到厚；水洗酸度的各家說法；常見產地，Nespresso 台灣說日曬常見於肯亞，Coffee Hero 把肯亞列在水洗產地；處理法的決定因素，HK01 手沖說由產地水源與日照決定，Coffee Hero 沒談。Coffee Hero 把哥倫比亞歸在中美洲，照原文轉述。
+- 判斷：選豆建議（水洗從衣索比亞或肯亞開始等）屬單一來源建議，標明「該文」；文末導向自家文章的句子不收；沒有新增概念頁（處理法已有頁）。
+- 忠實度核對：發現 1 處，處理方式：來源間的差異段原有「前三個來源之間原有的比較」一句舊的比較，在加入 HK01 手沖後標題已不準確，改標為「前三個來源的原有比較」。其餘跨來源句（水洗酸度、日曬酸與果味、產地、蜜處理色階）逐一對回四個來源原文：Seattle 豆袋與 HK01 手沖未談日曬酸度、Seattle 豆袋未談水洗酸，都明寫為「沒有提」，沒有寫成多來源一致。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 28 pages`；index 與 log 已更新。
