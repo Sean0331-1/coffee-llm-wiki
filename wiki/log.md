@@ -174,3 +174,7 @@ updated: 2026-11-16
 - 忠實度核對（依新規則自我再核一次）：除審查列出的項目外，另發現 8 處術語白話解釋不是原文內容（cooperative、wash station、single origin、stone fruit、body、cupping、rest，以及 filter 的「例如手沖」），依使用者決定 (3) 保留，但改標「（英文；本 Wiki 補充說明：……）」且不掛來源；origin.md 肯亞的「酸質鮮明」改回原文的 bright。
 - CLAUDE.md 修改：第 3 節加入來源簡稱（`short_name`）、concept 頁結構、「相關概念只做導覽」、「本 Wiki 補充說明」標記四條規則；第 5 節 N3 新增第 6 步「忠實度自我核對」（在 `check_wiki.py` 之前），ingest log 固定寫「忠實度核對：發現 N 處，處理方式……」；新增第 10 節「Graph 修改紀錄」，寫明修改前後、原因與代價。
 - 檢查：`python scripts/check_wiki.py` 為 `OK: 12 pages`，一次通過。
+
+## [2026-11-16] check | 補充說明標記簡化
+
+- 依 controller 對檢查點2 後續的裁定：術語白話解釋（只說明詞義、不含事實主張）由「（英文；本 Wiki 補充說明：……）」改為括號內解釋結尾加全形 ＊，並在用到的頁面頁尾加一行說明；「（本 Wiki 補充說明）」只保留給原文沒有的事實補充。共改 16 處 ＊（origin 4、processing-methods 1、roast-date 2、roast-level 1、tasting-notes 1、來源頁 7），6 個頁面加頁尾說明；目前 wiki 內沒有事實補充標記。CLAUDE.md 第 3 節、N3 第 6 步與第 10 節 Graph 修改紀錄同步更新。原因：嚴格版標記讓解釋長度約變三倍，而術語定義不是來源主張。`python scripts/check_wiki.py` 為 `OK: 12 pages`。

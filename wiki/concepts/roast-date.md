@@ -14,8 +14,8 @@ updated: 2026-11-16
 - 烘焙日期可能是豆袋上最重要的數字（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 一般在烘焙後約 2–4 週內最好喝，但會因豆子而異（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 依用途不同（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）：
-  - 做濃縮（espresso）：通常讓豆子多「休息」（rest；本 Wiki 補充說明：烘好後先放一段時間再用）一陣子，約烘焙後 2–4 週。
-  - 做濾泡（filter；本 Wiki 補充說明：例如手沖）：常在烘焙後約 1–2 週就很好喝。
+  - 做濃縮（espresso）：通常讓豆子多「休息」（rest，烘好後先放一段時間再用＊）一陣子，約烘焙後 2–4 週。
+  - 做濾泡（filter，例如手沖＊）：常在烘焙後約 1–2 週就很好喝。
 - 要避開：送到手上時已放了好幾週的豆子，或完全沒寫烘焙日期的豆子（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 例外：充氮包裝（nitrogen flushed）的豆子保存期較長，例如 Lavazza 這類歐洲品牌；但精品咖啡仍以上述期間內最好喝（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 只標賞味期限、沒有烘焙日期時，真正有用的資訊其實是烘焙日期（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
@@ -29,3 +29,5 @@ updated: 2026-11-16
 ## 來源間的差異
 
 目前僅一個來源（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。天數是該文的經驗建議，不是標準。
+
+＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

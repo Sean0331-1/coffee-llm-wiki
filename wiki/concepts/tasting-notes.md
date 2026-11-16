@@ -7,7 +7,7 @@ updated: 2026-11-16
 
 # 風味描述（Tasting Notes）
 
-**定義**：烘焙師在杯測（cupping；本 Wiki 補充說明：一種標準化的試喝方法）時，從這支咖啡辨識出的風味，通常列三到五個詞，例如藍莓、黑巧克力、柑橘（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
+**定義**：烘焙師在杯測（cupping，一種標準化的試喝方法＊）時，從這支咖啡辨識出的風味，通常列三到五個詞，例如藍莓、黑巧克力、柑橘（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 
 ## 重點
 
@@ -27,3 +27,5 @@ updated: 2026-11-16
 ## 來源間的差異
 
 目前僅一個來源（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。風味描述的用詞與風味輪的關係，待風味輪相關來源 ingest 後補充。
+
+＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。
