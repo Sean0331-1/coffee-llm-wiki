@@ -74,3 +74,60 @@ updated: 2026-11-16
 - 字數：約 7,169 字元。
 - 涵蓋區塊：風味輪。Step 1 到 Step 8 完整，含「從中心往外」「果味分為莓果、乾果、柑橘…」的使用說明。風味輪圖本身不在正文內。
 - 檢查結果：通過。
+
+## [2026-11-16] discuss | 檢查點1b：追加來源
+
+- 起因：檢查點1之後，使用者表示「多找一些再找四篇」。這是一次由使用者觸發、從 N2 回到 N1（再找來源）的迴圈。
+- 第二輪搜尋：Claude 提出 6 篇候選 #8–#13：#8 Trade〈The Coffee Taster's Flavor Wheel, Explained〉、#9 Urnex〈Reinventing the Coffee Taster's Flavor Wheel〉、#10 World Coffee Research〈Sensory Lexicon〉、#11 Coffee Hero〈Coffee Processing Methods: Washed, Natural and Honey Explained〉、#12 維基百科〈Coffee varieties〉（原先列的 WCR 品種目錄疑為 JS 動態載入，改用維基百科）、#13 Nespresso 台灣的三篇專文（咖啡種類、Flat White、拿鐵）。
+- 建議：subagent 建議 #8 #10 #11 #13；Claude 建議 #8 #11 #12 #13，把 #10 換成 #12。理由是缺口分析（gap analysis）發現沒有任何來源涵蓋豆子標籤的「品種」欄位，而 SCA 風味輪頁已經成功擷取，不再需要 WCR Sensory Lexicon 來頂替。
+- 使用者決定：回覆「全部都納進來」，6 篇全數加入，來源總數變成 12 篇。
+- 接下來：依 N2 擷取這 6 篇。
+
+## [2026-11-16] fetch | trade-flavor-wheel-explained
+
+- 網址：https://drinktrade.com/blog/education/coffee-tasters-flavor-wheel
+- 方式：curl 取原始 HTML，再用 Python 標準庫轉成文字，存為 `raw/trade-flavor-wheel-explained.md`（已略過選單、購物與 FAQ 區塊）。
+- 字數：約 7,476 字元。
+- 涵蓋區塊：風味輪。風味輪的歷史（1995 年首版、2016 年改版）、「由中心往外」的讀法、各層級舉例、缺陷區，並提到品種與處理法對風味的影響（Gesha、Bourbon、Washed、Natural）。
+- 檢查結果：通過。註：發文日為 2020-10-07；來源是訂閱平台的教育文，屬商業來源。
+
+## [2026-11-16] fetch | urnex-reinventing-flavor-wheel
+
+- 網址：https://urnex.com/blog/reinventing-the-coffee-tasters-flavor-wheel
+- 方式：同上，存為 `raw/urnex-reinventing-flavor-wheel.md`。
+- 字數：約 8,544 字元。
+- 涵蓋區塊：風味輪。2016 年改版的過程（WCR 詞彙表是基礎、110 個詞、每個詞有參照配方）、center-out 讀法、用途，可與 Trade 那篇交叉驗證。
+- 檢查結果：通過。註：來源是清潔用品廠商的部落格，權威性低於 WCR，當作第二來源。
+
+## [2026-11-16] fetch | wcr-sensory-lexicon
+
+- 網址：https://worldcoffeeresearch.org/resources/sensory-lexicon；另一頁 https://worldcoffeeresearch.org/work/sensory-lexic 實測會 302 轉址到同一頁，內容完全相同，所以只存一個檔 `raw/wcr-sensory-lexicon.md`。
+- 方式：同上。依指示只取簡介文字，沒有下載詞彙表 PDF。
+- 字數：約 1,698 字元。
+- 涵蓋區塊：風味輪／品飲詞彙的官方背景。Lexicon 2.0（2017 年 10 月出版）、110 個風味／香氣／質地屬性、由 Kansas State University 的 Sensory Analysis Center 建立、是新版風味輪的基礎。
+- 檢查結果：通過，但篇幅短。簡介頁沒有詞彙表本體，只能當官方背景與交叉驗證用。
+
+## [2026-11-16] fetch | coffee-hero-processing-methods
+
+- 網址：https://coffeehero.com.au/blogs/news/coffee-processing-methods-washed-natural-honey-explained
+- 方式：同上。原始 HTML 約 2.9 MB，轉成文字後正文乾淨可用（約 200 行），不需要改用備選的 Attendant Coffee。已略過導覽、相關文章與購物區塊。
+- 字數：約 6,404 字元。
+- 涵蓋區塊：處理法。Washed、Natural、Honey 的流程與風味、Yellow／Red／Black Honey 色階、比較表、怎麼在豆袋上找到處理法。
+- 檢查結果：通過。註：來源是澳洲烘焙商，用英式拼法 flavour。
+
+## [2026-11-16] fetch | wikipedia-coffee-varieties
+
+- 網址：https://en.wikipedia.org/wiki/Coffee_varieties（轉址到 List of coffee varieties）
+- 方式：同上，存為 `raw/wikipedia-coffee-varieties.md`（已略過 See also 與參考文獻）。
+- 字數：約 19,474 字元。
+- 涵蓋區塊：豆子標籤的「品種」欄。Variety 與 cultivar 的術語、選種標準、C. arabica 與 C. canephora（robusta）、品種清單（Bourbon、Typica 等及其由來）。
+- 檢查結果：通過。註：內容偏技術且很長，ingest 時只取初學者需要的部分；維基百科內容可能被編輯，以擷取日為準。
+- 另記：計畫中原本的 WCR 品種目錄（varieties.worldcoffeeresearch.org）疑為 JS 動態載入，N1 時已改用維基百科，所以沒有擷取它。
+
+## [2026-11-16] fetch | nespresso-tw-coffee-types
+
+- 網址：https://www.nespresso.com/tw/zh/blog-coffee-type 、 https://www.nespresso.com/tw/zh/blog-flat-white 、 https://www.nespresso.com/tw/zh/blog-latte-feature
+- 方式：同上，三頁合併存為 `raw/nespresso-tw-coffee-types.md`，各頁標題處標有網址（已略過文末的機型推薦區塊）。
+- 字數：約 12,707 字元（三頁約 7,322／2,965／2,402）。
+- 涵蓋區塊：台灣菜單用語（繁體中文）。10 款飲品與濃縮咖啡／牛奶比例、Flat White 的中文名稱（馥芮白、馥列白、平白咖啡、澳式白咖啡）及與拿鐵、卡布奇諾的差異、拿鐵與美式的比較；第一篇另有品種、處理法、烘焙度的簡短說明。
+- 檢查結果：通過。註：品牌（膠囊機）教育文，比例偏向膠囊機，ingest 時要與 Seattle Coffee Gear、La Marzocco 交叉比對；文內含食譜與機型推薦，只取飲品知識。
