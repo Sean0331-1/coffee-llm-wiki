@@ -261,3 +261,14 @@ updated: 2026-11-16
 - 修正：processing-methods 該句改為並列 Coffee Hero 與 Nespresso 台灣的時間；另把 `cupping-score` 的「目前只有 HK01 給出分數區間」同類負面表述改為肯定句；index.md 還原換行與空行，逐行確認每個條目各自一行。
 - 規則修改：CLAUDE.md N3 第 6 步加負面句必須逐一核對每個已 ingest 來源，並在第 10 節記錄修改前後與原因。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 30 pages`。
+
+## [2026-11-16] ingest | about-coffee-roasts
+
+- 來源：About Coffee（美國國家咖啡協會）〈Roasts〉（簡稱 NCA 烘焙，`raw/about-coffee-roasts.md`），英文教育頁。
+- 重點：(1) 烘焙是用熱把生豆變成咖啡豆，烘後放 2 到 3 天可沖，建議烘後約 2 到 7 天內沖煮；(2) Espresso roast 不是特定烘焙度，常見中到深焙；(3) 淺、中、深三個顏色類別，各家顏色與名稱不一；(4) 淺焙較酸、表面無油；中焙稱美式烘焙、表面不油；深焙黑亮有油、苦味明顯、較不酸；(5) 淺焙咖啡因略高，深焙不比較強；(6) 包裝上由淺到深的名稱：Blonde／Cinnamon、City、Full City、Vienna、French、Italian。
+- 新增頁面（1）：`sources/about-coffee-roasts.md`。
+- 更新頁面（4）：`concepts/roast-level.md`（新增 NCA 的各級說法、名稱、咖啡因、Espresso roast；新增並列段）、`concepts/roast-date.md`（烘後沖煮時機，與 Seattle 豆袋並列）、`concepts/espresso.md`（Espresso roast 一條）；`index.md`（來源 1 行、烘焙度摘要）。
+- 差異（並列「A 說…，B 說…」）：烘焙後最佳飲用時機，Seattle 豆袋說約 2–4 週（濃縮 2–4 週、濾泡 1–2 週），NCA 烘焙說烘後 2–3 天可沖、建議 2–7 天內，差距大，未選邊；分級四級（Seattle 豆袋）對三級（NCA 烘焙、Nespresso 台灣、HK01 手沖）；酸度與苦味方向，NCA 烘焙與 Nespresso 台灣、HK01 手沖逐一並列；中焙，NCA 烘焙談外觀與強度，Nespresso 台灣談甜味與焦糖，面向不同；「深焙比較強」，NCA 烘焙說與咖啡因無關，Nespresso 台灣說口感濃郁醇厚，面向不同。沒有直接矛盾。
+- 判斷：文末導向沖煮頁的句子不收；不另立各烘焙度的概念頁（roast-level 已涵蓋）。
+- 忠實度核對：發現 3 處，處理方式：(1) 來源頁初稿加了華氏轉攝氏，是本 Wiki 補充，刪除；(2) 並列段中 HK01 手沖的「淺焙保留香氣」初稿漏了原文前提，補上（傳統上好豆不太選深焙，因為高溫焙容易帶走獨特味道）；(3) 順手發現 `espresso.md` 既有負面句「壓力、咖啡與水的比例，只有 La Marzocco 提到」不實（Nespresso 台灣也提到 bar 與比例），改為肯定句，只說 9 bar 與 1:2 是 La Marzocco 飲品給的數字。跨來源句（酸度、深焙苦、淺焙保留原味、烘焙度因店而異）逐一對回 NCA 烘焙、Nespresso 台灣、HK01 手沖、Seattle 豆袋原文；HK01 手沖沒有講深焙酸度，明寫「沒有講」；新寫內容沒有「其他來源沒有」的負面句。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 31 pages`；index 與 log 已更新，已重讀 roast-level、roast-date、espresso、index 改過的清單與標題。

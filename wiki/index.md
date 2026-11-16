@@ -25,6 +25,7 @@ updated: 2026-11-16
 - [香港01（轉載 GQ Taiwan）：手沖咖啡必知5件事](sources/hk01-pour-over-five-things.md)（簡稱：HK01 手沖）：生活媒體文章，從點手沖切入，談焙度、日曬水洗、豆子標示、挑豆與杯測分數區間（五點圖卡未擷取）。
 - [Coffee Hero：水洗、日曬、蜜處理三種處理法](sources/coffee-hero-processing-methods.md)（簡稱：Coffee Hero）：澳洲烘焙商的教學文，說明三種處理法的流程、風味、黃紅黑蜜色階、比較表與豆袋上的寫法。
 - [Wikipedia：咖啡品種（Coffee varieties）](sources/wikipedia-coffee-varieties.md)（簡稱：Wikipedia 品種）：維基百科條目，說明 variety／cultivar 詞彙、阿拉比卡與羅巴斯塔、Bourbon、Typica、Caturra、Geisha、SL28 等豆袋上常見名字的來歷，以及哪些名字其實不是品種。
+- [About Coffee（美國國家咖啡協會）：烘焙度](sources/about-coffee-roasts.md)（簡稱：NCA 烘焙）：咖啡協會教育頁，說明淺、中、深焙的外觀與酸苦方向、包裝上常見的烘焙名稱，以及「Espresso roast」不是一個烘焙度。
 
 ## 概念
 
@@ -55,7 +56,7 @@ updated: 2026-11-16
 
 ### 烘焙度
 
-- [烘焙度（Roast Level）](concepts/roast-level.md)：淺到深的分級、舊稱、各家標準不一的問題，以及淺中深焙的風味方向與搭配牛奶的建議。
+- [烘焙度（Roast Level）](concepts/roast-level.md)：淺到深的分級、舊稱、各家標準不一的問題，淺中深焙的風味方向與搭配牛奶的建議，並列四個來源的說法。
 
 ## 產出
 

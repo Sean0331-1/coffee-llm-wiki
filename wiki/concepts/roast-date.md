@@ -1,7 +1,7 @@
 ---
 title: 烘焙日期與新鮮度（Roast Date）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/about-coffee-roasts.md]
 updated: 2026-11-16
 ---
 
@@ -28,6 +28,6 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-目前僅一個來源（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。天數是該文的經驗建議，不是標準。
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說烘焙後約 2 到 4 週內最好喝，濃縮豆通常多放一陣子（約 2 到 4 週），濾泡約 1 到 2 週；[NCA 烘焙](../sources/about-coffee-roasts.md)說烘好後放約 2 到 3 天即可研磨沖煮，並建議在烘焙後約 2 到 7 天內研磨沖煮，才能喝到新鮮烘焙風味的高峰。兩者的天數差很多，本 Wiki 並列，不選邊。[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)的天數是該文的經驗建議，不是標準。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。
