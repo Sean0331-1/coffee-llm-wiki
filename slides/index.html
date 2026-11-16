@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>走進精品咖啡店的第一課</title>
+<meta name="description" content="咖啡入門教學簡報：看懂菜單、看懂豆袋、知道自己該點什麼。內容全部來自咖啡入門 Wiki。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --cream:#F5ECDF; --paper:#FBF7F0; --ink:#2A1A12; --ink-2:#5A4134; --muted:#7A6152;
+  --espresso:#3A2216; --roast:#6B3F26; --caramel:#B87333; --caramel-ink:#8A501C;
+  --crema:#D19A55; --milk:#EBDDC7; --foam:#FFFBF3; --line:#E0CFB8;
+  --conflict:#9C3B28; --conflict-bg:#F6DED3; --advice:#44613F; --advice-bg:#E1EAD8;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --cup-h:clamp(120px,24vh,220px);
+}
+*{box-sizing:border-box}
+html{font-size:clamp(14px,min(1.42vw,2.55vh),25px);-webkit-text-size-adjust:100%}
+html,body{margin:0;height:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;overflow:hidden}
+a{color:inherit}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ---------- deck & navigation ---------- */
+.deck{position:fixed;inset:0}
+.slide{position:absolute;inset:0;display:none;overflow-y:auto;overflow-x:hidden;
+  background:radial-gradient(120% 90% at 85% 10%,#FBF5EC 0%,var(--cream) 55%,#EFE2D0 100%)}
+.slide.active{display:block;animation:enter .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes enter{from{transform:translateY(12px)}to{transform:none}}
+.slide-inner{min-height:100%;max-width:1440px;margin:0 auto;padding:5.5vh 5.5vw 4.2rem;
+  display:grid;grid-template-rows:auto 1fr auto;gap:2.2vh}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--crema),var(--caramel));
+  z-index:5;transition:width .35s ease}
+.nav{position:fixed;right:1.1rem;bottom:.8rem;z-index:6;display:flex;align-items:center;gap:.35rem;
+  background:rgba(251,247,240,.92);border:1px solid var(--line);border-radius:999px;padding:.2rem .3rem;
+  box-shadow:0 4px 16px rgba(58,34,22,.08);font-size:.8rem;color:var(--ink-2)}
+.nav button{all:unset;cursor:pointer;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;color:var(--roast);font-size:1.1rem}
+.nav button:hover{background:var(--milk)}
+.nav button:focus-visible{outline:2px solid var(--caramel);outline-offset:1px}
+.counter{min-width:3.6rem;text-align:center;font-variant-numeric:tabular-nums;font-weight:500}
+
+/* ---------- typography ---------- */
+.kicker{margin:0 0 .5rem;font-size:.74rem;letter-spacing:.22em;color:var(--caramel-ink);font-weight:700}
+.kicker b{display:inline-block;min-width:1.9rem;padding:.05rem .4rem;margin-right:.55rem;border-radius:4px;background:var(--espresso);color:var(--cream);letter-spacing:.06em;text-align:center}
+h1,h2{font-family:var(--serif);font-weight:900;letter-spacing:.02em;line-height:1.25;margin:0;color:var(--espresso)}
+h1{font-size:3.1rem}
+h2{font-size:2.15rem}
+.title-row{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.lede{margin:.55rem 0 0;color:var(--ink-2);font-size:1.02rem}
+ul.points{list-style:none;margin:0;padding:0;display:grid;gap:.85rem;font-size:1.04rem}
+ul.points li{position:relative;padding-left:1.55rem}
+ul.points li::before{content:"";position:absolute;left:.15rem;top:.55em;width:.62rem;height:.82rem;border-radius:50%;
+  background:var(--roast);transform:rotate(28deg);box-shadow:inset -.12rem 0 0 rgba(255,255,255,.0)}
+ul.points li::after{content:"";position:absolute;left:.44rem;top:.62em;width:1.5px;height:.66rem;background:var(--cream);transform:rotate(28deg);border-radius:2px}
+strong{color:var(--espresso);font-weight:700}
+.en{font-family:var(--serif);font-weight:700;color:var(--roast)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:.05rem .5rem;border-radius:4px;margin-right:.45rem;vertical-align:.12em;
+  background:var(--milk);color:var(--ink-2)}
+.tag.advice{background:var(--advice-bg);color:var(--advice)}
+.badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:700;padding:.25rem .75rem .25rem .55rem;border-radius:999px}
+.badge.conflict{background:var(--conflict-bg);color:var(--conflict);border:1px solid #E7B9A8}
+.badge.conflict::before{content:"";width:.95rem;height:.95rem;border-radius:50%;background:var(--conflict);
+  -webkit-mask:radial-gradient(circle at 50% 50%,transparent 0 0) ;
+  clip-path:polygon(50% 0,100% 100%,0 100%)}
+.badge.advice{background:var(--advice-bg);color:var(--advice);border:1px solid #BFD0B5}
+.note{margin:1rem 0 0;font-size:.84rem;color:var(--ink-2);border-left:3px solid var(--line);padding-left:.7rem}
+li.advice-li::before{background:var(--advice)!important}
+.small{font-size:.78rem;color:var(--muted)}
+
+/* ---------- footer citations ---------- */
+footer.cite{font-size:.74rem;color:var(--ink-2);border-top:1px solid var(--line);padding-top:.7rem;line-height:1.7}
+footer.cite .lbl{font-weight:700;color:var(--espresso);margin-right:.35rem}
+footer.cite a{color:var(--caramel-ink);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;margin-right:.15rem}
+footer.cite a:hover{text-decoration-style:solid}
+footer.cite .sep{color:var(--line);margin:0 .3rem}
+footer.cite .star-note{margin:.25rem 0 0;color:var(--muted)}
+
+/* ---------- layouts ---------- */
+.body{min-height:0;align-self:center}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:4vw;align-items:center}
+.split.even{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.split.wide-viz{grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr)}
+figure{margin:0}
+figure.viz{display:flex;flex-direction:column;align-items:center;gap:.6rem}
+figure.viz svg{max-width:100%;height:auto;display:block}
+figcaption{font-size:.78rem;color:var(--muted);text-align:center}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.3rem;box-shadow:0 10px 30px -18px rgba(58,34,22,.35)}
+
+/* ---------- cups ---------- */
+.cups{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:1.2rem 1.6rem}
+.cupitem{display:flex;flex-direction:column;align-items:center;gap:.3rem;text-align:center}
+.cupitem svg.cupsvg{height:var(--cup-h);width:auto;display:block;overflow:visible}
+.cupitem .name{font-family:var(--serif);font-weight:700;color:var(--espresso);font-size:1rem;line-height:1.3}
+.cupitem .name small{display:block;font-family:var(--sans);font-weight:400;font-size:.72rem;color:var(--muted)}
+.cupitem.faded{opacity:.45}
+.legend{list-style:none;margin:.2rem 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1rem;font-size:.78rem;color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:.35rem}
+.sw{width:.95rem;height:.95rem;border-radius:3px;border:1px solid rgba(58,34,22,.25);display:inline-block}
+.sw.esp{background:linear-gradient(180deg,#4A2A1A,#2A160E)}
+.sw.crema{background:#C98B47}
+.sw.milk{background:#EBDDC7}
+.sw.micro{background:radial-gradient(circle,#D9C7AA 1px,transparent 1.3px) 0 0/5px 5px,#F3E9D9}
+.sw.foam{background:radial-gradient(circle,#E2D2BA 1.6px,transparent 2px) 0 0/7px 7px,#FFFBF3}
+.sw.water{background:#D7E1E0}
+.sw.choc{background:#6A3423}
+.sw.cream{background:#FFFFFF}
+
+/* blocks (slide 2) */
+.blocks{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.blockstack{display:grid;gap:.7rem}
+.block{width:11.5rem;padding:.9rem 1rem;border-radius:12px;border:1px solid rgba(58,34,22,.18);box-shadow:0 6px 0 rgba(58,34,22,.12)}
+.block b{display:block;font-family:var(--serif);font-size:1.1rem}
+.block span{font-size:.76rem}
+.block.esp{background:linear-gradient(160deg,#4A2A1A,#2A160E);color:var(--cream)}
+.block.esp span{color:#E9D6BE}
+.block.milk{background:#EBDDC7;color:var(--espresso)}
+.block.foam{background:radial-gradient(circle,#E8DAC3 2px,transparent 2.6px) 0 0/11px 11px,#FFFBF3;color:var(--espresso)}
+.arrow-big{font-family:var(--serif);font-size:2.4rem;color:var(--caramel);line-height:1}
+
+/* ---------- dark slides ---------- */
+.slide.dark{background:radial-gradient(110% 90% at 80% 0%,#4A2C1D 0%,#2A1A12 55%,#1E120C 100%);color:#F3E6D4}
+.slide.dark h1,.slide.dark h2{color:#FBF1E2}
+.slide.dark .kicker{color:var(--crema)}
+.slide.dark .kicker b{background:var(--crema);color:var(--espresso)}
+.slide.dark ul.points li::before{background:var(--crema)}
+.slide.dark ul.points li::after{background:#2A1A12}
+.slide.dark strong{color:#FFE4BF}
+.slide.dark footer.cite{color:#D9C4AA;border-top-color:#5A3E2E}
+.slide.dark footer.cite .lbl{color:#FBF1E2}
+.slide.dark footer.cite a{color:#F0C489}
+.slide.dark .small,.slide.dark .lede{color:#D9C4AA}
+.slide.dark .tag.advice{background:#3E4A33;color:#D7E8C8}
+
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.4rem}
+.trio .step{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(240,196,137,.25)}
+.trio svg{width:2.6rem;height:2.6rem;flex:none;color:var(--crema)}
+.trio .step b{display:block;font-family:var(--serif);font-size:1.05rem;color:#FBF1E2}
+.trio .step span{font-size:.78rem;color:#D9C4AA}
+.hint{font-size:.76rem;color:#C9B297;margin-top:1rem}
+.hint kbd{font-family:var(--sans);border:1px solid #6A4B38;border-bottom-width:2px;border-radius:4px;padding:0 .35rem;color:#F3E6D4}
+
+/* summary cards */
+.bigsteps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.bigstep{border-radius:20px;padding:1.4rem 1.3rem;background:rgba(255,255,255,.06);border:1px solid rgba(240,196,137,.28)}
+.bigstep .num{font-family:var(--serif);font-weight:900;font-size:2.6rem;color:var(--crema);line-height:1}
+.bigstep svg{width:3.4rem;height:3.4rem;color:var(--crema);float:right}
+.bigstep h3{font-family:var(--serif);font-size:1.35rem;margin:.6rem 0 .4rem;color:#FBF1E2}
+.bigstep p{margin:0;font-size:.95rem;color:#E6D3BC}
+
+/* menu board (slide 7) */
+.board{background:linear-gradient(160deg,#2F3A33,#232B26);color:#EFE9DC;border:10px solid #6B4A33;border-radius:12px;
+  box-shadow:inset 0 0 30px rgba(0,0,0,.35),0 14px 30px -14px rgba(42,26,18,.6);padding:1.1rem 1.3rem;width:100%;max-width:34rem}
+.board h3{margin:0 0 .6rem;font-family:var(--serif);letter-spacing:.3em;text-align:center;font-size:1.1rem;color:#F6E7C9}
+.board table{width:100%;border-collapse:collapse;font-size:.9rem}
+.board th{font-size:.72rem;font-weight:500;color:#C8D1C6;text-align:left;padding:.2rem .4rem;border-bottom:1px dashed rgba(239,233,220,.35)}
+.board td{padding:.38rem .4rem;border-bottom:1px dashed rgba(239,233,220,.18);vertical-align:top}
+.board td:first-child{font-family:var(--serif);font-weight:700;color:#F6E7C9;white-space:nowrap}
+.board tr.hl td{background:rgba(209,154,85,.16)}
+.board tr.q td{color:#F0C489;font-weight:700}
+
+/* bag legend (slide 8) */
+ol.callouts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.45rem .9rem;font-size:.86rem}
+ol.callouts li{display:flex;gap:.5rem;align-items:baseline}
+ol.callouts .n{flex:none;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--espresso);color:var(--cream);display:grid;place-items:center;font-size:.72rem;font-weight:700;transform:translateY(.1rem)}
+ol.callouts li.hot .n{background:var(--caramel)}
+ol.callouts li.star .n{background:var(--conflict)}
+ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
+
+/* chips (slide 11, 12) */
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{font-size:.8rem;padding:.25rem .7rem;border-radius:999px;background:var(--paper);border:1.5px solid var(--roast);color:var(--espresso);font-family:var(--serif);font-weight:700}
+.chip.dashed{border-style:dashed;border-color:var(--muted);color:var(--ink-2)}
+.chip small{font-family:var(--sans);font-weight:400;color:var(--muted)}
+.chiprow{display:grid;grid-template-columns:5.2rem 1fr;gap:.5rem;align-items:center;margin-top:.5rem}
+.chiprow .k{font-size:.8rem;font-weight:700;color:var(--ink-2)}
+
+/* timeline (slide 13) */
+.timeline{width:100%;padding:.4rem .3rem 0}
+.tl-row{position:relative;margin:0 0 1.3rem}
+.tl-row .who{font-size:.8rem;font-weight:700;color:var(--ink-2);margin-bottom:.3rem}
+.tl-track{position:relative;height:2.3rem;border-radius:8px;background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--line) calc(25% - 1px) 25%),#F8F1E7;border:1px solid var(--line)}
+.tl-band{position:absolute;top:.25rem;bottom:.25rem;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.tl-band.nca{background:linear-gradient(90deg,#B4532A,#C9733F)}
+.tl-band.filter{background:linear-gradient(90deg,#7C8B5A,#8FA068)}
+.tl-band.esp{background:linear-gradient(90deg,#5A3524,#7A4A32)}
+.tl-axis{position:relative;height:1.4rem;font-size:.7rem;color:var(--muted)}
+.tl-axis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.tl-axis span:first-child{transform:none}
+.tl-axis span:last-child{transform:translateX(-100%)}
+.tl-legend{font-size:.78rem;color:var(--ink-2);display:grid;gap:.25rem;margin-top:.2rem}
+.tl-legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:3px;margin-right:.35rem;vertical-align:-.1rem}
+
+/* roast scale (slide 14) */
+.roastbar{height:1.4rem;border-radius:999px;background:linear-gradient(90deg,#C9A06D 0%,#A8733F 30%,#7A4A28 55%,#3E2416 80%,#1A0E08 100%);box-shadow:inset 0 1px 3px rgba(0,0,0,.25)}
+.beans3{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:.6rem}
+.beans3 svg{width:4.6rem;height:auto;margin:0 auto .3rem;display:block}
+.beans3 b{font-family:var(--serif);font-size:1.05rem;color:var(--espresso);display:block}
+.beans3 span{font-size:.74rem;color:var(--muted);display:block;line-height:1.4}
+
+.roastdir{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;font-size:.8rem;margin-top:.5rem}
+.roastdir b{display:block;color:var(--espresso);font-family:var(--serif)}
+.roastdir span{color:var(--ink-2);font-size:.74rem;line-height:1.4;display:block}
+/* processing cards / tasting cards */
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.card{border-radius:14px;padding:.75rem .85rem;background:var(--paper);border:1px solid var(--line);font-size:.84rem}
+.card b{font-family:var(--serif);display:block;font-size:1rem;color:var(--espresso)}
+.card .words{color:var(--ink-2)}
+.card.washed{border-top:5px solid #7FA3A8}
+.card.natural{border-top:5px solid #9B3D4A}
+.card.honey{border-top:5px solid #D39A2C}
+
+/* brewing (slide 17) */
+.brew3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;text-align:center}
+.brew3 svg{width:4.2rem;height:4.2rem;display:block;margin:0 auto .2rem}
+.brew3 b{font-family:var(--serif);display:block;color:var(--espresso)}
+.brew3 span{font-size:.74rem;color:var(--muted)}
+.logaxis{position:relative;margin:1.7rem .4rem .4rem;height:4.6rem}
+.logaxis .line{position:absolute;left:0;right:0;top:2.2rem;height:3px;background:var(--roast);border-radius:2px}
+.logaxis .tick{position:absolute;top:2rem;width:1px;height:.75rem;background:var(--roast)}
+.logaxis .tl{position:absolute;top:2.95rem;transform:translateX(-50%);font-size:.68rem;color:var(--muted);white-space:nowrap}
+.logaxis .mark{position:absolute;top:0;transform:translateX(-50%);text-align:center;font-size:.72rem;font-weight:700;color:var(--espresso);white-space:nowrap;line-height:1.2}
+.logaxis .mark::after{content:"";display:block;width:.8rem;height:.8rem;border-radius:50%;background:var(--caramel);border:2px solid var(--paper);margin:.2rem auto 0;box-shadow:0 0 0 1px var(--caramel)}
+.logaxis .band{position:absolute;top:2rem;height:.55rem;background:var(--caramel);border-radius:4px;opacity:.85}
+
+/* decision tree (slide 18) */
+.tree{display:grid;gap:.75rem}
+.trow{display:grid;grid-template-columns:12.5rem 1fr;gap:.8rem;align-items:stretch}
+.qnode{position:relative;display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem;border-radius:14px;background:var(--espresso);color:var(--cream);font-family:var(--serif);font-weight:700;font-size:.98rem;line-height:1.35}
+.qnode .qn{flex:none;width:2rem;height:2rem;display:grid;place-items:center;background:var(--crema);color:var(--espresso);transform:rotate(45deg);border-radius:4px;font-family:var(--sans);font-size:.75rem}
+.qnode .qn span{transform:rotate(-45deg)}
+.qnode::after{content:"";position:absolute;right:-.8rem;top:50%;width:.8rem;height:2px;background:var(--roast)}
+.leaves{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:.55rem;position:relative}
+.leaf{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.5rem .65rem .45rem;font-size:.8rem;line-height:1.45}
+.leaf .if{display:block;font-size:.72rem;font-weight:700;color:var(--caramel-ink)}
+.leaf .then{display:flex;gap:.4rem;align-items:flex-start;font-weight:700;color:var(--espresso);font-size:.86rem}
+.leaf .then svg{width:1.3rem;height:1.3rem;flex:none;color:var(--roast);margin-top:.05rem}
+.leaf .src{display:block;margin-top:.25rem;font-size:.64rem;color:var(--muted);line-height:1.35}
+.leaf .src::before{content:"出處 ";font-weight:700}
+
+/* flavor wheel */
+.wheelwrap{display:flex;flex-direction:column;align-items:center}
+.wheelwrap svg{width:min(100%,27rem,56vh)}
+
+/* ---------- mobile ---------- */
+@media (max-width:760px), (max-aspect-ratio:4/5){
+  html{font-size:16px}
+  body{line-height:1.62}
+  .slide-inner{padding:1.6rem 1rem 4.6rem;gap:1.2rem;grid-template-rows:auto auto auto}
+  h1{font-size:2rem} h2{font-size:1.55rem}
+  ul.points{font-size:.98rem;gap:.7rem}
+  .split,.split.even,.split.wide-viz{grid-template-columns:1fr;gap:1.4rem}
+  .trio,.bigsteps{grid-template-columns:1fr}
+  .cards3{grid-template-columns:1fr}
+  .brew3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  ol.callouts{grid-template-columns:1fr}
+  --cup-h:150px;
+  .cups{gap:.8rem 1rem}
+  .trow{grid-template-columns:1fr}
+  .qnode::after{display:none}
+  .leaves{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:1fr 1fr}
+  .block{width:9.5rem}
+  .nav{right:.6rem;bottom:.6rem}
+  .board{border-width:7px;padding:.9rem .8rem}
+  .board td:first-child{white-space:normal}
+}
+@media (max-width:760px){ :root{--cup-h:140px} }
+@media (max-width:380px){ .leaves{grid-template-columns:1fr} }
+
+@media (prefers-reduced-motion:reduce){
+  .slide.active{animation:none}
+  .progress{transition:none}
+}
+@media print{
+  body{overflow:visible}
+  .deck{position:static}
+  .slide{position:relative;display:block!important;height:auto;min-height:100vh;page-break-after:always;overflow:visible}
+  .nav,.progress{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- shared drawing defs: patterns, gradients, icons (all hand-drawn) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-esp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A2A1A"/><stop offset="1" stop-color="#26140C"/></linearGradient>
+    <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3EBEA"/><stop offset="1" stop-color="#C9B49A"/></linearGradient>
+    <linearGradient id="g-lm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E9D9"/><stop offset=".45" stop-color="#9A6A45"/><stop offset="1" stop-color="#EBDDC7"/></linearGradient>
+    <linearGradient id="g-glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".15" stop-color="#fff" stop-opacity=".45"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <pattern id="p-foam" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#FFFBF3"/><circle cx="2.5" cy="2.5" r="1.6" fill="#EADCC6"/><circle cx="7" cy="6.5" r="1.1" fill="#EFE3D0"/></pattern>
+    <pattern id="p-micro" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#F1E5D2"/><circle cx="1.5" cy="1.5" r=".7" fill="#DCCAAE"/></pattern>
+  </defs>
+  <symbol id="i-cup" viewBox="0 0 48 48"><path d="M8 18h26v10a11 11 0 0 1-11 11h-4A11 11 0 0 1 8 28z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M34 21h3a5 5 0 0 1 0 10h-3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 43h32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 6c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 48 48"><path d="M12 10l3-5h18l3 5v32a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M12 10h24" stroke="currentColor" stroke-width="2.4"/><rect x="17" y="19" width="14" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M20 24h8M20 29h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 48 48"><path d="M7 11a4 4 0 0 1 4-4h26a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H21l-9 8v-8h-1a4 4 0 0 1-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="17" cy="20" r="2.2" fill="currentColor"/><circle cx="24" cy="20" r="2.2" fill="currentColor"/><circle cx="31" cy="20" r="2.2" fill="currentColor"/></symbol>
+  <symbol id="i-bean" viewBox="0 0 40 52"><ellipse cx="20" cy="26" rx="16" ry="22" fill="currentColor"/><path d="M20 6c-6 8 6 14 0 22s6 14 0 18" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"></div>
+
+<main class="deck" id="deck">
+
+<!-- ===================== 1 ===================== -->
+<section class="slide dark" id="slide-1" aria-label="第 1 頁：菜單上的字，為什麼看不懂？" data-wiki="wiki/concepts/espresso-drinks.md wiki/concepts/reading-coffee-bags.md wiki/concepts/roast-date.md wiki/overview.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>00</b>咖啡入門 · 走進精品咖啡店的第一課</p>
+    <h1>菜單上的字，<br>為什麼看不懂？</h1>
+  </header>
+  <div class="body split">
+    <div>
+      <ul class="points">
+        <li>菜單上的拿鐵、卡布奇諾、馥列白，多半是<strong>同樣三樣東西換比例</strong>做成的。</li>
+        <li>豆袋上的產區、處理法、烘焙日期看起來很多，但<strong>每一項都有用意</strong>。</li>
+        <li>精品咖啡和超市咖啡最大的差別之一是<strong>新鮮烘焙</strong>；烘焙商把生產者資訊揭露得越多，也是精品咖啡和大宗商品咖啡（commodity coffee）的差別之一。</li>
+      </ul>
+      <div class="trio" role="list" aria-label="今天學三件事">
+        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-cup"/></svg><div><b>看懂菜單</b><span>濃縮、蒸奶、奶泡</span></div></div>
+        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-bag"/></svg><div><b>看懂豆袋</b><span>產區、處理法、日期</span></div></div>
+        <div class="step" role="listitem"><svg aria-hidden="true"><use href="#i-chat"/></svg><div><b>知道點什麼</b><span>說出你的偏好</span></div></div>
+      </div>
+      <p class="hint">翻頁：<kbd>←</kbd> <kbd>→</kbd>、點畫面左右兩半，或在手機上左右滑動。</p>
+    </div>
+    <figure class="viz">
+      <svg viewBox="0 0 520 380" role="img" aria-labelledby="t1">
+        <title id="t1">手繪的咖啡店菜單板，列著 Espresso、Americano、Cappuccino、Flat White、Latte、Macchiato、Cortado、Mocha 等英文飲品名，每個名字旁都有問號；旁邊是一包豆袋，標籤上也浮著問號。</title>
+        <rect x="18" y="22" width="300" height="336" rx="10" fill="#6B4A33"/>
+        <rect x="30" y="34" width="276" height="312" rx="4" fill="#26302A"/>
+        <text x="168" y="74" text-anchor="middle" font-family="Noto Serif TC,serif" font-size="22" font-weight="700" letter-spacing="6" fill="#F6E7C9">MENU</text>
+        <path d="M80 86h176" stroke="#F6E7C9" stroke-opacity=".35" stroke-dasharray="3 5"/>
+        <g font-family="Noto Serif TC,serif" font-size="17" fill="#EFE9DC">
+          <text x="54" y="118">Espresso</text><text x="54" y="148">Americano</text><text x="54" y="178">Cappuccino</text><text x="54" y="208">Flat White</text>
+          <text x="54" y="238">Latte</text><text x="54" y="268">Macchiato</text><text x="54" y="298">Cortado</text><text x="54" y="328">Mocha</text>
+        </g>
+        <g font-family="Noto Sans TC,sans-serif" font-size="17" font-weight="700" fill="#F0C489" text-anchor="end">
+          <text x="286" y="118">?</text><text x="286" y="148">?</text><text x="286" y="178">?</text><text x="286" y="208">?</text>
+          <text x="286" y="238">?</text><text x="286" y="268">?</text><text x="286" y="298">?</text><text x="286" y="328">?</text>
+        </g>
+        <!-- bag -->
+        <g transform="translate(350 96)">
+          <path d="M8 26 L22 0 H120 L134 26 V236 a10 10 0 0 1-10 10 H18 a10 10 0 0 1-10-10z" fill="#C9A273"/>
+          <path d="M8 26 H134" stroke="#A47E52" stroke-width="3"/>
+          <path d="M22 0 L30 26 M120 0 L112 26" stroke="#A47E52" stroke-width="2"/>
+          <circle cx="71" cy="50" r="8" fill="#A47E52"/><circle cx="71" cy="50" r="3.5" fill="#C9A273"/>
+          <rect x="26" y="80" width="90" height="116" rx="6" fill="#FBF7F0"/>
+          <rect x="36" y="94" width="58" height="8" rx="3" fill="#3A2216"/>
+          <rect x="36" y="112" width="70" height="5" rx="2" fill="#C5B39C"/><rect x="36" y="126" width="52" height="5" rx="2" fill="#C5B39C"/>
+          <rect x="36" y="140" width="64" height="5" rx="2" fill="#C5B39C"/><rect x="36" y="154" width="44" height="5" rx="2" fill="#C5B39C"/>
+          <rect x="36" y="170" width="60" height="12" rx="3" fill="#B87333"/>
+        </g>
+        <g font-family="Noto Serif TC,serif" font-weight="900" fill="#F0C489">
+          <text x="476" y="78" font-size="40">?</text><text x="340" y="70" font-size="26" fill-opacity=".7">?</text><text x="500" y="200" font-size="24" fill-opacity=".6">?</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a><span class="sep">·</span><a href="../wiki/concepts/reading-coffee-bags.md" title="wiki/concepts/reading-coffee-bags.md">豆袋標籤怎麼讀</a><span class="sep">·</span><a href="../wiki/concepts/roast-date.md" title="wiki/concepts/roast-date.md">烘焙日期與新鮮度</a><span class="sep">·</span><a href="../wiki/overview.md" title="wiki/overview.md">咖啡入門總覽</a></footer>
+</div>
+</section>
+
+<!-- ===================== 2 ===================== -->
+<section class="slide" id="slide-2" aria-label="第 2 頁：三個積木：濃縮、蒸奶、奶泡" data-wiki="wiki/concepts/espresso-drinks.md wiki/concepts/espresso.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>01</b>看懂菜單</p>
+    <h2>三個積木：濃縮、蒸奶、奶泡</h2>
+  </header>
+  <div class="body split">
+    <ul class="points">
+      <li><strong>濃縮咖啡（espresso）</strong>：濃、小杯，是其他義式飲品的基底。</li>
+      <li><strong>蒸奶</strong>（steamed milk，加熱過的牛奶＊）與<strong>奶泡</strong>（milk foam，牛奶上的泡沫層＊）。</li>
+      <li><strong>微細奶泡（microfoam）</strong>：很細緻、密實的奶泡；有的飲品把它融在牛奶裡，有的只在上面蓋薄薄一層。</li>
+      <li>飲品之間的差別，就在這三樣的<strong>比例</strong>，和牛奶打成什麼<strong>質地</strong>。</li>
+    </ul>
+    <figure class="viz" role="img" aria-label="三塊積木：深咖啡色的濃縮、米白色的蒸奶、帶泡泡紋的白色奶泡，箭頭指向一個空杯剖面，示意往杯子裡疊積木。">
+      <div class="blocks" aria-hidden="true">
+        <div class="blockstack">
+          <div class="block foam"><b>奶泡</b><span>milk foam</span></div>
+          <div class="block milk"><b>蒸奶</b><span>steamed milk</span></div>
+          <div class="block esp"><b>濃縮</b><span>espresso</span></div>
+        </div>
+        <div class="arrow-big">→</div>
+        <div class="cupitem"><div class="cupslot" data-cup="empty"></div><span class="name">往杯子裡疊<small>比例不同，就是不同的飲品</small></span></div>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a><span class="sep">·</span><a href="../wiki/concepts/espresso.md" title="wiki/concepts/espresso.md">濃縮咖啡</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 3 ===================== -->
+<section class="slide" id="slide-3" aria-label="第 3 頁：不加奶的兩杯：濃縮與美式" data-wiki="wiki/concepts/espresso.md wiki/concepts/brewing-methods.md wiki/concepts/americano.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>02</b>看懂菜單 · 黑咖啡</p>
+    <h2>不加奶的兩杯：濃縮與美式</h2>
+  </header>
+  <div class="body split">
+    <ul class="points">
+      <li>濃縮<strong>不是一種豆子、也不是一種烘焙度</strong>，是以沖煮方式命名的一小杯咖啡。</li>
+      <li>一份濃縮叫一個 <span class="en">shot</span>；雙份（double shot）是家用與咖啡店常用的基準量。</li>
+      <li>表面那層叫 <span class="en">crema</span>（濃縮表面的泡沫油脂層＊）。</li>
+      <li><strong>美式（Americano）</strong>＝濃縮加熱水，喝起來比較像一般的萃取咖啡。</li>
+    </ul>
+    <figure class="viz" role="img" aria-label="兩個杯子剖面：左邊是 demitasse 小杯，裝著濃縮，上層是金棕色的 crema；右邊是較高的杯子，底部是濃縮，上面是熱水。">
+      <div class="cups" aria-hidden="true">
+        <div class="cupitem"><div class="cupslot" data-cup="espresso"></div><span class="name">濃縮 Espresso<small>demitasse 小杯（小型濃縮咖啡杯＊）</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="americano"></div><span class="name">美式 Americano<small>濃縮＋熱水</small></span></div>
+      </div>
+      <ul class="legend" aria-hidden="true"><li><i class="sw esp"></i>濃縮</li><li><i class="sw crema"></i>crema（金棕色上層）</li><li><i class="sw water"></i>熱水</li></ul>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/espresso.md" title="wiki/concepts/espresso.md">濃縮咖啡</a><span class="sep">·</span><a href="../wiki/concepts/brewing-methods.md" title="wiki/concepts/brewing-methods.md">沖煮方式</a><span class="sep">·</span><a href="../wiki/concepts/americano.md" title="wiki/concepts/americano.md">美式</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 4 ===================== -->
+<section class="slide" id="slide-4" aria-label="第 4 頁：奶咖啡（一）：拿鐵與卡布奇諾" data-wiki="wiki/concepts/latte.md wiki/concepts/cappuccino.md wiki/concepts/espresso-drinks.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>03</b>看懂菜單 · 奶咖啡</p>
+    <h2>奶咖啡（一）：拿鐵與卡布奇諾</h2>
+  </header>
+  <div class="body split">
+    <div>
+      <ul class="points">
+        <li><strong>拿鐵（Latte）</strong>：濃縮加大量蒸奶，上面薄薄一層微細奶泡；杯子比卡布奇諾、馥列白大。La Marzocco 那篇依序介紹多款義式飲品，說拿鐵比排在它前面的都淡。</li>
+        <li>因為牛奶占大宗，拿鐵常被加糖漿調味。</li>
+        <li><strong>卡布奇諾（Cappuccino）</strong>：傳統上濃縮、蒸奶、奶泡<strong>各占三分之一</strong>，上面那層奶泡厚而密。</li>
+      </ul>
+      <p class="note"><span class="tag">腳註</span>La Marzocco 說，現代精品咖啡店的卡布奇諾常做成奶泡很少、做法接近拿鐵的版本。</p>
+    </div>
+    <figure class="viz" role="img" aria-label="兩個杯子剖面並排，同一比例尺：卡布奇諾杯較矮，濃縮、蒸奶、奶泡三層等高；拿鐵杯較高，蒸奶層最厚，上面只有薄薄一層微細奶泡。">
+      <div class="cups" aria-hidden="true">
+        <div class="cupitem"><div class="cupslot" data-cup="cappuccino"></div><span class="name">卡布奇諾<small>傳統：三層各三分之一</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="latte"></div><span class="name">拿鐵<small>蒸奶最多、奶泡薄</small></span></div>
+      </div>
+      <ul class="legend" aria-hidden="true"><li><i class="sw esp"></i>濃縮</li><li><i class="sw milk"></i>蒸奶</li><li><i class="sw micro"></i>微細奶泡</li><li><i class="sw foam"></i>奶泡</li></ul>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/latte.md" title="wiki/concepts/latte.md">拿鐵</a><span class="sep">·</span><a href="../wiki/concepts/cappuccino.md" title="wiki/concepts/cappuccino.md">卡布奇諾</a><span class="sep">·</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a></footer>
+</div>
+</section>
+
+<!-- ===================== 5 ===================== -->
+<section class="slide" id="slide-5" aria-label="第 5 頁：奶咖啡（二）：馥列白、Cortado、摩卡" data-wiki="wiki/concepts/flat-white.md wiki/concepts/cortado.md wiki/concepts/mocha.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>04</b>看懂菜單 · 奶咖啡</p>
+    <h2>奶咖啡（二）：馥列白、Cortado、摩卡</h2>
+  </header>
+  <div class="body split wide-viz">
+    <div>
+      <ul class="points">
+        <li><strong>馥列白（Flat White）</strong>：比拿鐵小杯、咖啡味比拿鐵強，上面的奶泡很薄。</li>
+        <li><strong>Cortado</strong>：濃縮與牛奶約等量、奶泡極少；牛奶讓濃縮變柔和，但不蓋過咖啡。</li>
+        <li><strong>摩卡（Mocha）</strong>：加了巧克力的拿鐵，上面常擠鮮奶油，甜得像甜點。</li>
+      </ul>
+      <p class="note"><span class="tag">腳註</span>各家配方不同，例如 Nespresso 台灣的摩卡是濃縮加熱可可與奶泡。</p>
+    </div>
+    <figure class="viz" role="img" aria-label="四個杯子剖面，與前兩頁同一比例尺：Cortado 小玻璃杯，濃縮與牛奶約等量；馥列白杯，牛奶與微細奶泡融在一起，頂上奶泡很薄；淡色的拿鐵作為對照；摩卡在拿鐵的基礎上多一層巧克力，頂上有鮮奶油。下方一條牛奶量的橫條，由 Cortado 的少到拿鐵的多。">
+      <div class="cups" aria-hidden="true">
+        <div class="cupitem"><div class="cupslot" data-cup="cortado"></div><span class="name">Cortado<small>小玻璃杯</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="flatwhite"></div><span class="name">馥列白</span></div>
+        <div class="cupitem faded"><div class="cupslot" data-cup="latte"></div><span class="name">拿鐵<small>對照</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="mocha"></div><span class="name">摩卡<small>拿鐵＋巧克力</small></span></div>
+      </div>
+      <div style="width:100%;max-width:30rem" aria-hidden="true">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);font-weight:700"><span>牛奶少 · Cortado</span><span>馥列白</span><span>拿鐵 · 牛奶多</span></div>
+        <div style="height:.7rem;border-radius:999px;background:linear-gradient(90deg,#4A2A1A,#B98C64 45%,#EBDDC7);margin-top:.25rem"></div>
+      </div>
+      <ul class="legend" aria-hidden="true"><li><i class="sw esp"></i>濃縮</li><li><i class="sw milk"></i>蒸奶</li><li><i class="sw micro"></i>微細奶泡</li><li><i class="sw choc"></i>巧克力</li><li><i class="sw cream"></i>鮮奶油</li></ul>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/flat-white.md" title="wiki/concepts/flat-white.md">馥列白</a><span class="sep">·</span><a href="../wiki/concepts/cortado.md" title="wiki/concepts/cortado.md">Cortado</a><span class="sep">·</span><a href="../wiki/concepts/mocha.md" title="wiki/concepts/mocha.md">摩卡</a></footer>
+</div>
+</section>
+
+<!-- ===================== 6 ===================== -->
+<section class="slide" id="slide-6" aria-label="第 6 頁：同名不同杯：瑪奇朵" data-wiki="wiki/concepts/macchiato.md wiki/outputs/ordering-guide.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>05</b>看懂菜單 · 小心同名</p>
+    <div class="title-row"><h2>同名不同杯：瑪奇朵（Macchiato）</h2><span class="badge conflict">各家說法不同</span></div>
+  </header>
+  <div class="body split wide-viz">
+    <ul class="points">
+      <li><strong>傳統瑪奇朵</strong>：一份濃縮，上面一小坨奶泡，小杯。</li>
+      <li><strong>現代咖啡店</strong>：常像做拿鐵一樣，加入蒸奶與微細奶泡。</li>
+      <li><strong>Nespresso 台灣的「拿鐵瑪奇朵」</strong>：以牛奶為主，把濃縮加進奶泡裡。<strong>焦糖瑪奇朵</strong>則是加了風味的拿鐵，又是另一杯。</li>
+      <li class="advice-li"><span class="tag advice">建議</span>點瑪奇朵之前，先問店員是哪一種。</li>
+    </ul>
+    <figure class="viz" role="img" aria-label="同一張 Macchiato 名牌下並排三個杯子剖面：傳統版是小杯濃縮上一小坨奶泡；現代咖啡店版是小杯裡加了蒸奶與微細奶泡；Nespresso 台灣的拿鐵瑪奇朵是牛奶為主的高杯，濃縮加在奶泡中。角落另有一杯淡色的焦糖瑪奇朵，標示為另一杯：加風味的拿鐵。">
+      <div aria-hidden="true" style="font-family:var(--serif);font-weight:900;letter-spacing:.2em;background:var(--espresso);color:var(--cream);padding:.3rem 1.2rem;border-radius:6px;font-size:1rem">MACCHIATO</div>
+      <div class="cups" aria-hidden="true">
+        <div class="cupitem"><div class="cupslot" data-cup="macchiato"></div><span class="name">傳統<small>Seattle 飲品 · La Marzocco</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="macchiatoModern"></div><span class="name">現代咖啡店<small>La Marzocco</small></span></div>
+        <div class="cupitem"><div class="cupslot" data-cup="latteMacchiato"></div><span class="name">拿鐵瑪奇朵<small>Nespresso 台灣</small></span></div>
+        <div class="cupitem faded" style="border-left:1.5px dashed var(--line);padding-left:1rem"><div class="cupslot" data-cup="caramel"></div><span class="name">焦糖瑪奇朵<small>另一杯：加風味的拿鐵</small></span></div>
+      </div>
+      <ul class="legend" aria-hidden="true"><li><i class="sw esp"></i>濃縮</li><li><i class="sw milk"></i>蒸奶</li><li><i class="sw micro"></i>微細奶泡</li><li><i class="sw foam"></i>奶泡</li></ul>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/macchiato.md" title="wiki/concepts/macchiato.md">瑪奇朵</a><span class="sep">·</span><a href="../wiki/outputs/ordering-guide.md" title="wiki/outputs/ordering-guide.md">點餐指南（綜合整理）</a></footer>
+</div>
+</section>
+
+<!-- ===================== 7 ===================== -->
+<section class="slide" id="slide-7" aria-label="第 7 頁：菜單上的名字：同一杯，不同寫法" data-wiki="wiki/concepts/flat-white.md wiki/concepts/espresso-drinks.md wiki/concepts/latte.md wiki/outputs/ordering-guide.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>06</b>看懂菜單 · 名字</p>
+    <h2>菜單上的名字：同一杯，不同寫法</h2>
+  </header>
+  <div class="body split even">
+    <div>
+      <ul class="points">
+        <li><strong>Flat White 沒有標準中文譯名</strong>，可能寫成馥芮白、馥列白、平白咖啡或澳式白咖啡。</li>
+        <li>在台灣，拿鐵指「加入牛奶與熱奶泡的義式濃縮咖啡」。</li>
+        <li class="advice-li"><span class="tag advice">建議</span>菜單上可能還有其他名字，直接問店員。</li>
+      </ul>
+      <p class="note"><span class="tag">腳註</span>La Marzocco 說在歐洲，latte 可能只是「加牛奶的濃縮」；出國點拿鐵，要說清楚想要的比例。</p>
+    </div>
+    <figure class="viz">
+      <div class="board">
+        <h3>MENU · 菜單</h3>
+        <table>
+          <caption class="small" style="caption-side:bottom;color:#C8D1C6;padding-top:.5rem;text-align:left">中文寫法依 Nespresso 台灣的用詞；Cortado 在該文沒有出現，所以沒有中文名。</caption>
+          <thead><tr><th scope="col">英文</th><th scope="col">中文寫法</th></tr></thead>
+          <tbody>
+            <tr><td>Espresso</td><td>義式濃縮咖啡</td></tr>
+            <tr><td>Americano</td><td>美式咖啡</td></tr>
+            <tr><td>Latte</td><td>拿鐵</td></tr>
+            <tr><td>Cappuccino</td><td>卡布奇諾</td></tr>
+            <tr class="hl"><td>Flat White</td><td>馥芮白／馥列白／平白咖啡／澳式白咖啡</td></tr>
+            <tr><td>Mocha</td><td>摩卡</td></tr>
+            <tr><td>Macchiato</td><td>拿鐵瑪奇朵（但見第 6 頁）</td></tr>
+            <tr class="q"><td>？</td><td>沒看過的名字 → 問店員</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/flat-white.md" title="wiki/concepts/flat-white.md">馥列白</a><span class="sep">·</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a><span class="sep">·</span><a href="../wiki/concepts/latte.md" title="wiki/concepts/latte.md">拿鐵</a><span class="sep">·</span><a href="../wiki/outputs/ordering-guide.md" title="wiki/outputs/ordering-guide.md">點餐指南（綜合整理）</a></footer>
+</div>
+</section>
+
+<!-- ===================== 8 ===================== -->
+<section class="slide" id="slide-8" aria-label="第 8 頁：豆袋標籤拆解" data-wiki="wiki/concepts/reading-coffee-bags.md wiki/concepts/roast-date.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>07</b>看懂豆袋</p>
+    <h2>豆袋標籤拆解</h2>
+  </header>
+  <div class="body split wide-viz">
+    <ul class="points">
+      <li>常見<strong>八個欄位</strong>：產區、品種、處理法、海拔、風味描述、烘焙日期、烘焙度、生產者資訊（前七項在第 9–15 頁逐一說明）。</li>
+      <li>初學者<strong>先看產區和處理法</strong>；品種等喝過幾支、知道喜好後再研究。</li>
+      <li><strong>烘焙日期</strong>可能是袋上最重要的數字。</li>
+      <li>菜單上只寫產區、焙度、處理法時，可以多問咖啡師豆子的狀況。</li>
+    </ul>
+    <figure class="viz">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:1rem;align-items:center;width:100%" class="bagfig">
+        <svg viewBox="0 0 300 400" role="img" aria-labelledby="t8">
+          <title id="t8">虛構的豆袋標籤（不是真實品牌），八個欄位依序編號：1 產區、2 品種、3 處理法、4 海拔、5 風味描述、6 烘焙日期、7 烘焙度、8 生產者資訊；產區與處理法用醒目的焦糖色框起來。</title>
+          <path d="M18 36 L40 4 H260 L282 36 V380 a14 14 0 0 1-14 14 H32 a14 14 0 0 1-14-14z" fill="#C9A273"/>
+          <path d="M18 36 H282" stroke="#A47E52" stroke-width="3"/>
+          <path d="M40 4 L52 36 M260 4 L248 36" stroke="#A47E52" stroke-width="2"/>
+          <circle cx="150" cy="62" r="10" fill="#A47E52"/><circle cx="150" cy="62" r="4" fill="#C9A273"/>
+          <rect x="38" y="88" width="224" height="290" rx="8" fill="#FBF7F0"/>
+          <text x="150" y="116" text-anchor="middle" font-family="Noto Serif TC,serif" font-weight="900" font-size="15" fill="#3A2216" letter-spacing="2">示範烘焙所（虛構）</text>
+          <path d="M60 126 H240" stroke="#E0CFB8"/>
+          <g font-family="Noto Sans TC,sans-serif" font-size="12.5" fill="#3A2216">
+            <rect x="50" y="134" width="200" height="26" rx="5" fill="#F6E3CB" stroke="#B87333" stroke-width="2"/>
+            <text x="80" y="152" font-weight="700">ETHIOPIA · Yirgacheffe</text>
+            <text x="80" y="182">Variety: Typica</text>
+            <rect x="50" y="194" width="200" height="26" rx="5" fill="#F6E3CB" stroke="#B87333" stroke-width="2"/>
+            <text x="80" y="212" font-weight="700">Process: Washed</text>
+            <text x="80" y="242">1,900 MASL</text>
+            <text x="80" y="270">花香 · 柑橘 · 茶感</text>
+            <text x="80" y="298" font-weight="700">Roasted: 2026-11-09</text>
+            <text x="80" y="326">Roast: Light</text>
+            <text x="80" y="354">Producer: 示範水洗站</text>
+          </g>
+          <g font-family="Noto Sans TC,sans-serif" font-size="11" font-weight="700" fill="#FBF7F0" text-anchor="middle">
+            <circle cx="64" cy="148" r="10" fill="#B87333"/><text x="64" y="152">1</text>
+            <circle cx="64" cy="178" r="10" fill="#3A2216"/><text x="64" y="182">2</text>
+            <circle cx="64" cy="208" r="10" fill="#B87333"/><text x="64" y="212">3</text>
+            <circle cx="64" cy="238" r="10" fill="#3A2216"/><text x="64" y="242">4</text>
+            <circle cx="64" cy="266" r="10" fill="#3A2216"/><text x="64" y="270">5</text>
+            <circle cx="64" cy="294" r="10" fill="#9C3B28"/><text x="64" y="298">6</text>
+            <circle cx="64" cy="322" r="10" fill="#3A2216"/><text x="64" y="326">7</text>
+            <circle cx="64" cy="350" r="10" fill="#3A2216"/><text x="64" y="354">8</text>
+          </g>
+        </svg>
+        <ol class="callouts">
+          <li class="hot"><span class="n">1</span><div>產區 Origin<small>先看這個</small></div></li>
+          <li><span class="n">2</span><div>品種 Variety<small>之後再研究</small></div></li>
+          <li class="hot"><span class="n">3</span><div>處理法 Processing<small>先看這個</small></div></li>
+          <li><span class="n">4</span><div>海拔 Elevation</div></li>
+          <li><span class="n">5</span><div>風味描述 Tasting Notes</div></li>
+          <li class="star"><span class="n">6</span><div>烘焙日期 Roast Date<small>可能最重要的數字</small></div></li>
+          <li><span class="n">7</span><div>烘焙度 Roast Level</div></li>
+          <li><span class="n">8</span><div>生產者資訊 Producer Info<small>農場、農民、合作社或水洗站</small></div></li>
+        </ol>
+      </div>
+      <figcaption>虛構示範標籤，內容不是真實商品。</figcaption>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/reading-coffee-bags.md" title="wiki/concepts/reading-coffee-bags.md">豆袋標籤怎麼讀</a><span class="sep">·</span><a href="../wiki/concepts/roast-date.md" title="wiki/concepts/roast-date.md">烘焙日期與新鮮度</a></footer>
+</div>
+</section>
+
+<!-- ===================== 9 ===================== -->
+<section class="slide" id="slide-9" aria-label="第 9 頁：產區與海拔：豆子從哪裡來" data-wiki="wiki/concepts/origin.md wiki/concepts/altitude.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>08</b>看懂豆袋 · 產區與海拔</p>
+    <h2>產區與海拔：豆子從哪裡來</h2>
+  </header>
+  <div class="body split">
+    <ul class="points">
+      <li><strong>產區（Origin）</strong>可以只寫國家，也可以細到國內產區、農場、合作社（cooperative，多位小農一起處理與販售咖啡的組織＊）或水洗站（wash station，集中處理咖啡果實的場所＊）；寫得越細，越能追溯來歷。</li>
+      <li>單一產區（single origin，整包豆子來自同一個地方，而不是多地混合＊）的豆袋上，產區通常最醒目。</li>
+      <li>產區能讓你預期大概的風味，例如衣索比亞常有花香，但<strong>只是起點、不是規則</strong>。</li>
+      <li><strong>海拔</strong>常寫成 MASL（海拔公尺數）；種在高海拔的豆子通常較密、風味較複雜。</li>
+    </ul>
+    <figure class="viz">
+      <svg viewBox="0 0 540 330" role="img" aria-labelledby="t9">
+        <title id="t9">左邊三層由大到小的同心框：國家（例如衣索比亞）、國內產區（例如耶加雪菲）、農場／合作社／水洗站，越往內越能追溯。右邊一座山的剖面，山腰有一條虛線，標示約 1,500 公尺以上（Seattle 豆袋的概略說法）。</title>
+        <g font-family="Noto Sans TC,sans-serif">
+          <rect x="10" y="20" width="250" height="290" rx="18" fill="#EFE2CF" stroke="#C9B08F"/>
+          <text x="28" y="48" font-size="14" font-weight="700" fill="#5A4134">國家</text>
+          <text x="28" y="68" font-size="13" fill="#7A6152">Ethiopia 衣索比亞</text>
+          <rect x="34" y="86" width="202" height="204" rx="14" fill="#F6ECDD" stroke="#C9B08F"/>
+          <text x="50" y="112" font-size="14" font-weight="700" fill="#5A4134">國內產區</text>
+          <text x="50" y="132" font-size="13" fill="#7A6152">Yirgacheffe 耶加雪菲</text>
+          <rect x="58" y="150" width="154" height="118" rx="12" fill="#FBF7F0" stroke="#B87333" stroke-width="2"/>
+          <text x="135" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#3A2216">農場／合作社</text>
+          <text x="135" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#3A2216">／水洗站</text>
+          <text x="135" y="246" text-anchor="middle" font-size="12" fill="#8A501C">越細越能追溯</text>
+        </g>
+        <!-- mountain -->
+        <g>
+          <path d="M280 310 L360 150 L392 182 L440 70 L530 310 Z" fill="#8A6A4F"/>
+          <path d="M440 70 L463 128 L448 120 L436 136 L420 118 Z" fill="#F5ECDF"/>
+          <path d="M280 310 L360 150 L392 182 L410 140 L330 310 Z" fill="#6B4E38" opacity=".55"/>
+          <path d="M284 168 H536" stroke="#3A2216" stroke-width="2" stroke-dasharray="6 5"/>
+          <rect x="290" y="96" width="132" height="54" rx="8" fill="#FBF7F0" stroke="#E0CFB8"/>
+          <text x="300" y="118" font-family="Noto Sans TC,sans-serif" font-size="13" font-weight="700" fill="#3A2216">約 1,500 公尺以上</text>
+          <text x="300" y="138" font-family="Noto Sans TC,sans-serif" font-size="11" fill="#7A6152">Seattle 豆袋的概略說法</text>
+          <text x="404" y="292" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#FBF7F0">MASL＝海拔公尺數</text>
+          <g fill="#C04A3E"><circle cx="466" cy="150" r="4"/><circle cx="474" cy="156" r="4"/><circle cx="458" cy="158" r="4"/></g>
+          <path d="M466 160 v18" stroke="#3E5A2E" stroke-width="3"/>
+        </g>
+      </svg>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/origin.md" title="wiki/concepts/origin.md">產區</a><span class="sep">·</span><a href="../wiki/concepts/altitude.md" title="wiki/concepts/altitude.md">海拔</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 10 ===================== -->
+<section class="slide" id="slide-10" aria-label="第 10 頁：處理法：水洗、日曬、蜜處理" data-wiki="wiki/concepts/processing-methods.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>09</b>看懂豆袋 · 處理法</p>
+    <h2>處理法：水洗、日曬、蜜處理</h2>
+  </header>
+  <div class="body split even">
+    <div>
+      <ul class="points">
+        <li><strong>處理法（Processing）</strong>：咖啡果實採收後，用什麼方式把豆子取出、乾燥；它是影響風味最大的因素之一。</li>
+        <li><strong>水洗（Washed）</strong>：先去掉果皮果肉再乾燥，喝起來乾淨、明亮。</li>
+        <li><strong>日曬（Natural）</strong>：整顆果實一起乾燥，果味明顯、口感（body，喝起來的厚薄、重量感＊）較厚。</li>
+        <li><strong>蜜處理（Honey）</strong>：去果皮但留下黏液（mucilage，包在豆子外的黏稠果膠層＊）乾燥，風味介於兩者之間；依留多少分成黃蜜、紅蜜、黑蜜，越黑越接近日曬。</li>
+      </ul>
+      <p class="note"><span class="tag">腳註</span>Nespresso 台灣另列白蜜。</p>
+    </div>
+    <figure class="viz">
+      <svg viewBox="0 0 560 380" role="img" aria-labelledby="t10">
+        <title id="t10">左邊一顆咖啡果實的剖面，由外到內標出果皮、果肉、黏液、豆子。往右分出三條路：水洗只留豆子乾燥；蜜處理留著黏液乾燥，下方有黃、紅、黑三個色塊，越黑留的黏液越多、越接近日曬；日曬是整顆果實一起乾燥。</title>
+        <g font-family="Noto Sans TC,sans-serif">
+          <!-- cherry -->
+          <ellipse cx="96" cy="190" rx="78" ry="84" fill="#A7323A"/>
+          <ellipse cx="96" cy="192" rx="64" ry="70" fill="#E07E68"/>
+          <ellipse cx="96" cy="194" rx="48" ry="54" fill="#F4CFA6" opacity=".95"/>
+          <ellipse cx="78" cy="196" rx="20" ry="36" fill="#CDB98F"/><ellipse cx="114" cy="196" rx="20" ry="36" fill="#CDB98F"/>
+          <path d="M78 166 q6 30 0 60 M114 166 q-6 30 0 60" stroke="#9C845C" stroke-width="2" fill="none"/>
+          <path d="M96 106 q6 -20 24 -26" stroke="#3E5A2E" stroke-width="4" fill="none"/>
+          <g font-size="12" fill="#3A2216">
+            <path d="M40 120 L20 90" stroke="#3A2216"/><text x="4" y="84">果皮</text>
+            <path d="M50 250 L24 300" stroke="#3A2216"/><text x="4" y="316">果肉</text>
+            <path d="M140 236 L166 300" stroke="#3A2216"/><text x="152" y="316">黏液</text>
+            <path d="M114 186 L170 120" stroke="#3A2216"/><text x="166" y="112">豆子</text>
+          </g>
+          <!-- paths -->
+          <path d="M184 190 C220 190 220 70 260 70" stroke="#B87333" stroke-width="2.5" fill="none"/>
+          <path d="M184 190 H260" stroke="#B87333" stroke-width="2.5"/>
+          <path d="M184 190 C220 190 220 310 260 310" stroke="#B87333" stroke-width="2.5" fill="none"/>
+          <!-- washed -->
+          <rect x="262" y="34" width="288" height="78" rx="12" fill="#FBF7F0" stroke="#7FA3A8" stroke-width="2"/>
+          <ellipse cx="296" cy="73" rx="12" ry="20" fill="#CDB98F"/><ellipse cx="320" cy="73" rx="12" ry="20" fill="#CDB98F"/>
+          <text x="346" y="66" font-size="15" font-weight="700" fill="#3A2216">水洗 Washed</text>
+          <text x="346" y="88" font-size="12" fill="#5A4134">只剩豆子去乾燥 → 乾淨、明亮</text>
+          <!-- honey -->
+          <rect x="262" y="140" width="288" height="100" rx="12" fill="#FBF7F0" stroke="#D39A2C" stroke-width="2"/>
+          <ellipse cx="296" cy="176" rx="15" ry="23" fill="#F4CFA6"/><ellipse cx="296" cy="176" rx="11" ry="19" fill="#CDB98F"/>
+          <ellipse cx="324" cy="176" rx="15" ry="23" fill="#F4CFA6"/><ellipse cx="324" cy="176" rx="11" ry="19" fill="#CDB98F"/>
+          <text x="350" y="170" font-size="15" font-weight="700" fill="#3A2216">蜜處理 Honey</text>
+          <text x="350" y="192" font-size="12" fill="#5A4134">留著黏液乾燥 → 介於兩者之間</text>
+          <rect x="282" y="208" width="60" height="20" rx="4" fill="#E2B23B"/><text x="312" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#3A2216">黃蜜</text>
+          <rect x="350" y="208" width="60" height="20" rx="4" fill="#A6362F"/><text x="380" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#FBF7F0">紅蜜</text>
+          <rect x="418" y="208" width="60" height="20" rx="4" fill="#2A160E"/><text x="448" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#FBF7F0">黑蜜</text>
+          <text x="486" y="222" font-size="11" fill="#5A4134">→ 近日曬</text>
+          <!-- natural -->
+          <rect x="262" y="268" width="288" height="78" rx="12" fill="#FBF7F0" stroke="#9B3D4A" stroke-width="2"/>
+          <circle cx="298" cy="307" r="20" fill="#A7323A"/><circle cx="292" cy="300" r="5" fill="#fff" opacity=".25"/>
+          <text x="330" y="300" font-size="15" font-weight="700" fill="#3A2216">日曬 Natural</text>
+          <text x="330" y="322" font-size="12" fill="#5A4134">整顆果實一起乾燥 → 果味明顯、口感厚</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/processing-methods.md" title="wiki/concepts/processing-methods.md">處理法</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 11 ===================== -->
+<section class="slide" id="slide-11" aria-label="第 11 頁：處理法別用產地猜，看袋上寫什麼" data-wiki="wiki/concepts/processing-methods.md wiki/concepts/reading-coffee-bags.md wiki/outputs/ordering-guide.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>10</b>看懂豆袋 · 處理法</p>
+    <div class="title-row"><h2>處理法別用產地猜，看袋上寫什麼</h2><span class="badge conflict">各家說法不同</span></div>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li>來源之間說法不一：Nespresso 台灣說日曬常見於<strong>衣索比亞、肯亞</strong>；Coffee Hero 卻把<strong>肯亞列在水洗</strong>產地。</li>
+      <li class="advice-li"><span class="tag advice">建議</span>處理法以<strong>豆袋上的標示</strong>為準，不要用國家去猜。</li>
+      <li>沒寫處理法時，可以問烘焙商；處理法透明是精品咖啡的特徵之一。</li>
+    </ul>
+    <figure class="viz">
+      <svg viewBox="0 0 520 210" role="img" aria-labelledby="t11">
+        <title id="t11">左邊一個地球儀被打叉，代表不要用產地猜處理法；右邊是豆袋標籤特寫，放大鏡停在「Process: Washed」那一行。</title>
+        <g>
+          <circle cx="96" cy="105" r="74" fill="#EFE2CF" stroke="#8A6A4F" stroke-width="3"/>
+          <ellipse cx="96" cy="105" rx="32" ry="74" fill="none" stroke="#8A6A4F" stroke-width="2"/>
+          <path d="M22 105 H170 M32 68 H160 M32 142 H160" stroke="#8A6A4F" stroke-width="2"/>
+          <path d="M70 52 q20 -6 30 8 q-8 14 6 22 q-14 16 -30 4 q-14 -16 -6 -34z M112 112 q18 2 22 18 q-10 18 -24 10 q-6 -16 2 -28z" fill="#B8A07E"/>
+          <path d="M36 45 L156 165 M156 45 L36 165" stroke="#9C3B28" stroke-width="9" stroke-linecap="round"/>
+        </g>
+        <g>
+          <rect x="226" y="22" width="270" height="166" rx="12" fill="#FBF7F0" stroke="#E0CFB8" stroke-width="2"/>
+          <g font-family="Noto Sans TC,sans-serif" font-size="14" fill="#7A6152">
+            <text x="248" y="56">Origin: ……</text>
+            <text x="248" y="146">Roasted: ……</text>
+          </g>
+          <rect x="242" y="78" width="200" height="34" rx="6" fill="#F6E3CB" stroke="#B87333" stroke-width="2"/>
+          <text x="254" y="101" font-family="Noto Sans TC,sans-serif" font-size="17" font-weight="700" fill="#3A2216">Process: Washed</text>
+          <circle cx="400" cy="96" r="44" fill="#fff" fill-opacity=".25" stroke="#3A2216" stroke-width="6"/>
+          <path d="M432 128 L472 170" stroke="#3A2216" stroke-width="12" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div style="width:100%">
+        <div class="chiprow"><span class="k">水洗</span><div class="chips"><span class="chip">washed</span><span class="chip">fully washed</span><span class="chip">wet process</span></div></div>
+        <div class="chiprow"><span class="k">日曬</span><div class="chips"><span class="chip">natural</span><span class="chip">dry process</span></div></div>
+        <div class="chiprow"><span class="k">蜜處理</span><div class="chips"><span class="chip">honey</span><span class="chip">yellow honey</span><span class="chip">black honey</span></div></div>
+        <p class="small" style="margin:.5rem 0 0">袋上常見寫法（Coffee Hero 列出的寫法；色階是蜜處理的分級）</p>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/processing-methods.md" title="wiki/concepts/processing-methods.md">處理法</a><span class="sep">·</span><a href="../wiki/concepts/reading-coffee-bags.md" title="wiki/concepts/reading-coffee-bags.md">豆袋標籤怎麼讀</a><span class="sep">·</span><a href="../wiki/outputs/ordering-guide.md" title="wiki/outputs/ordering-guide.md">點餐指南（綜合整理）</a></footer>
+</div>
+</section>
+
+<!-- ===================== 12 ===================== -->
+<section class="slide" id="slide-12" aria-label="第 12 頁：品種：像葡萄品種之於葡萄酒" data-wiki="wiki/concepts/variety.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>11</b>看懂豆袋 · 品種</p>
+    <h2>品種：像葡萄品種之於葡萄酒</h2>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>品種（Variety）</strong>：咖啡樹的栽培品種，例如 Bourbon、Typica、Geisha；就像葡萄品種會影響葡萄酒的味道。</li>
+      <li>常見印象：<strong>Geisha 以花香出名、Bourbon 偏甜</strong>。</li>
+      <li>剛入門可以<strong>先不管品種</strong>，喝過幾支、知道喜好後再看。</li>
+      <li>袋上的名字不一定是品種：<strong>Mocha</strong> 指經葉門摩卡港交易的咖啡，不是巧克力飲品；<strong>Santos</strong> 通常是巴西咖啡的分級用語。</li>
+    </ul>
+    <figure class="viz">
+      <svg viewBox="0 0 480 220" role="img" aria-labelledby="t12">
+        <title id="t12">左邊是葡萄酒瓶與一串葡萄，右邊是豆袋與一枝結著紅色咖啡果實的咖啡樹枝，中間是等號：品種之於咖啡，就像葡萄品種之於葡萄酒。</title>
+        <!-- wine -->
+        <path d="M70 30 h20 v40 q22 14 22 44 v86 a8 8 0 0 1-8 8 h-48 a8 8 0 0 1-8-8 v-86 q0-30 22-44z" fill="#6E2B3A"/>
+        <rect x="56" y="120" width="48" height="44" rx="4" fill="#F5ECDF"/>
+        <path d="M64 136 h32 M64 148 h22" stroke="#B8A07E" stroke-width="3"/>
+        <g fill="#7A3B6E"><circle cx="150" cy="120" r="10"/><circle cx="170" cy="120" r="10"/><circle cx="160" cy="137" r="10"/><circle cx="140" cy="137" r="10"/><circle cx="180" cy="137" r="10"/><circle cx="150" cy="154" r="10"/><circle cx="170" cy="154" r="10"/><circle cx="160" cy="171" r="10"/></g>
+        <path d="M160 110 q0-16 12-22" stroke="#3E5A2E" stroke-width="4" fill="none"/>
+        <path d="M172 92 q16 -10 26 2 q-14 10 -26 -2z" fill="#6E8B4E"/>
+        <text x="240" y="132" text-anchor="middle" font-family="Noto Serif TC,serif" font-weight="900" font-size="40" fill="#B87333">＝</text>
+        <!-- bag + branch -->
+        <g transform="translate(290 34)">
+          <path d="M6 18 L16 0 H84 L94 18 V170 a8 8 0 0 1-8 8 H14 a8 8 0 0 1-8-8z" fill="#C9A273"/>
+          <rect x="20" y="60" width="60" height="70" rx="5" fill="#FBF7F0"/>
+          <path d="M28 76 h44 M28 90 h30 M28 104 h38" stroke="#C5B39C" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <path d="M400 200 q10-60 50-150" stroke="#5A3E2B" stroke-width="5" fill="none"/>
+        <path d="M410 150 q-28 -6 -34 -28 q28 2 34 28z M430 104 q30 -2 40 -22 q-30 0 -40 22z M418 172 q30 -4 42 -24 q-30 -2 -42 24z" fill="#5E7F45"/>
+        <g fill="#B8323A"><circle cx="410" cy="132" r="7"/><circle cx="422" cy="126" r="7"/><circle cx="434" cy="88" r="6"/><circle cx="406" cy="182" r="7"/></g>
+      </svg>
+      <div style="width:100%">
+        <div class="chiprow"><span class="k">是品種</span><div class="chips"><span class="chip">Bourbon <small>偏甜</small></span><span class="chip">Typica</span><span class="chip">Geisha <small>花香</small></span></div></div>
+        <div class="chiprow"><span class="k">不是品種</span><div class="chips"><span class="chip dashed">Mocha <small>葉門摩卡港交易的咖啡</small></span><span class="chip dashed">Santos <small>巴西咖啡的分級用語</small></span></div></div>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/variety.md" title="wiki/concepts/variety.md">品種</a></footer>
+</div>
+</section>
+
+<!-- ===================== 13 ===================== -->
+<section class="slide" id="slide-13" aria-label="第 13 頁：烘焙日期：各家說的最好喝期間不一樣" data-wiki="wiki/concepts/roast-date.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>12</b>看懂豆袋 · 烘焙日期</p>
+    <div class="title-row"><h2>烘焙日期：各家說的「最好喝期間」不一樣</h2><span class="badge conflict">各家說法不同</span></div>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>烘焙日期（Roast Date）和賞味期限不是同一件事</strong>；判斷新鮮度要看烘焙日期。</li>
+      <li><strong>Seattle 豆袋</strong>：烘焙後約 2–4 週內最好喝（做濃縮的豆子多放一陣子；濾泡（filter，例如手沖＊）約 1–2 週）。</li>
+      <li><strong>NCA（美國國家咖啡協會）</strong>：烘好約 2–3 天就能沖，烘焙後約 2–7 天內沖煮是新鮮風味的高峰。</li>
+      <li>Seattle 豆袋建議避開：送到手上已放了好幾週的豆子，或完全沒寫烘焙日期的豆子。</li>
+    </ul>
+    <figure class="viz" role="img" aria-label="一條從烘焙日到第 4 週的時間軸，上下兩組色帶：NCA 約第 2 到第 7 天；Seattle 豆袋的濾泡約第 1 到第 2 週、濃縮約第 2 到第 4 週。各家範圍不同。">
+      <div class="timeline panel" aria-hidden="true">
+        <div class="tl-row">
+          <div class="who">NCA 烘焙</div>
+          <div class="tl-track"><div class="tl-band nca" style="left:7.14%;width:17.86%">2–7 天</div></div>
+        </div>
+        <div class="tl-row">
+          <div class="who">Seattle 豆袋</div>
+          <div class="tl-track">
+            <div class="tl-band filter" style="left:25%;width:25%">濾泡 1–2 週</div>
+            <div class="tl-band esp" style="left:50%;width:50%">濃縮 約 2–4 週</div>
+          </div>
+        </div>
+        <div class="tl-axis"><span style="left:0">烘焙日</span><span style="left:25%">第 1 週</span><span style="left:50%">第 2 週</span><span style="left:75%">第 3 週</span><span style="left:100%">第 4 週</span></div>
+        <p class="small" style="margin:.6rem 0 0">兩家的數字差很多，Wiki 並列、不選邊。Seattle 豆袋的天數是該文的經驗建議，不是標準。</p>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/roast-date.md" title="wiki/concepts/roast-date.md">烘焙日期與新鮮度</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 14 ===================== -->
+<section class="slide" id="slide-14" aria-label="第 14 頁：烘焙度：淺、中、深" data-wiki="wiki/concepts/roast-level.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>13</b>喝出差別 · 烘焙度</p>
+    <h2>烘焙度：淺、中、深</h2>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>淺焙</strong>：淺棕色，酸度（acidity，喝起來的酸味明亮程度＊）較明顯，較保留豆子原本的花果香。</li>
+      <li><strong>中焙</strong>：酸度比淺焙低、甜味更突出，有較多焦糖香調。</li>
+      <li><strong>深焙</strong>：黑亮、表面有油，苦味明顯、酸度低。</li>
+      <li>各家的「中焙」深淺不一定一樣；<strong>深焙味道濃，不代表咖啡因比較多</strong>。</li>
+    </ul>
+    <figure class="viz">
+      <div class="panel" style="width:100%">
+        <div class="beans3" role="img" aria-label="三顆豆子由淺到深：淺焙是淺棕色、表面無光澤；中焙是中棕色、表面不油；深焙是黑亮、表面有油光。">
+          <div><svg viewBox="0 0 40 52" aria-hidden="true" style="color:#B98D5C"><use href="#i-bean"/></svg><b>淺焙</b><span>淺棕、表面無光澤</span></div>
+          <div><svg viewBox="0 0 40 52" aria-hidden="true" style="color:#7A4A28"><use href="#i-bean"/></svg><b>中焙</b><span>中棕、表面不油</span></div>
+          <div><svg viewBox="0 0 40 52" aria-hidden="true"><use href="#i-bean" style="color:#24140C"/><ellipse cx="13" cy="16" rx="3" ry="6" fill="#fff" opacity=".55"/><ellipse cx="27" cy="34" rx="2" ry="4" fill="#fff" opacity=".4"/></svg><b>深焙</b><span>黑亮、表面有油</span></div>
+        </div>
+        <div class="roastbar" style="margin:.8rem 0 .2rem" aria-hidden="true"></div>
+        <div class="roastdir" role="img" aria-label="方向：越淺焙越酸；深焙苦味明顯、酸度低。中焙只標酸度比淺焙低、甜味更突出。">
+          <div><b>← 越淺越酸</b><span>淺焙：酸度較明顯</span></div>
+          <div style="text-align:center"><b>中焙</b><span>酸比淺焙低、甜味更突出</span></div>
+          <div style="text-align:right"><b>深焙 →</b><span>苦味明顯、酸度低</span></div>
+        </div>
+        <p class="small" style="margin:.5rem 0 0">只畫來源說的方向，不是測量值。</p>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/roast-level.md" title="wiki/concepts/roast-level.md">烘焙度</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 15 ===================== -->
+<section class="slide" id="slide-15" aria-label="第 15 頁：風味描述：袋上的藍莓不是加進去的" data-wiki="wiki/concepts/tasting-notes.md wiki/concepts/origin.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>14</b>喝出差別 · 風味描述</p>
+    <h2>風味描述：袋上的藍莓不是加進去的</h2>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>風味描述（Tasting Notes）</strong>：烘焙師在杯測（cupping，一種標準化的試喝方法＊）時辨識出的風味，通常列三到五個詞。</li>
+      <li><strong>不是添加物</strong>：沒有人在咖啡裡加藍莓，那是豆子本身給人的印象。</li>
+      <li><strong>當成方向，不是保證</strong>：沖法、研磨、水和個人味覺，都會影響你喝到什麼。</li>
+    </ul>
+    <figure class="viz">
+      <svg viewBox="0 0 500 200" role="img" aria-labelledby="t15">
+        <title id="t15">豆袋上寫著三個詞：藍莓、黑巧克力、柑橘，各連到一個手繪小圖示；旁邊一個咖啡杯上寫著「沒有加料」。</title>
+        <g font-family="Noto Sans TC,sans-serif">
+          <rect x="10" y="40" width="150" height="120" rx="10" fill="#FBF7F0" stroke="#E0CFB8" stroke-width="2"/>
+          <text x="24" y="64" font-size="11" fill="#7A6152" letter-spacing="1">TASTING NOTES</text>
+          <text x="24" y="92" font-size="16" font-weight="700" fill="#3A2216">藍莓</text>
+          <text x="24" y="118" font-size="16" font-weight="700" fill="#3A2216">黑巧克力</text>
+          <text x="24" y="144" font-size="16" font-weight="700" fill="#3A2216">柑橘</text>
+          <path d="M62 87 C120 87 140 46 196 46" stroke="#B87333" stroke-dasharray="4 4" fill="none"/>
+          <path d="M100 113 H196" stroke="#B87333" stroke-dasharray="4 4"/>
+          <path d="M62 139 C120 139 140 178 196 178" stroke="#B87333" stroke-dasharray="4 4" fill="none"/>
+          <!-- blueberry -->
+          <g transform="translate(214 46)"><circle r="13" fill="#3E4C8A"/><circle cx="16" cy="6" r="11" fill="#4F5E9E"/><path d="M-4 -6 l4 4 l4 -4" stroke="#1E2650" stroke-width="2" fill="none"/></g>
+          <!-- chocolate -->
+          <g transform="translate(200 98)"><rect width="38" height="30" rx="3" fill="#4A2618"/><path d="M13 0 v30 M26 0 v30 M0 15 h38" stroke="#2A140C" stroke-width="2"/></g>
+          <!-- citrus -->
+          <g transform="translate(220 178)"><circle r="16" fill="#E9A93A"/><circle r="12" fill="#F6D27A"/><path d="M0 -12 V12 M-12 0 H12 M-8.5 -8.5 L8.5 8.5 M8.5 -8.5 L-8.5 8.5" stroke="#E9A93A" stroke-width="1.6"/></g>
+          <!-- cup -->
+          <g transform="translate(300 40)">
+            <path d="M20 40 h120 v44 a44 44 0 0 1-44 44 h-32 a44 44 0 0 1-44-44z" fill="#FBF7F0" stroke="#3A2216" stroke-width="3"/>
+            <path d="M140 52 h12 a18 18 0 0 1 0 36 h-14" fill="none" stroke="#3A2216" stroke-width="3"/>
+            <ellipse cx="80" cy="44" rx="56" ry="6" fill="#4A2A1A"/>
+            <path d="M58 22 q-6 -10 2 -18 M84 22 q-6 -10 2 -18" stroke="#B8A07E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="34" y="70" width="92" height="26" rx="13" fill="#44613F"/>
+            <text x="80" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">沒有加料</text>
+          </g>
+        </g>
+      </svg>
+      <div class="cards3" style="width:100%">
+        <div class="card washed"><b>水洗</b><span class="words">花香、柑橘</span></div>
+        <div class="card natural"><b>日曬</b><span class="words">莓果</span></div>
+        <div class="card honey"><b>蜜處理</b><span class="words">核果（stone fruit，桃子、杏桃這類有硬核的水果＊）、焦糖</span></div>
+      </div>
+      <figcaption>常見對應：處理法與風味詞（烘焙商 Coffee Hero 的整理）</figcaption>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/tasting-notes.md" title="wiki/concepts/tasting-notes.md">風味描述</a><span class="sep">·</span><a href="../wiki/concepts/origin.md" title="wiki/concepts/origin.md">產區</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 16 ===================== -->
+<section class="slide" id="slide-16" aria-label="第 16 頁：風味輪：從中間往外讀" data-wiki="wiki/concepts/flavor-wheel.md wiki/concepts/cupping-score.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>15</b>喝出差別 · 風味輪</p>
+    <h2>風味輪：從中間往外讀</h2>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>咖啡品嚐者風味輪（Coffee Taster's Flavor Wheel）</strong>：SCAA（美國精品咖啡協會）與 World Coffee Research（咖啡研究機構＊）合作的工具，用來描述咖啡的風味。</li>
+      <li><strong>從中心往外讀</strong>：中心最籠統（例如果香），越往外越具體（柑橘 → 葡萄柚），可以停在任何一層。</li>
+      <li><strong>想不出詞時看顏色</strong>：只想到「像某種紅色水果」，就到紅色區找。</li>
+      <li><strong>不必是專家</strong>：可以從平常吃的東西練習，例如細嚐一塊巧克力、一滴檸檬汁、一把堅果。</li>
+    </ul>
+    <figure class="viz wheelwrap">
+      <svg id="wheel" viewBox="0 0 420 420" role="img" aria-labelledby="t16">
+        <title id="t16">自繪的簡化三環風味輪：中心環是果香、花香、甜；果香往外分成莓果、乾燥水果、柑橘、其他水果；柑橘再往外是葡萄柚、柳橙、檸檬、萊姆，其他水果往外是櫻桃、椰子、葡萄、鳳梨。一條箭頭示範由內往外：果香 → 柑橘 → 葡萄柚。</title>
+      </svg>
+      <figcaption>自繪簡化示意，不是 SCA 原圖；只畫出 Wiki 提到的詞，空白格代表還有更多詞。</figcaption>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/flavor-wheel.md" title="wiki/concepts/flavor-wheel.md">風味輪</a><span class="sep">·</span><a href="../wiki/concepts/cupping-score.md" title="wiki/concepts/cupping-score.md">杯測分數與精品等級</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+</div>
+</section>
+
+<!-- ===================== 17 ===================== -->
+<section class="slide" id="slide-17" aria-label="第 17 頁：沖煮方式：手沖、義式、冷萃在菜單上的差別" data-wiki="wiki/concepts/pour-over.md wiki/concepts/brewing-methods.md wiki/concepts/cold-brew.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>16</b>沖煮方式</p>
+    <h2>手沖、義式、冷萃：菜單上的差別</h2>
+  </header>
+  <div class="body split even">
+    <ul class="points">
+      <li><strong>手沖（Pour-over）</strong>：用手把水倒過濾器裡的咖啡粉，擅長帶出獨特的風味與香氣，適合單一產區咖啡。</li>
+      <li>點手沖時，店家通常讓你選<strong>單品豆</strong>（單一產區的豆子），並問你喜歡什麼風味。</li>
+      <li><strong>義式</strong>：先萃出濃縮，可以單喝，也可以做成拿鐵、卡布奇諾。</li>
+      <li><strong>冷萃（Cold Brew）不是冰咖啡</strong>：冷萃用室溫或更冷的水長時間萃取，比冰咖啡更順、更不苦；冰咖啡是熱沖後再降溫。</li>
+    </ul>
+    <figure class="viz">
+      <div class="panel" style="width:100%">
+        <div class="brew3">
+          <div>
+            <svg viewBox="0 0 64 64" role="img" aria-label="手沖濾杯"><path d="M10 14 h44 l-14 24 h-16z" fill="#C9A273" stroke="#3A2216" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 20 l6 12 M32 20 v12 M44 20 l-6 12" stroke="#8A6A4F" stroke-width="1.6"/><path d="M14 54 h36 v-8 a6 6 0 0 0-6-6 h-24 a6 6 0 0 0-6 6z" fill="#FBF7F0" stroke="#3A2216" stroke-width="2.5"/><path d="M32 38 v4" stroke="#4A2A1A" stroke-width="3"/><path d="M46 4 q-10 0 -12 8" stroke="#7FA3A8" stroke-width="2.5" fill="none"/></svg>
+            <b>手沖</b><span>Pour-over</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 64 64" role="img" aria-label="濃縮小杯"><path d="M16 26 h28 v10 a12 12 0 0 1-12 12 h-4 a12 12 0 0 1-12-12z" fill="#FBF7F0" stroke="#3A2216" stroke-width="2.5"/><path d="M44 30 h4 a5 5 0 0 1 0 10 h-5" fill="none" stroke="#3A2216" stroke-width="2.5"/><ellipse cx="30" cy="28" rx="12" ry="2.6" fill="#C98B47"/><ellipse cx="30" cy="54" rx="22" ry="4" fill="none" stroke="#3A2216" stroke-width="2.5"/><path d="M26 18 q-3 -5 1 -9 M34 18 q-3 -5 1 -9" stroke="#B8A07E" stroke-width="2" fill="none"/></svg>
+            <b>義式</b><span>Espresso</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 64 64" role="img" aria-label="冷萃瓶"><rect x="20" y="6" width="24" height="7" rx="2" fill="#8A6A4F"/><path d="M18 14 h28 v40 a6 6 0 0 1-6 6 h-16 a6 6 0 0 1-6-6z" fill="#E8EEF0" stroke="#3A2216" stroke-width="2.5"/><path d="M19 26 h26 v28 a5 5 0 0 1-5 5 h-16 a5 5 0 0 1-5-5z" fill="#5A3524"/><rect x="24" y="32" width="7" height="7" rx="1.5" fill="#fff" opacity=".6"/><rect x="33" y="42" width="6" height="6" rx="1.5" fill="#fff" opacity=".5"/></svg>
+            <b>冷萃</b><span>Cold Brew</span>
+          </div>
+        </div>
+        <div class="logaxis" role="img" aria-label="對數刻度的接觸時間軸：義式濃縮約 20 到 30 秒，滴濾約 5 分鐘，冷萃典型約 12 小時。">
+          <div class="line"></div>
+          <div class="band" style="left:7.6%;width:4.5%"></div>
+          <div class="mark" style="left:9.9%">義式<br>20–30 秒</div>
+          <div class="mark" style="left:37.5%">滴濾<br>約 5 分</div>
+          <div class="mark" style="left:92.3%">冷萃<br>典型約 12 小時</div>
+          <div class="tick" style="left:0"></div><div class="tl" style="left:0;transform:none">10 秒</div>
+          <div class="tick" style="left:19.8%"></div><div class="tl" style="left:19.8%">1 分</div>
+          <div class="tick" style="left:45.2%"></div><div class="tl" style="left:45.2%">10 分</div>
+          <div class="tick" style="left:64.9%"></div><div class="tl" style="left:64.9%">1 小時</div>
+          <div class="tick" style="left:100%"></div><div class="tl" style="left:100%;transform:translateX(-100%)">1 天</div>
+        </div>
+        <p class="small" style="margin:.6rem 0 0">接觸時間，對數刻度（越往右每格代表的時間越長）；數字出自 NCA 沖煮。滴濾是機器自動滴，手沖是人手倒水。</p>
+      </div>
+    </figure>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/pour-over.md" title="wiki/concepts/pour-over.md">手沖咖啡</a><span class="sep">·</span><a href="../wiki/concepts/brewing-methods.md" title="wiki/concepts/brewing-methods.md">沖煮方式</a><span class="sep">·</span><a href="../wiki/concepts/cold-brew.md" title="wiki/concepts/cold-brew.md">冷萃與冰滴</a></footer>
+</div>
+</section>
+
+<!-- ===================== 18 ===================== -->
+<section class="slide" id="slide-18" aria-label="第 18 頁：點餐決策樹：三個問題" data-wiki="wiki/outputs/ordering-guide.md wiki/concepts/roast-level.md wiki/concepts/processing-methods.md wiki/concepts/latte.md wiki/concepts/flat-white.md wiki/concepts/cortado.md wiki/concepts/mocha.md wiki/concepts/americano.md wiki/concepts/cold-brew.md wiki/concepts/pour-over.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>17</b>知道點什麼</p>
+    <div class="title-row"><h2>點餐決策樹：三個問題</h2><span class="badge advice">全頁皆為「建議」</span></div>
+  </header>
+  <div class="body">
+    <div class="tree" role="group" aria-label="點餐決策樹">
+      <div class="trow">
+        <div class="qnode"><span class="qn"><span>Q1</span></span>怕苦，還是怕酸？</div>
+        <div class="leaves">
+          <div class="leaf"><span class="if">怕苦</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>淺到中焙 · 拿鐵 · 冷萃</span><span class="src">焙度：NCA 烘焙、Nespresso、HK01；拿鐵：只有 Nespresso；冷萃：NCA 沖煮、Nespresso</span></div>
+          <div class="leaf"><span class="if">怕酸</span><span class="then"><svg aria-hidden="true"><use href="#i-bean"/></svg>中到深焙；處理法往日曬或蜜處理找</span><span class="src">焙度：NCA 烘焙、Nespresso、HK01；處理法：只有 Coffee Hero</span></div>
+        </div>
+      </div>
+      <div class="trow">
+        <div class="qnode"><span class="qn"><span>Q2</span></span>加不加奶？</div>
+        <div class="leaves">
+          <div class="leaf"><span class="if">不加</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>濃縮或美式</span><span class="src">Seattle 飲品、La Marzocco、Nespresso</span></div>
+          <div class="leaf"><span class="if">奶味多</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>拿鐵</span><span class="src">Seattle 飲品、La Marzocco</span></div>
+          <div class="leaf"><span class="if">咖啡味多一點</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>馥列白或 Cortado</span><span class="src">Seattle 飲品、La Marzocco</span></div>
+          <div class="leaf"><span class="if">想要甜</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>摩卡</span><span class="src">Seattle 飲品、La Marzocco</span></div>
+        </div>
+      </div>
+      <div class="trow">
+        <div class="qnode"><span class="qn"><span>Q3</span></span>手沖，還是義式？</div>
+        <div class="leaves">
+          <div class="leaf"><span class="if">想喝豆子本身的味道</span><span class="then"><svg aria-hidden="true"><use href="#i-chat"/></svg>手沖，並說出風味方向：明亮花香（水洗）、濃郁果味（日曬）、甜而均衡（蜜處理）</span><span class="src">手沖：NCA 沖煮、HK01；風味方向：只有 Coffee Hero</span></div>
+          <div class="leaf"><span class="if">想喝奶咖啡</span><span class="then"><svg aria-hidden="true"><use href="#i-cup"/></svg>義式 → 回到 Q2</span><span class="src">NCA 沖煮</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note"><span class="tag advice">建議</span>以上都是點餐指南「根據以上整理的建議」，不是任何單一來源的原話；其中「拿鐵適合怕苦的人」只來自 Nespresso 台灣（品牌文章），處理法對應風味的選豆建議只來自 Coffee Hero（烘焙商）。</p>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/outputs/ordering-guide.md" title="wiki/outputs/ordering-guide.md">點餐指南（綜合整理）</a><span class="sep">·</span><a href="../wiki/concepts/roast-level.md" title="wiki/concepts/roast-level.md">烘焙度</a><span class="sep">·</span><a href="../wiki/concepts/processing-methods.md" title="wiki/concepts/processing-methods.md">處理法</a><span class="sep">·</span><a href="../wiki/concepts/latte.md" title="wiki/concepts/latte.md">拿鐵</a><span class="sep">·</span><a href="../wiki/concepts/flat-white.md" title="wiki/concepts/flat-white.md">馥列白</a><span class="sep">·</span><a href="../wiki/concepts/cortado.md" title="wiki/concepts/cortado.md">Cortado</a><span class="sep">·</span><a href="../wiki/concepts/mocha.md" title="wiki/concepts/mocha.md">摩卡</a><span class="sep">·</span><a href="../wiki/concepts/americano.md" title="wiki/concepts/americano.md">美式</a><span class="sep">·</span><a href="../wiki/concepts/cold-brew.md" title="wiki/concepts/cold-brew.md">冷萃與冰滴</a><span class="sep">·</span><a href="../wiki/concepts/pour-over.md" title="wiki/concepts/pour-over.md">手沖咖啡</a></footer>
+</div>
+</section>
+
+<!-- ===================== 19 ===================== -->
+<section class="slide dark" id="slide-19" aria-label="第 19 頁：總結：走進咖啡店的三個步驟" data-wiki="wiki/concepts/espresso-drinks.md wiki/concepts/reading-coffee-bags.md wiki/outputs/ordering-guide.md">
+<div class="slide-inner">
+  <header>
+    <p class="kicker"><b>18</b>總結</p>
+    <h2>走進咖啡店的三個步驟</h2>
+  </header>
+  <div class="body">
+    <div class="bigsteps">
+      <div class="bigstep"><svg aria-hidden="true"><use href="#i-cup"/></svg><div class="num">1</div><h3>看菜單</h3><p>找出濃縮、蒸奶、奶泡怎麼配比。</p></div>
+      <div class="bigstep"><svg aria-hidden="true"><use href="#i-bag"/></svg><div class="num">2</div><h3>看豆袋</h3><p>先看產區和處理法，也別忘了烘焙日期。</p></div>
+      <div class="bigstep"><svg aria-hidden="true"><use href="#i-chat"/></svg><div class="num">3</div><h3>說出你的偏好</h3><p>怕苦或怕酸、加不加奶、手沖或義式。</p></div>
+    </div>
+    <p class="lede" style="margin-top:1.4rem"><span class="tag advice">建議</span>不確定時就問：瑪奇朵是哪一種，問店員；袋上沒寫處理法，問店員或烘焙商。</p>
+    <p class="small" style="margin-top:1.2rem">這份簡報的內容全部來自咖啡入門 Wiki。</p>
+  </div>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/espresso-drinks.md" title="wiki/concepts/espresso-drinks.md">菜單飲品怎麼看</a><span class="sep">·</span><a href="../wiki/concepts/reading-coffee-bags.md" title="wiki/concepts/reading-coffee-bags.md">豆袋標籤怎麼讀</a><span class="sep">·</span><a href="../wiki/outputs/ordering-guide.md" title="wiki/outputs/ordering-guide.md">點餐指南（綜合整理）</a></footer>
+</div>
+</section>
+
+</main>
+
+<nav class="nav" aria-label="翻頁">
+  <button type="button" id="prev" aria-label="上一頁">‹</button>
+  <span class="counter" id="counter" aria-live="polite">1 / 19</span>
+  <button type="button" id="next" aria-label="下一頁">›</button>
+</nav>
+
+<script>
+(function () {
+  "use strict";
+  /* ---------- cup cross-sections: one shared scale (U px per unit) ---------- */
+  var U = 10, BASE = 190, VH = 200, uid = 0;
+  var FILL = {
+    esp: "url(#g-esp)", crema: "#C98B47", milk: "#EBDDC7", micro: "url(#p-micro)",
+    foam: "url(#p-foam)", water: "url(#g-water)", choc: "#6A3423", lm: "url(#g-lm)"
+  };
+  // w/h in units; layers bottom -> top: [kind, units]
+  var CUPS = {
+    empty:          { kind: "cup",   w: 8.5, h: 9,    layers: [] },
+    espresso:       { kind: "demi",  w: 6,   h: 5,    layers: [["esp", 3.6], ["crema", 0.8]] },
+    americano:      { kind: "cup",   w: 8,   h: 11,   layers: [["esp", 3.2], ["water", 7.2]] },
+    cappuccino:     { kind: "cup",   w: 8.5, h: 9,    layers: [["esp", 2.9], ["milk", 2.9], ["foam", 2.9]] },
+    latte:          { kind: "cup",   w: 9,   h: 14,   layers: [["esp", 2.6], ["milk", 10.2], ["micro", 0.9]] },
+    flatwhite:      { kind: "cup",   w: 8.5, h: 9,    layers: [["esp", 3.2], ["micro", 5.2], ["foam", 0.35]] },
+    cortado:        { kind: "glass", w: 6,   h: 6.5,  layers: [["esp", 3], ["milk", 3], ["foam", 0.25]] },
+    mocha:          { kind: "cup",   w: 9,   h: 14,   layers: [["choc", 1.8], ["esp", 2.4], ["milk", 9.5]], cream: true },
+    macchiato:      { kind: "demi",  w: 6,   h: 5,    layers: [["esp", 4]], dollop: true },
+    macchiatoModern:{ kind: "demi",  w: 6.5, h: 6,    layers: [["esp", 2.8], ["milk", 2.3], ["micro", 0.6]] },
+    latteMacchiato: { kind: "glass", w: 7,   h: 14,   layers: [["milk", 7.5], ["lm", 2.6], ["foam", 3.5]] },
+    caramel:        { kind: "glass", w: 7,   h: 13,   layers: [["milk", 9], ["esp", 1.8], ["foam", 1.6]] }
+  };
+  function sideX(cx, w, wb, top, y) { // x of left wall at height y
+    var t = (y - top) / (BASE - top);
+    return cx - (w / 2 + (wb / 2 - w / 2) * t);
+  }
+  function cupSVG(s) {
+    var id = "cc" + (++uid), w = s.w * U, h = s.h * U;
+    var wb = w * (s.kind === "glass" ? 0.86 : 0.74);
+    var pad = 14, handle = s.kind === "glass" ? 0 : (s.kind === "demi" ? 18 : 26);
+    var W = Math.round(w + pad * 2 + handle), cx = pad + w / 2, top = BASE - h, r = s.kind === "glass" ? 6 : 14;
+    var d = "M" + (cx - w / 2) + "," + top + " L" + (cx - wb / 2) + "," + (BASE - r) +
+      " Q" + (cx - wb / 2) + "," + BASE + " " + (cx - wb / 2 + r) + "," + BASE +
+      " L" + (cx + wb / 2 - r) + "," + BASE + " Q" + (cx + wb / 2) + "," + BASE + " " + (cx + wb / 2) + "," + (BASE - r) +
+      " L" + (cx + w / 2) + "," + top + " Z";
+    var out = '<svg class="cupsvg" viewBox="0 0 ' + W + " " + VH + '" aria-hidden="true" focusable="false">';
+    out += '<clipPath id="' + id + '"><path d="' + d + '"/></clipPath>';
+    out += '<path d="' + d + '" fill="' + (s.kind === "glass" ? "#F4F7F7" : "#FFFDF9") + '"/>';
+    out += '<g clip-path="url(#' + id + ')">';
+    var y = BASE;
+    s.layers.forEach(function (L) {
+      var hh = L[1] * U;
+      out += '<rect x="0" y="' + (y - hh) + '" width="' + W + '" height="' + (hh + 0.6) + '" fill="' + FILL[L[0]] + '"/>';
+      y -= hh;
+    });
+    if (s.dollop) out += '<ellipse cx="' + cx + '" cy="' + (y + 1) + '" rx="' + (w * 0.24) + '" ry="7" fill="url(#p-foam)" stroke="#E2D2BA"/>';
+    if (s.kind === "glass") out += '<rect x="0" y="0" width="' + W + '" height="' + VH + '" fill="url(#g-glass)"/>';
+    out += "</g>";
+    if (s.cream) {
+      var cy = y;
+      out += '<path d="M' + (cx - w / 2 + 6) + "," + cy + " Q" + (cx - w / 2 + 4) + "," + (cy - 20) + " " + (cx - w / 6) + "," + (cy - 18) +
+        " Q" + cx + "," + (cy - 40) + " " + (cx + w / 6) + "," + (cy - 18) + " Q" + (cx + w / 2 - 4) + "," + (cy - 20) + " " + (cx + w / 2 - 6) + "," + cy +
+        ' Z" fill="#FFFFFF" stroke="#D9C7AA" stroke-width="1.5"/>';
+    }
+    if (s.drizzle) {
+      out += '<path d="M' + (cx - w / 2 + 8) + "," + (y + 4) + " l10,8 l10,-8 l10,8 l10,-8 l10,8" + '" fill="none" stroke="#C27A2C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+    }
+    if (handle) {
+      var y1 = top + h * 0.22, y2 = top + h * 0.62;
+      var x1 = 2 * cx - sideX(cx, w, wb, top, y1), x2 = 2 * cx - sideX(cx, w, wb, top, y2);
+      out += '<path d="M' + (x1 - 1) + "," + y1 + " C" + (x1 + handle) + "," + (y1 - 2) + " " + (x2 + handle) + "," + (y2 + 2) + " " + (x2 - 1) + "," + y2 +
+        '" fill="none" stroke="#3A2216" stroke-width="' + (s.kind === "demi" ? 4 : 5) + '" stroke-linecap="round"/>';
+    }
+    out += '<path d="' + d + '" fill="none" stroke="' + (s.kind === "glass" ? "#7E6A5C" : "#3A2216") + '" stroke-width="' + (s.kind === "glass" ? 2 : 2.6) + '" stroke-linejoin="round"/>';
+    if (s.kind === "demi") out += '<ellipse cx="' + cx + '" cy="' + (BASE + 4) + '" rx="' + (w * 0.78) + '" ry="4.5" fill="#FFFDF9" stroke="#3A2216" stroke-width="2.2"/>';
+    if (!s.layers.length) out += '<path d="M' + (cx - w / 2 + 10) + "," + (top + 12) + " H" + (cx + w / 2 - 10) + '" stroke="#C9B08F" stroke-dasharray="4 5"/>';
+    return out + "</svg>";
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".cupslot"), function (el) {
+    var spec = CUPS[el.getAttribute("data-cup")];
+    if (spec) el.outerHTML = cupSVG(spec);
+  });
+
+  /* ---------- simplified flavor wheel (own drawing, only words from the wiki) ---------- */
+  (function wheel() {
+    var svg = document.getElementById("wheel");
+    if (!svg) return;
+    var C = 210, R = [34, 100, 150, 205];
+    function pt(r, a) { var t = (a - 90) * Math.PI / 180; return [C + r * Math.cos(t), C + r * Math.sin(t)]; }
+    function arc(r0, r1, a0, a1) {
+      var p0 = pt(r1, a0), p1 = pt(r1, a1), p2 = pt(r0, a1), p3 = pt(r0, a0), big = (a1 - a0) > 180 ? 1 : 0;
+      return "M" + p0 + " A" + r1 + "," + r1 + " 0 " + big + " 1 " + p1 + " L" + p2 + " A" + r0 + "," + r0 + " 0 " + big + " 0 " + p3 + " Z";
+    }
+    var html = "";
+    function sector(r0, r1, a0, a1, fill, label, ink, size, radial) {
+      html += '<path d="' + arc(r0, r1, a0, a1) + '" fill="' + fill + '" stroke="#FBF7F0" stroke-width="2"/>';
+      if (!label) return;
+      var am = (a0 + a1) / 2, rm = (r0 + r1) / 2, p = pt(rm, am);
+      var rot = radial ? (am < 180 ? am - 90 : am + 90) : 0;
+      html += '<text x="' + p[0] + '" y="' + p[1] + '" text-anchor="middle" dominant-baseline="central" font-size="' + (size || 13) +
+        '" font-weight="700" fill="' + (ink || "#fff") + '" transform="rotate(' + rot + " " + p[0] + " " + p[1] + ')">' + label + "</text>";
+    }
+    // ring 1
+    sector(R[0], R[1], 0, 180, "#B03A3A", "果香", "#fff", 16);
+    sector(R[0], R[1], 180, 270, "#B5679A", "花香", "#fff", 15);
+    sector(R[0], R[1], 270, 360, "#C98A2E", "甜", "#2A1A12", 16);
+    // ring 2 (fruit split; the rest left as blanks)
+    var r2 = [["莓果", "#8E2F4A"], ["乾燥水果", "#A85A3A"], ["柑橘", "#D98A2B"], ["其他水果", "#C2503F"]];
+    r2.forEach(function (s, i) { sector(R[1], R[2], i * 45, (i + 1) * 45, s[1], s[0], "#fff", 12.5, true); });
+    sector(R[1], R[2], 180, 270, "#E2B9D3"); sector(R[1], R[2], 270, 360, "#EBCB98");
+    // ring 3
+    var cit = [["葡萄柚", "#E58F2E"], ["柳橙", "#EDA83F"], ["檸檬", "#F2CB55"], ["萊姆", "#B9BC4E"]];
+    cit.forEach(function (s, i) { sector(R[2], R[3], 90 + i * 11.25, 90 + (i + 1) * 11.25, s[1], s[0], "#2A1A12", 12, true); });
+    var oth = [["櫻桃", "#A3303F"], ["椰子", "#E9DFC9"], ["葡萄", "#6E3B6E"], ["鳳梨", "#E3B23C"]];
+    oth.forEach(function (s, i) { sector(R[2], R[3], 135 + i * 11.25, 135 + (i + 1) * 11.25, s[1], s[0], i === 1 || i === 3 ? "#2A1A12" : "#fff", 12, true); });
+    sector(R[2], R[3], 0, 45, "#E7C3C9"); sector(R[2], R[3], 45, 90, "#EBC7B6");
+    sector(R[2], R[3], 180, 270, "#F1DCE8"); sector(R[2], R[3], 270, 360, "#F4E3C6");
+    html += '<circle cx="' + C + '" cy="' + C + '" r="' + R[0] + '" fill="#3A2216"/>';
+    html += '<text x="' + C + '" y="' + C + '" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#F5ECDF">由此開始</text>';
+    // arrow: 果香 -> 柑橘 -> 葡萄柚
+    var a = pt(70, 112), b = pt(125, 112), c = pt(178, 96);
+    html += '<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2A1A12"/></marker></defs>';
+    html += '<path d="M' + a + " L" + b + " L" + c + '" fill="none" stroke="#2A1A12" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#ah)" opacity=".9"/>';
+    [a, b].forEach(function (p) { html += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4.5" fill="#2A1A12"/>'; });
+    svg.insertAdjacentHTML("beforeend", '<g font-family="Noto Sans TC,sans-serif">' + html + "</g>");
+  })();
+
+  /* ---------- navigation ---------- */
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var N = slides.length, cur = -1;
+  var counter = document.getElementById("counter"), bar = document.querySelector(".progress");
+  function parseHash() { var n = parseInt((location.hash || "").replace("#", ""), 10); return isNaN(n) ? 0 : n - 1; }
+  function go(i) {
+    i = Math.max(0, Math.min(N - 1, i));
+    if (i === cur) return;
+    slides.forEach(function (s, k) {
+      var on = k === i;
+      s.classList.toggle("active", on);
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+      if ("inert" in s) s.inert = !on;
+    });
+    slides[i].scrollTop = 0;
+    cur = i;
+    counter.textContent = (i + 1) + " / " + N;
+    bar.style.width = ((i + 1) / N * 100) + "%";
+    if (parseHash() !== i) history.replaceState(null, "", "#" + (i + 1));
+  }
+  function next() { go(cur + 1); }
+  function prev() { go(cur - 1); }
+  document.getElementById("next").addEventListener("click", next);
+  document.getElementById("prev").addEventListener("click", prev);
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    var t = e.target, onControl = t && t.closest && t.closest("a,button");
+    switch (e.key) {
+      case "ArrowRight": case "PageDown": next(); break;
+      case "ArrowLeft": case "PageUp": prev(); break;
+      case " ": case "Spacebar": if (onControl) return; e.shiftKey ? prev() : next(); break;
+      case "Home": go(0); break;
+      case "End": go(N - 1); break;
+      default: return;
+    }
+    e.preventDefault();
+  });
+  window.addEventListener("hashchange", function () { go(parseHash()); });
+  var deck = document.getElementById("deck"), sx = 0, sy = 0, swiped = false;
+  deck.addEventListener("touchstart", function (e) { var t = e.changedTouches[0]; sx = t.clientX; sy = t.clientY; swiped = false; }, { passive: true });
+  deck.addEventListener("touchend", function (e) {
+    var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; dx < 0 ? next() : prev(); }
+  }, { passive: true });
+  deck.addEventListener("click", function (e) {
+    if (swiped) { swiped = false; return; }
+    if (e.target.closest("a,button,summary,input,label,select,textarea")) return;
+    var sel = window.getSelection && window.getSelection();
+    if (sel && String(sel).length) return;
+    e.clientX < window.innerWidth / 2 ? prev() : next();
+  });
+  go(parseHash());
+})();
+</script>
+</body>
+</html>
