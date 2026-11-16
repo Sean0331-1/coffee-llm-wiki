@@ -376,3 +376,35 @@ updated: 2026-11-16
 
 忠實度核對：發現 0 處新問題；修改過程中修正 1 處自己的初稿措辭（cold-brew 定義曾寫「不用熱水」，原文沒有，改回「咖啡萃取方式」）。
 檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；已重讀所有改動的「相關概念」清單、標題與頁尾。
+
+## [2026-11-16] query | 簡報素材查詢
+
+先讀 `index.md` 與 `overview.md`，依學習目標挑頁，再逐頁讀完選用的概念頁；只用 Wiki，不引入 Wiki 以外的事實。另讀 `task-6-lint-report.md` 的矛盾清單與檢查點3 決定，作為取捨依據。
+
+選用的頁面（依學習目標）：
+- 看懂菜單：`concepts/espresso-drinks.md`（入口、三組件、台灣名稱）、`espresso.md`、`americano.md`、`latte.md`、`cappuccino.md`、`flat-white.md`、`cortado.md`、`mocha.md`、`macchiato.md`（同名不同杯）。
+- 看懂豆袋：`reading-coffee-bags.md`（入口、八欄位）、`origin.md`、`altitude.md`、`processing-methods.md`（含產地對應的不一致）、`variety.md`、`roast-date.md`（最佳期間的不一致）、`tasting-notes.md`。
+- 喝出差別：`roast-level.md`、`flavor-wheel.md`、`tasting-notes.md`；`cupping-score.md` 只用來解釋 SCAA 這個縮寫。
+- 沖煮方式：`brewing-methods.md`、`pour-over.md`、`cold-brew.md`。
+- 知道點什麼：上列飲品頁、`roast-level.md`（含 Nespresso 的牛奶搭配建議）、`processing-methods.md`（Coffee Hero 的選豆建議）、`cold-brew.md`，整合進新寫的 `outputs/ordering-guide.md`。
+- 開場與總結的架構：`overview.md`。
+
+刻意不用或只部分使用：
+- `species.md`：阿拉比卡、羅巴斯塔對點餐與讀豆袋的幫助小，19 頁內放不下，不用。
+- `cupping-score.md` 的分數區間：初學者點餐用不到，只借用 SCAA 的中文名稱。
+- `sources/*.md`：大綱引用概念頁，來源頁經由概念頁追溯，不直接列。
+- 依檢查點3 決定排除的內容：La Marzocco 自己對不上的比例（卡布奇諾 1:4、拿鐵 1:5 以上）、濃縮是「蒸氣」還是「熱水加壓」、風味輪與詞彙表誰以誰為基礎；ristretto、lungo、冰飲、植物奶不放；咖啡因只放 NCA 的「深焙不代表咖啡因多」一句；冰滴只在點餐指南出現，不上簡報。
+- 盎司、毫升、倍數一律不放（各來源單位與定量性質不同，見 lint 第 3 節 #3、#4、#8、#10）。
+
+## [2026-11-16] outline | 簡報大綱
+
+- 產出：`outputs/ordering-guide.md`（type: synthesis，三個問題：怕苦還是怕酸、加不加奶、手沖還是義式；每個分支先列背後事實並連到概念頁、註明出自哪個來源，建議標「根據以上整理的建議」，並註明單一來源的建議：拿鐵適合怕苦、牛奶搭配中深焙只來自 Nespresso 台灣，處理法對應風味的選豆建議只來自 Coffee Hero；這些「只來自」句先用 grep 對照全部 concepts 與 sources 頁確認）；`outputs/slide-outline.md`（type: output，19 頁，每頁 2–4 個重點、視覺構想、引用的 wiki 頁）。`index.md`「產出」區與 `overview.md` 新增導覽連結。
+- 寫點餐指南時自己改掉的初稿推論（N6 檢查前）：「Cortado 牛奶更少」改成 La Marzocco 原話「馥列白比 Cortado 多一點量」；美式「一大杯、比較溫和」改成 Nespresso 的「口感清爽」；瑪奇朵「牛奶為主的大杯」刪「大杯」；「NCA 沖煮只說冷萃比冰咖啡不苦」這類負面句改成正面陳述；另補上處理法以豆袋標示為準的分支（第 11 頁要引用）。
+- N6 檢查（逐頁重讀引用的概念頁對照每個重點）：
+  1. 每頁至少 1 個 wiki 引用：通過（19/19 頁；引用都寫成連結，`check_wiki.py` 一併驗證路徑存在）。
+  2. 每個重點都能在所引用的頁找到：**不通過 3 處**，已重寫：(a) 第 4 頁拿鐵「常見飲品裡杯子最大、牛奶最多」是跨列比較的推論，原文沒有直說，改成 Seattle 杯量表可直接對照的「杯子比卡布奇諾、馥列白大」加 La Marzocco 原話「比該文前面介紹的飲品都淡」，點餐指南同一句一併改；(b) 第 8 頁「菜單或袋上資訊很少時問咖啡師」，HK01 只講菜單，刪掉「袋上」；(c) 第 11 頁把 pulped natural 對應到蜜處理，wiki 沒有這個對應，刪掉，改列 yellow honey、black honey。另把第 1 頁「精品咖啡會把豆子從哪裡來寫得更清楚」改回 Seattle 豆袋的原意（生產者資訊揭露越多是精品與大宗商品咖啡的差別之一）。
+  3. 術語第一次出現有解釋：**不通過 3 處**，已補：「精品咖啡」沒解釋（第 1 頁加一點：新鮮烘焙與資訊揭露是它和超市／大宗商品咖啡的差別）；「濾泡」沒解釋（第 13 頁加 ＊ 解釋）；第 17 頁「單品豆」加括號「單一產區的豆子」。第 8 頁的八個欄位名稱改標「第 9–15 頁逐一說明」。
+  4. 學習目標涵蓋：通過。看懂菜單第 2–7、17 頁；看懂豆袋第 8–13、15 頁；喝出差別第 14–16 頁；知道點什麼第 18–19 頁（第 6、7、11 頁也有點餐建議）。
+  5. 矛盾只正面呈現核准的三項：通過。第 6 頁瑪奇朵、第 11 頁處理法與產地、第 13 頁烘焙日期；範圍差異用腳註（第 4 頁現代卡布奇諾、第 5 頁 Nespresso 摩卡、第 7 頁歐洲 latte、第 10 頁白蜜）。grep 確認大綱沒有 1:4、1:5、ristretto、lungo、植物奶；咖啡因只有 NCA 一句。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 39 pages`。
+- 尚待：使用者確認大綱（N6 結束條件），確認前不進 N7。

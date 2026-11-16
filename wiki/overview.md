@@ -30,6 +30,11 @@ updated: 2026-11-16
 - [風味輪](concepts/flavor-wheel.md)：風味輪的由來與讀法。
 - [風味描述](concepts/tasting-notes.md)：豆袋上的風味詞是什麼意思。
 
+## 四、知道點什麼
+
+- [點餐指南](outputs/ordering-guide.md)：三個問題的點餐整理（綜合整理頁）。
+- [簡報大綱](outputs/slide-outline.md)：教學簡報的逐頁大綱。
+
 ## 其他入口
 
 - [目錄](index.md)：所有來源頁與概念頁的清單。
