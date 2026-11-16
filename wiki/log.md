@@ -456,3 +456,9 @@ updated: 2026-11-16
 - 修正（只改這幾頁的版面，內容不變）：第 1 頁把三張卡片移到兩欄下方、橫跨全寬，標題改成一行，菜單板圖加高度上限；第 7 頁縮小菜單板的字級與列距；手機寬度下所有小字（來源標籤、圖說、品種名牌等）設最小 11.5px。量測時另發現第 16 頁（風味輪）在 1280×720 高 731px、第 6 頁在 1920×1080 高 1094px，一併修正（風味輪高度上限 50vh；根字級上限 25px 改 24px）；手機上第 12 頁名牌小字 9.6px 也一併調大。
 - 修正後重新量測（每頁 `scrollHeight <= clientHeight`）：1280×720、1366×768、1920×1080 三種尺寸 19 頁皆無溢出；375×812 無水平溢出，最小字級 11.52px；console 無錯誤。
 - 檢查：`python scripts/check_slides.py` → `OK: 19 slides`；`python scripts/check_wiki.py` → `OK: 39 pages`。
+
+## [2026-11-16] report | 繳交報告
+
+- 產出：`report.md`，對應作業 6 項：主題與簡介、Wiki 連結與規模（39 頁：sources 11、concepts 23、outputs 2、index／overview／log 3）、簡報連結與 19 頁 ↔ wiki 頁對照表、實際 graph 的 mermaid 流程圖與文字說明、從本 log 摘錄的一次完整執行與檢查總表、反思。repo 與 GitHub Pages 網址先用 `{{REPO_URL}}`、`{{PAGES_URL}}` 占位，推上 GitHub 後再填；Obsidian graph view 截圖留位置由使用者補。
+- 反思的統計依本 log：N3 ingest 發現最多（忠實度自我核對 30 處、第一篇審查 11 處、檢查點2 自我再核 9 處、批次A 2 處、批次B 2 處，共 54 處），N6 大綱 18、N7 生成 11、N1 與 N2 各 1。批次C、D 審查 0 處 Important 沒有寫在本 log，報告中註明出自審查紀錄。
+- 檢查：報告中的數字逐一對回本 log 與 git 紀錄；`python scripts/check_wiki.py`、`python scripts/check_slides.py` 結果 `OK: 39 pages`、`OK: 19 slides`。
