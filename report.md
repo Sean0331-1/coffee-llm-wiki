@@ -1,10 +1,8 @@
 # 繳交報告：咖啡入門 LLM Wiki ＋ 教學 HTML 簡報
 
-> **繳交標題格式（請自行填寫）：** `學校 學號 系級 姓名 主題`
-
 **使用工具：** Claude Code（依 `CLAUDE.md` 執行 graph，不用 LangGraph／API key）；獨立審查用 Claude Code subagent（reviewer）；Python 檢查腳本 `scripts/check_wiki.py`、`scripts/check_slides.py`；Wiki 是 Obsidian 相容的 markdown（標準相對連結）；簡報是手寫單檔 HTML。
 
-本報告的數字與引文都來自 [`wiki/log.md`](wiki/log.md)、git 紀錄與 repo 內的檔案。批次 C、D 與簡報的審查結果原本只記在 controller 的審查紀錄，後來補記於 log `check | 簡報審查與批次C/D 審查結果`。
+本報告的數字與引文都來自 [`wiki/log.md`](wiki/log.md)、git 紀錄與 repo 內的檔案。批次 C、D 與簡報的審查結果原本只記在審查紀錄，後來補記於 log `check | 簡報審查與批次C/D 審查結果`。
 
 ---
 
@@ -46,8 +44,7 @@
 - **GitHub：** 從 `wiki/index.md` 點進任何一頁，連結都是標準相對路徑，GitHub 上可直接點。
 - **Obsidian：** 把 repo 資料夾當 vault 開啟，連結是標準 markdown 連結（不用 `[[ ]]`），Graph view 可看到頁面之間的連結關係；`index.md`、`overview.md` 與各入口頁（`espresso-drinks`、`reading-coffee-bags`、`brewing-methods`）是主要的樞紐。
 
-<!-- 可在此放 Obsidian graph view 截圖，例如：![Obsidian graph view](docs/obsidian-graph.png) -->
-（Obsidian graph view 截圖：可由使用者在此補上。）
+本報告不附截圖；用 Obsidian 開啟 repo 資料夾當 vault，即可看到各頁連結形成的 graph view。
 
 ## 3. 教學 HTML 簡報連結
 
@@ -63,7 +60,7 @@
 | 喝出差別 | 第 14–16 頁 |
 | 知道點什麼 | 第 18–19 頁（第 6、7、11 頁也有點餐建議） |
 
-**每頁怎麼對應 Wiki：** 每頁是 `<section class="slide" data-wiki="wiki/...">`，頁尾的「出處：」由 `data-wiki` 自動產生並連到該 wiki 頁，所以兩者不會不一致。`scripts/check_slides.py` 會檢查每頁都有 `data-wiki`、不是空的、路徑都存在、頁數正確（log `generate | 教學簡報 HTML`：先用壞檔測試四種問題都會回報，正式簡報結果 `OK: 19 slides`）。點餐建議標「建議」；來源說法不一的三頁（第 6、11、13 頁）標「各家說法不同」。
+**每頁怎麼對應 Wiki：** 每頁是 `<section class="slide" data-wiki="wiki/...">`，頁尾的「出處：」最初由 `data-wiki` 產生，後來改寫成 GitHub 絕對連結（頁尾是靜態 HTML，不會自動更新）。`scripts/check_slides.py` 會檢查每頁都有 `data-wiki`、不是空的、路徑都存在、頁數正確，並逐頁驗證頁尾出處連結的目標與 `data-wiki` 路徑完全相同（19 頁皆一致）（log `generate | 教學簡報 HTML`：先用壞檔測試四種問題都會回報，正式簡報結果 `OK: 19 slides`）。點餐建議標「建議」；來源說法不一的三頁（第 6、11、13 頁）標「各家說法不同」。
 
 **簡報 ↔ Wiki 對照（摘自各頁 `data-wiki`，省略 `wiki/concepts/` 路徑）：**
 
@@ -115,7 +112,7 @@ flowchart TD
   R3 -->|"還有來源：下一篇"| N3
   R3 -->|"全部 ingest 完"| N4["N4 Lint：矛盾、孤兒頁、缺頁、<br/>無來源陳述、學習目標缺口、格式"]
   N4 --> CP3{"◆CP3 補資料／標註矛盾／忽略"}
-  CP3 -.->|"補資料：回 N1 或 N3"| N3
+  CP3 -.->|"補資料：回 N3"| N3
   CP3 -->|"處理完"| N5["N5 Query：讀 index，依學習目標選頁"]
   N5 --> N6["N6 簡報大綱＋點餐指南"]
   N6 --> C6{"大綱檢查：每頁有引用？重點找得到？<br/>術語有解釋？涵蓋學習目標？"}

@@ -485,3 +485,19 @@ updated: 2026-11-16
 
 - repo 已推上 GitHub，GitHub Pages 由使用者設定完成（main, root）。
 - 簡報 footer 出處連結 51 個由相對路徑 `../wiki/...md` 改為 GitHub blob 絕對網址（新分頁開啟），`data-wiki` 屬性不變；report.md、README.md 的 `{{REPO_URL}}`、`{{PAGES_URL}}` 占位已換成實際網址；新增 `.nojekyll`。
+
+## [2026-11-16] check | 最終整體審查
+
+- 最終整體審查（由較強的模型擔任 reviewer，看整個專案）預估每個評分項目在 GitHub Pages 正常運作的前提下可得 9–10 分。
+- 發現 1 項 Critical：GitHub Pages 當時尚未啟用，簡報連結會 404（需使用者自行設定，不是 repo 內可修的問題）。
+- 發現 2 項 Important：report.md 留有占位文字（標題格式、Obsidian 截圖）；report.md 說頁尾出處「由 data-wiki 自動產生所以不會不一致」，但頁尾是靜態 HTML，說法過度。另有數項 Minor。
+- 先前延後的 Minor 逐項分流：14 項已解決或決定不處理，1 項修正（CP3 虛線邊標籤）。
+- 本次修正：
+  1. report.md 移除標題格式占位與 Obsidian 截圖占位，改以一句話說明可用 Obsidian 開啟看 graph view。
+  2. `scripts/check_slides.py` 新增檢查：每頁頁尾出處連結的目標（絕對 blob 網址，結尾 wiki/....md）必須與同頁 `data-wiki` 路徑相同且順序一致。以暫時改壞的檔案測試會回報 3 頁不一致（第 1、8、13 頁）並以 1 結束；正式簡報 `OK: 19 slides`。report.md 同步改成較準確的說法。
+  3. report.md 的 mermaid CP3 虛線邊標籤由「補資料：回 N1 或 N3」改為「補資料：回 N3」。
+  4. report.md 移除「controller」字樣，改為「審查紀錄」。
+  5. wiki/concepts/roast-level.md 中 Nespresso 台灣的 5 處近乎逐字的片段改以自己的話改寫（事實與出處不變）；掃描其他引用 Nespresso 台灣與 HK01 的概念頁，沒有其他 ≥25 字的重複（flat-white、espresso-drinks 的 26 字為加引號的中文別名清單，latte 的 25 字為加引號的定義，皆保留）。
+  6. CLAUDE.md 規則紀錄中「約四週」改為與來源一致的「長達四週」。
+  7. README.md 資料夾清單補上 `scripts/check_slides.py` 與 `docs/plans/`。
+- 檢查：`python scripts/check_slides.py` → `OK: 19 slides`；`python scripts/check_wiki.py` → `OK: 39 pages`。

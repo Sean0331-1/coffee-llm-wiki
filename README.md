@@ -10,10 +10,11 @@
 CLAUDE.md        schema：頁面格式、各節點流程與檢查規則
 raw/SOURCES.md   公開的來源清單（raw/ 其餘全文因版權不上傳）
 wiki/            LLM 維護的 Wiki：index.md、log.md、overview.md、sources/、concepts/、outputs/
-scripts/         check_wiki.py：Wiki 檢查腳本（python scripts/check_wiki.py）
+scripts/         check_wiki.py、check_slides.py：Wiki／簡報檢查腳本（python scripts/check_wiki.py）
 slides/          教學簡報（單一 HTML）
 report.md        繳交報告
 docs/specs/      設計文件
+docs/plans/      實作計畫
 ```
 
 ## 連結
