@@ -12,7 +12,7 @@ updated: 2026-11-16
 ## 重點
 
 - 知道這三個組件之後，菜單會比較看得懂（[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)）。
-- 另一個來源也說各款飲品的差別在牛奶的量與質地（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）；第三個來源說最關鍵的差異來自飲品中濃縮咖啡所占的比例，它決定咖啡的濃度、香氣層次與整體口感（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。同一個菜單名字在傳統與現代咖啡店可能做法不同，見下方比較與「來源間的差異」。
+- 另一個來源在卡布奇諾與拿鐵的說明中，以牛奶與濃縮的比例區分兩者（[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)）；第三個來源說最關鍵的差異來自飲品中濃縮咖啡所占的比例，它決定咖啡的濃度、香氣層次與整體口感（[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)）。同一個菜單名字在傳統與現代咖啡店可能做法不同，見下方比較與「來源間的差異」。
 - 下表一整理 [Seattle 飲品](../sources/seattle-espresso-drinks-guide.md) 對八款飲品的說法；表二整理 [La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md) 的說法；表三整理 [Nespresso 台灣](../sources/nespresso-tw-coffee-types.md) 的說法（毫升、膠囊定量）；空白或「未說明」代表該來源沒有講，不是沒有。
 
 **表一：Seattle 飲品**
@@ -101,7 +101,7 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-三篇在大方向上一致：飲品由濃縮、牛奶、奶泡組成，差別在比例與質地。主要不同如下（各款細節見各概念頁）：
+以下是三個來源在各款飲品上的主要不同（各款細節見各概念頁）：
 
 - **瑪奇朵（差別最大）**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說傳統版是一份濃縮加一小坨奶泡、約 2 盎司，並提醒不要與星巴克式焦糖瑪奇朵混淆；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說義大利式也是濃縮加一點奶泡，但現代咖啡店常加蒸奶與微細奶泡，奶量大致等於或略少於濃縮；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)把「拿鐵瑪奇朵」寫成在 125 毫升熱牛奶與奶泡中加入 40 毫升濃縮，以牛奶為主。
 - **卡布奇諾**：[Seattle 飲品](../sources/seattle-espresso-drinks-guide.md)說傳統上三等分、約 5 至 6 盎司，厚奶泡是特色；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)也是 1:1:1（各 40 毫升）；[La Marzocco 飲品](../sources/la-marzocco-espresso-drinks.md)說三等分是義大利傳統，現代精品店多半是約 6 盎司、牛奶與濃縮約 1:4、奶泡很少的奶咖啡。
