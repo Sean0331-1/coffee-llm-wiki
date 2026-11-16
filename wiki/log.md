@@ -480,3 +480,8 @@ updated: 2026-11-16
 - 修正後量測（每頁 `scrollHeight <= clientHeight`）：加 Cortado 一列後第 7 頁在 1280×720 一度高 745px，縮小表格列距、精簡表註後修好。1280×720、1366×768、1920×1080 三種尺寸 19 頁皆無溢出；375×812 無水平溢出；console 無錯誤。
 - 檢查：`python scripts/check_slides.py` → `OK: 19 slides`；`python scripts/check_wiki.py` → `OK: 39 pages`。
 - 補充：第 16 頁原本借 cupping-score.md 寫出 SCAA 的中文名稱「美國精品咖啡協會」；移除該引用後，這個中文名稱改標 ＊（術語解釋，非來源內容），讓頁面不再依賴未引用的頁。
+
+## [2026-11-16] report | 發佈連結
+
+- repo 已推上 GitHub，GitHub Pages 由使用者設定完成（main, root）。
+- 簡報 footer 出處連結 51 個由相對路徑 `../wiki/...md` 改為 GitHub blob 絕對網址（新分頁開啟），`data-wiki` 屬性不變；report.md、README.md 的 `{{REPO_URL}}`、`{{PAGES_URL}}` 占位已換成實際網址；新增 `.nojekyll`。

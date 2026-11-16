@@ -24,7 +24,7 @@
 
 ## 2. LLM Wiki 連結與成果
 
-- **Wiki（GitHub repo）：** {{REPO_URL}}
+- **Wiki（GitHub repo）：** https://github.com/Sean0331-1/coffee-llm-wiki
 - **入口：** [`wiki/index.md`](wiki/index.md)（目錄，每頁一行摘要）、[`wiki/overview.md`](wiki/overview.md)（依學習目標分組的導覽）、[`wiki/log.md`](wiki/log.md)（只增不改的操作紀錄）
 
 **規模（`check_wiki.py` 最後結果 `OK: 39 pages`）：**
@@ -51,7 +51,7 @@
 
 ## 3. 教學 HTML 簡報連結
 
-- **簡報（GitHub Pages）：** {{PAGES_URL}}
+- **簡報（GitHub Pages）：** https://sean0331-1.github.io/coffee-llm-wiki/slides/
 - 原始檔：[`slides/index.html`](slides/index.html)（單一 HTML，只外連 Google Fonts，圖全部是內嵌 SVG／CSS 自繪；←／→、空白鍵、點擊、手機滑動翻頁；網址 `#N` 可直接到第 N 頁；375px 手機寬度可讀）
 
 **教學結構：** 19 頁，第 1 頁開場「菜單上的字，為什麼看不懂？」，之後依 4 個學習目標排列（大綱在 [`wiki/outputs/slide-outline.md`](wiki/outputs/slide-outline.md)，分組依 log `outline | 簡報大綱` 的 N6 檢查第 4 項）：

@@ -18,6 +18,6 @@ docs/specs/      設計文件
 
 ## 連結
 
-- Wiki（GitHub repo）：（待填）
-- 簡報（GitHub Pages）：（待填）
-- 報告：（待填）
+- Wiki（GitHub repo）：https://github.com/Sean0331-1/coffee-llm-wiki（入口：https://github.com/Sean0331-1/coffee-llm-wiki/blob/main/wiki/index.md）
+- 簡報（GitHub Pages）：https://sean0331-1.github.io/coffee-llm-wiki/slides/
+- 報告：https://github.com/Sean0331-1/coffee-llm-wiki/blob/main/report.md
