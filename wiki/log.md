@@ -301,3 +301,14 @@ updated: 2026-11-16
 - 判斷：詞彙表參照物的取得與嗅聞方式只收一句；步驟 4 到 6 屬進階，不細寫；沒有輪上詞彙的完整清單。
 - 忠實度核對：發現 1 處，處理方式：來源頁初稿在「與其他來源的關係」寫了尚未存在的 Trade 頁連結與「兩者說法不同」，在 Trade ingest 前屬於預寫，刪除，留待 Trade 那篇再補。其餘句子逐句對回原文；「風味輪（flavor wheel）」概念頁「杯測」用 ＊ 並加頁尾說明；沒有跨來源肯定或負面句。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 36 pages`；index 與 log 已更新，已重讀 tasting-notes 重點與相關概念清單、index 新增的清單與標題。
+
+## [2026-11-16] ingest | trade-flavor-wheel-explained
+
+- 來源：Trade〈The Coffee Taster’s Flavor Wheel, Explained〉（簡稱 Trade 風味輪，`raw/trade-flavor-wheel-explained.md`），英文商業教育部落格（2020 年 10 月）。
+- 重點：(1) 風味輪受 UC Davis 1984 年 Wine Aroma Wheel 啟發；(2) 咖啡版 1995 年由 SCAA 發布，用於品質管控、杯測評分與交易，2016 年大改版；(3) 輪上與包裝上的風味不是添加物；(4) 產國、品種、處理法、烘焙風格影響風味，Gesha 花香、Bourbon 偏甜、水洗核果、日曬藍莓；(5) 中心環、第二環（群組）、最外環（具體詞）的讀法；(6) 輪底部是瑕疵詞；(7) WCR 詞彙表是以輪為基礎的獨立資源；(8) 初學者從日常食物練習，品嚐應該有趣。
+- 新增頁面（1）：`sources/trade-flavor-wheel-explained.md`。
+- 更新頁面（5）：`concepts/flavor-wheel.md`（改寫為兩來源，新增由來、環狀讀法、瑕疵、初學者練習、差異段）、`concepts/tasting-notes.md`（新增 Trade 一條與差異句）、`concepts/processing-methods.md`（新增 Trade 風味詞小節與差異段）、`concepts/variety.md`（新增 Gesha／Bourbon 風味與差異段）、`index.md`（來源 1 行、風味輪摘要更新）。
+- 差異（並列「A 說…，B 說…」）：輪與詞彙表誰以誰為基礎，SCA 風味輪說輪以 WCR 詞彙表為基礎，Trade 風味輪說詞彙表獨立發表、以輪為基礎，方向相反，未選邊；水洗風味詞，Trade 風味輪說清脆、核果類水果味，Coffee Hero 說花香、柑橘、茶感；日曬兩者都提到藍莓、草莓；層次說法與用途面向不同。沒有其他直接矛盾。
+- 判斷：不收 Trade 的行銷用語；WCR 詞彙表的練習做法只收一句進來源頁；圖片未擷取。
+- 忠實度核對：發現 3 處，處理方式：(1) 瑕疵區「一般買到的豆子不必太在意」是把 Trade 針對自家咖啡的話概括化，改為「因此這一區不必太在意」，並在來源頁註明是文章的說法；(2) variety 差異段初稿寫「兩者都說 Geisha 以花香出名」，Trade 原文是「常有花香」，改為「有花香」；(3) 流程上補回 SCA 來源頁在 SCA ingest 時刻意不寫的兩篇對照，這次已逐一對回兩篇原文，輪與詞彙表的相反說法各自引用。跨來源句（Seattle 豆袋與 Trade 風味輪對 Geisha、Bourbon 的風味、對「不是添加物」的說法、Coffee Hero 與 Trade 風味輪的日曬藍莓草莓）已逐一對回原文；負面句「SCA 沒有談處理法與品種」已對回 SCA 全文確認，限定在這兩個風味輪來源之內。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；index 與 log 已更新，已重讀 tasting-notes、variety、processing-methods、index 改過的清單與標題，條目皆各自一行。

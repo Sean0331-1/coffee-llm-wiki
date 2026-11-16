@@ -1,7 +1,7 @@
 ---
 title: 風味描述（Tasting Notes）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/sca-flavor-wheel-eight-steps.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/sca-flavor-wheel-eight-steps.md, sources/trade-flavor-wheel-explained.md]
 updated: 2026-11-16
 ---
 
@@ -18,6 +18,7 @@ updated: 2026-11-16
 - 另一個來源把「預期的風味」列為精準標示資訊之一，與微產區、莊園、海拔、批次、生產履歷並列（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 
 - 處理法與風味詞的對應，該文給的是：水洗常描述為花香、柑橘、茶感；日曬為莓果、熱帶水果、葡萄酒感，常被形容為藍莓、草莓；蜜處理為核果、焦糖、糖漿感（[Coffee Hero](../sources/coffee-hero-processing-methods.md)）。
+- [Trade 風味輪](../sources/trade-flavor-wheel-explained.md)也說，輪上的風味和烘焙商印在包裝上的風味不是添加物造成的，而是豆子本身就有；產國、品種、處理法、烘焙風格等都會影響風味。
 - 描述風味時，業界有一張標準的風味輪，讓大家用同一組詞溝通；從輪的中心往外選，由籠統到具體（[SCA 風味輪](../sources/sca-flavor-wheel-eight-steps.md)；詳見[風味輪](flavor-wheel.md)）。
 
 ## 相關概念
@@ -33,6 +34,6 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明風味描述是什麼、不是添加物；[HK01 手沖](../sources/hk01-pour-over-five-things.md)只在標示清單中提到「預期風味」，沒有解釋它的意思。[Coffee Hero](../sources/coffee-hero-processing-methods.md)是從處理法的角度列出各自常見的風味詞，沒有談風味描述怎麼產生。[SCA 風味輪](../sources/sca-flavor-wheel-eight-steps.md)談的是品嚐者怎麼用風味輪描述風味，沒有談豆袋上的風味描述。
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明風味描述是什麼、不是添加物；[HK01 手沖](../sources/hk01-pour-over-five-things.md)只在標示清單中提到「預期風味」，沒有解釋它的意思。[Coffee Hero](../sources/coffee-hero-processing-methods.md)是從處理法的角度列出各自常見的風味詞，沒有談風味描述怎麼產生。[SCA 風味輪](../sources/sca-flavor-wheel-eight-steps.md)談的是品嚐者怎麼用風味輪描述風味，沒有談豆袋上的風味描述。[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)與 [Seattle 豆袋](../sources/seattle-read-coffee-bag.md)都說包裝上的風味不是添加物；Trade 把它放在風味輪的脈絡裡談，並說輪上的詞與包裝上的詞都來自豆子本身。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

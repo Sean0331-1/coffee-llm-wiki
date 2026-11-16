@@ -28,6 +28,7 @@ updated: 2026-11-16
 - [About Coffee（美國國家咖啡協會）：烘焙度](sources/about-coffee-roasts.md)（簡稱：NCA 烘焙）：咖啡協會教育頁，說明淺、中、深焙的外觀與酸苦方向、包裝上常見的烘焙名稱，以及「Espresso roast」不是一個烘焙度。
 - [About Coffee（美國國家咖啡協會）：沖煮方式](sources/about-coffee-brewing.md)（簡稱：NCA 沖煮）：協會的沖煮教學五頁，收滴濾、手沖、義式濃縮、冷萃各是什麼、杯中差別，以及冷萃不是冰咖啡；器材與步驟不收。
 - [SCA：用八個步驟使用咖啡品嚐者風味輪](sources/sca-flavor-wheel-eight-steps.md)（簡稱：SCA 風味輪）：精品咖啡協會的官方使用說明，講風味輪由中心往外的讀法、與感官詞彙表的關係、相鄰格子與顏色的意思。
+- [Trade：咖啡品嚐者風味輪解說](sources/trade-flavor-wheel-explained.md)（簡稱：Trade 風味輪）：咖啡訂閱服務的教育文，說明風味輪受葡萄酒香氣輪啟發的由來、1995 初版與 2016 改版、中心環到最外環的讀法，以及處理法與品種如何帶出不同風味詞。
 
 ## 概念
 
@@ -62,7 +63,7 @@ updated: 2026-11-16
 
 ### 風味輪
 
-- [風味輪（Flavor Wheel）](concepts/flavor-wheel.md)：風味輪是什麼、由中心往外怎麼讀。
+- [風味輪（Flavor Wheel）](concepts/flavor-wheel.md)：風味輪的由來、由中心往外怎麼讀、輪底部的瑕疵詞，並列兩個來源在輪與詞彙表關係上的不同說法。
 
 ### 沖煮方式
 

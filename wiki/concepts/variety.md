@@ -1,7 +1,7 @@
 ---
 title: 品種（Variety）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/wikipedia-coffee-varieties.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/wikipedia-coffee-varieties.md, sources/trade-flavor-wheel-explained.md]
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,7 @@ updated: 2026-11-16
   - Geisha：以花香出名。
   - Bourbon：常偏甜、層次多。
   - SL28：以明亮的酸質（acidity）出名。
+- Trade 的例子：Gesha 常有茉莉、忍冬般的花香；Bourbon 花香較少、較甜，像奶油糖或黑糖（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
 - 品種資訊要等喝過幾支、知道自己喜歡什麼之後才比較有用；剛入門建議先看[產區](origin.md)和[處理法](processing-methods.md)（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 - 阿拉比卡、羅巴斯塔、賴比瑞亞三大豆種的說明，見[豆種：阿拉比卡與羅巴斯塔](species.md)。
 - 詞彙：[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說，專業咖啡界熟知的品種大多其實是 cultivar（人工栽培選出的品種），Bourbon 與 Typica 是最廣為人知的 cultivar；該條目自己的用法是 variety 指自然產生的亞種、cultivar 指栽培出的亞種。
@@ -35,12 +36,15 @@ updated: 2026-11-16
 - [處理法](processing-methods.md)：水洗、日曬、蜜處理等處理法。
 - [豆種：阿拉比卡與羅巴斯塔](species.md)：咖啡樹的物種層級與三大豆種。
 - [風味描述](tasting-notes.md)：豆袋上的風味用詞。
+- [風味輪](flavor-wheel.md)：風味輪的讀法與由來。
 
 ## 來源間的差異
 
 三個來源談的層級不同，沒有直接衝突：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)列的 Bourbon、Typica、Caturra、Geisha、SL28 是栽培品種（cultivar）；[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說 Bourbon 與 Typica 是最廣為人知的 cultivar，並說明 Bourbon、Typica、Caturra、Geisha、SL28 的來歷；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說藝妓、鐵比卡、波旁是阿拉比卡的分支品種，[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)的品種表也把這幾個品種的物種標為 C. arabica。
 
 風味方面：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說 Geisha 以花香出名、Bourbon 常偏甜且層次多、SL28 以明亮的酸質出名；[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)沒有給這幾個品種的風味，只說 Geisha 價格極高、Caturra 杯測品質較差、SL34 不如 SL28。[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說品種像葡萄品種之於葡萄酒，[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說品種選擇是杯中品質的關鍵之一。
+
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)與[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)都說 Geisha（Gesha）有花香、Bourbon 偏甜；[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)另給了花香像茉莉、忍冬，甜像奶油糖或黑糖，並說 Bourbon 花香較少。
 
 拼法：[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)寫「Geisha or Gesha」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)寫藝妓（Geisha）；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)寫 Geisha。[Wikipedia 品種](../sources/wikipedia-coffee-varieties.md)說這個品種原產自衣索比亞的 Gesha 村，並沒有說兩種拼法在袋上有何不同。
 

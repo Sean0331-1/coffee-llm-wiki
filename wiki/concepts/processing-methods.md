@@ -1,7 +1,7 @@
 ---
 title: 處理法（Processing）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/hk01-pour-over-five-things.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/coffee-hero-processing-methods.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/nespresso-tw-coffee-types.md, sources/hk01-pour-over-five-things.md, sources/hk01-pour-over-five-things.md, sources/coffee-hero-processing-methods.md, sources/coffee-hero-processing-methods.md, sources/trade-flavor-wheel-explained.md]
 updated: 2026-11-16
 ---
 
@@ -61,11 +61,16 @@ updated: 2026-11-16
 - 該文說水洗適合手沖與濾泡，日曬適合濃縮與冷萃，蜜處理各種沖法都可（[Coffee Hero](../sources/coffee-hero-processing-methods.md)）。
 - 在豆袋上：精品烘焙商通常把處理法和產區、品種、風味描述印在一起；寫法包括 washed、fully washed、wet process、natural、dry process、honey、pulped natural，以及 yellow honey、black honey 這類色階；沒有寫的話值得問烘焙商（[Coffee Hero](../sources/coffee-hero-processing-methods.md)）。
 
+### 處理法與風味詞（Trade 的說法）
+
+- 影響咖啡風味的變數包括產國、品種、處理法、烘焙風格等；水洗處理的咖啡可能清脆、帶核果類水果味，日曬處理的像藍莓或燉煮過的草莓（[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)）。
+
 ## 相關概念
 
 - [豆袋標籤怎麼讀](reading-coffee-bags.md)：豆袋八個常見欄位的速查入口。
 - [產區](origin.md)：咖啡種在哪裡、標示的層級。
 - [風味描述](tasting-notes.md)：豆袋上的風味用詞。
+- [風味輪](flavor-wheel.md)：風味輪的讀法與由來。
 
 ## 來源間的差異
 
@@ -82,6 +87,8 @@ updated: 2026-11-16
 **選擇處理法的理由**：[HK01 手沖](../sources/hk01-pour-over-five-things.md)說處理法依產地條件決定（水源充足用水洗、缺水陽光足用日曬）；[Coffee Hero](../sources/coffee-hero-processing-methods.md)沒有談產地條件，只談風味與適合的沖法。
 
 **其他**：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明厭氧處理，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說明濕剝法，[Coffee Hero](../sources/coffee-hero-processing-methods.md)兩者都沒有提；[Coffee Hero](../sources/coffee-hero-processing-methods.md)給了水洗發酵 24–72 小時、日曬 3–6 週的時間；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)在衣索比亞日曬的例子裡說果實在高架床上翻動約四週。
+
+**水洗與日曬的風味詞**：日曬方面，[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)說像藍莓或燉煮過的草莓，[Coffee Hero](../sources/coffee-hero-processing-methods.md)說常被形容為藍莓、草莓、熱帶水果或葡萄酒感，兩者都提到藍莓與草莓。水洗方面，[Trade 風味輪](../sources/trade-flavor-wheel-explained.md)說可能清脆、帶核果類水果味，[Coffee Hero](../sources/coffee-hero-processing-methods.md)列的是花香、柑橘、茶感，用詞不同，並列不選邊。
 
 **前三個來源的原有比較**：
 [Seattle 豆袋](../sources/seattle-read-coffee-bag.md)與[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)對水洗、日曬、蜜處理的風味方向一致：水洗乾淨明亮、日曬甜感與果味明顯且口感厚、蜜處理介於兩者之間。第三個來源[HK01 手沖](../sources/hk01-pour-over-five-things.md)也說日曬口感飽滿、甜味濃郁，水洗乾淨明亮，但說水洗「口感偏酸」；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)沒有這樣寫，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說水洗「酸度較明亮」。[HK01 手沖](../sources/hk01-pour-over-five-things.md)稱蜜處理為「半水洗」並說明做法（去果肉、留黏液層後日曬），沒有談蜜處理的風味，也沒有分白、黃、紅、黑蜜；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)則分四種。名稱上，[HK01 手沖](../sources/hk01-pour-over-five-things.md)用「Dry process／Wet process」，[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)用「Natural／Washed」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)稱日曬為「乾式處理法」、水洗為「濕式處理法」。細節不同之處：[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說蜜處理「比日曬更有結構」，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)說蜜處理「酸度較平衡」並說明依果膠殘留分白、黃、紅、黑蜜；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明厭氧處理，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)沒有提；[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)另外介紹濕剝法，[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)沒有提。[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)只講結果，[Nespresso 台灣](../sources/nespresso-tw-coffee-types.md)補了部分流程（發酵、水洗、去殼）與常見產地，但都是概略說法。
