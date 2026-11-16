@@ -1,7 +1,7 @@
 ---
 title: 產區（Origin）
 type: concept
-sources: [sources/seattle-read-coffee-bag.md]
+sources: [sources/seattle-read-coffee-bag.md, sources/hk01-pour-over-five-things.md]
 updated: 2026-11-16
 ---
 
@@ -18,6 +18,8 @@ updated: 2026-11-16
   - 衣索比亞：常有花香與核果（stone fruit，桃子、杏桃這類有硬核的水果＊）風味。
   - 哥倫比亞：偏均衡、甜。
   - 肯亞：偏明亮（bright）、帶有像葡萄酒的感覺。
+- 另一個來源說，點手沖時店家通常讓你選單品咖啡豆（單一產區的咖啡豆）（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
+- 同一來源列出更細的產區資訊：微產區、莊園、批次（[HK01 手沖](../sources/hk01-pour-over-five-things.md)）。
 - 對初學者來說，產區和[處理法](processing-methods.md)是最該先看的兩個欄位（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
 
 ## 相關概念
@@ -29,6 +31,6 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-目前僅一個來源（[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)）。
+[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)說明產區可寫到國家、國內產區、農場或合作社、水洗站，並給了衣索比亞、哥倫比亞、肯亞的風味傾向；[HK01 手沖](../sources/hk01-pour-over-five-things.md)提到「單品咖啡豆（單一產區）」與微產區、莊園、批次，沒有給各產區的風味傾向。[HK01 手沖](../sources/hk01-pour-over-five-things.md)舉的例子「耶加雪菲」在這篇裡是菜單上的產區標示，沒有說明它的風味。
 
 ＊ 括號內標 ＊ 的白話解釋為本 Wiki 補充的術語說明，非來源內容。

@@ -219,3 +219,14 @@ updated: 2026-11-16
 - 錯誤源頭節點：N3 ingest（第 6 步自我核對漏掉）。規律：跨來源綜合句最容易過度概括。
 - 規則修改：CLAUDE.md N3 第 6 步加一句，並在第 10 節記錄修改前後與原因。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 25 pages`。
+
+## [2026-11-16] ingest | hk01-pour-over-five-things
+
+- 來源：香港01〈咖啡冷知識｜手沖咖啡必知5件事〉（轉載 GQ Taiwan；簡稱 HK01 手沖，`raw/hk01-pour-over-five-things.md`）。文章開頭的「五件事」圖卡沒有擷取到，只依文字整理，未推測圖卡內容。
+- 重點：(1) 焙度最直接影響風味：淺焙酸甜、深焙苦；(2) 日曬（Dry）／水洗（Wet）最大宗，依產地水源與日照決定；日曬飽滿濃甜、水洗乾淨明亮口感偏酸；蜜處理又稱半水洗；(3) 最基本標示為產區、焙度、處理法，進階有微產區、莊園、海拔、批次、預期風味、生產履歷；(4) 挑豆看大小均勻與聞香；(5) 杯測評分項目與 COE 為例的分數區間（69 以下、70–74、75–79、80+ 精品、86+ 優勝、90+）。
+- 新增頁面（2）：`sources/hk01-pour-over-five-things.md`；`concepts/cupping-score.md`（杯測分數與精品等級；HK01 手沖已有完整區間與評分項目，故另立）。
+- 更新頁面（6）：`processing-methods`（日曬水洗蜜處理說法、來源間的差異）、`roast-level`（淺深焙風味、深焙與好豆的說法、差異）、`reading-coffee-bags`（基本與進階標示、挑豆、差異）、`origin`、`altitude`、`tasting-notes`（各補一兩條與差異）；`index.md`（來源 1 行、新概念 1 行）。`variety`、`roast-date` 不動（此來源未談）。
+- 差異（並列「A 說…，B 說…」）：水洗風味，HK01 手沖說「口感偏酸」，Nespresso 台灣說「酸度較明亮」，Seattle 豆袋只說乾淨明亮；蜜處理，HK01 手沖稱半水洗並只講做法，Nespresso 台灣分白黃紅黑蜜；處理法名稱 Dry／Wet、Natural／Washed、乾式／濕式；基本標示，HK01 手沖列焙度為最基本，Seattle 豆袋說不是每包都標烘焙度；杯測 69 與 70 分之間原文留有間隙，照列。海拔、品種沒有衝突（HK01 手沖不談門檻與品種）。
+- 判斷：酸甜與苦的描述不與 Nespresso 合併成「多來源一致」，只並列；SCAA 只被點名為杯測方法，沒有給分數，不補；沖煮技巧、咖啡營養文章連結不收。
+- 忠實度核對：發現 2 處，處理方式：(1) 來源頁原寫「處理法、焙度與 Seattle 豆袋、Nespresso 台灣大致同向」，但 Seattle 豆袋並未談焙度風味，改為只指向概念頁；(2) 來源頁原寫分數區間是「本 Wiki 唯一給出具體數字的來源」，是對整個 Wiki 的主張，改為「目前只有這篇給出」。處理法差異段的跨來源敘述逐一對回 Seattle、Nespresso、HK01 原文（水洗酸度、日曬口感、Dry/Wet 與乾式/濕式用詞）後保留。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 27 pages`；index 與 log 已更新。
