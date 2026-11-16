@@ -37,4 +37,4 @@ updated: 2026-11-16
 
 ## 來源間的差異
 
-目前只有 [HK01 手沖](../sources/hk01-pour-over-five-things.md)給出分數區間，且只說「以 COE 為例」，沒有給 SCAA 的分數；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)只提到杯測是烘焙師辨識風味的場合，沒有談分數。文中 69 分以下與 70 分之間的間隙，原文沒有說明，本頁照原文列出。
+[HK01 手沖](../sources/hk01-pour-over-five-things.md)給出分數區間，且只說「以 COE 為例」，沒有給 SCAA 的分數；[Seattle 豆袋](../sources/seattle-read-coffee-bag.md)只提到杯測是烘焙師辨識風味的場合，沒有談分數。文中 69 分以下與 70 分之間的間隙，原文沒有說明，本頁照原文列出。

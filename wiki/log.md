@@ -252,3 +252,12 @@ updated: 2026-11-16
 - 判斷：不收 40 多個品種的完整清單與育種史；Brutte、Starmaya 等罕見品種不收；原文標 citation needed 的句子（SL28 的選育年份與來源、Bergendal）不收；Geisha 拍賣價只收「條目稱最貴品種」，不寫每磅金額。
 - 忠實度核對：發現 4 處，處理方式：(1) 豆種頁與品種頁原寫「更上一層的分類」，是階層推論、原文沒有，改為只引兩來源的各自用詞（Nespresso 稱三大品種、Wikipedia 在 Species 標題下用學名）；(2) Caturra 原寫「Bourbon 的天然突變」，原文是「由 Bourbon Red 天然突變出的兩個品種發展而來」，改為原文說法；(3) 原寫「Mandheling 與 Lintong 是地區」，原文只有 Lintong 說是地區，Mandheling 是名稱由來，改為只寫 Lintong；(4) 豆種頁差異原寫「兩者都沒有給對方那一種說法」，語意不清，改為「說法不同，並列」。其餘跨來源句（Bourbon／Typica／Geisha 都是阿拉比卡、Yirgacheffe 的三種歸類）已逐一對回 Seattle 豆袋、Nespresso 台灣、HK01 手沖與 Wikipedia 品種原文。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 30 pages`；index 與 log 已更新。
+
+## [2026-11-16] check | 批次B 審查
+
+- 做法：審查者抽查 25 處陳述，對照 `raw/` 原文。
+- 結果：24 處屬實；1 處為錯誤的跨來源負面句：`processing-methods` 寫「Coffee Hero 給了發酵與乾燥時間，其他來源沒有給數字」，但 Nespresso 台灣原文有衣索比亞日曬例子「長達四週」。另有 1 處 markdown 格式破損：`index.md` 的 Wikipedia 來源行黏在 Coffee Hero 行尾，且 `## 概念` 前的空行被刪掉；`check_wiki.py` 偵測不到這類問題。其餘較小的措辭問題暫緩。
+- 錯誤源頭節點：N3 ingest（第 6 步）。新規則（第 3 批前加的）只涵蓋「多個來源一致」的肯定句，沒涵蓋「其他來源沒有提／唯一來源」這類負面句。
+- 修正：processing-methods 該句改為並列 Coffee Hero 與 Nespresso 台灣的時間；另把 `cupping-score` 的「目前只有 HK01 給出分數區間」同類負面表述改為肯定句；index.md 還原換行與空行，逐行確認每個條目各自一行。
+- 規則修改：CLAUDE.md N3 第 6 步加負面句必須逐一核對每個已 ingest 來源，並在第 10 節記錄修改前後與原因。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 30 pages`。
