@@ -18,11 +18,23 @@ updated: 2026-11-16
 
 ## 來源
 
-（尚無。每篇 ingest 的來源一頁，放在 `sources/`。）
+- [Seattle Coffee Gear：精品咖啡豆袋怎麼讀](sources/seattle-read-coffee-bag.md)：逐欄說明豆袋上的產區、品種、處理法、海拔、風味描述、烘焙日期、烘焙度與生產者資訊。
 
 ## 概念
 
-（尚無。放在 `concepts/`。）
+### 豆子標籤
+
+- [豆袋標籤怎麼讀](concepts/reading-coffee-bags.md)：豆袋八個常見欄位的速查表與初學者閱讀順序（入口頁）。
+- [產區（Origin）](concepts/origin.md)：咖啡種在哪裡、標示層級，以及幾個產區的風味傾向。
+- [處理法（Processing）](concepts/processing-methods.md)：水洗、日曬、蜜處理與厭氧處理的風味差異。
+- [海拔（Elevation）](concepts/altitude.md)：為什麼高海拔咖啡通常較密、風味較複雜。
+- [品種（Variety）](concepts/variety.md)：咖啡樹品種與幾個常見品種的風味印象。
+- [風味描述（Tasting Notes）](concepts/tasting-notes.md)：袋上的「藍莓、巧克力」是品嚐印象，不是添加物。
+- [烘焙日期與新鮮度（Roast Date）](concepts/roast-date.md)：烘焙後多久最好喝，與賞味期限的差別。
+
+### 烘焙度
+
+- [烘焙度（Roast Level）](concepts/roast-level.md)：淺到深的分級、舊稱，以及各家標準不一的問題。
 
 ## 產出
 
