@@ -312,3 +312,9 @@ updated: 2026-11-16
 - 判斷：不收 Trade 的行銷用語；WCR 詞彙表的練習做法只收一句進來源頁；圖片未擷取。
 - 忠實度核對：發現 3 處，處理方式：(1) 瑕疵區「一般買到的豆子不必太在意」是把 Trade 針對自家咖啡的話概括化，改為「因此這一區不必太在意」，並在來源頁註明是文章的說法；(2) variety 差異段初稿寫「兩者都說 Geisha 以花香出名」，Trade 原文是「常有花香」，改為「有花香」；(3) 流程上補回 SCA 來源頁在 SCA ingest 時刻意不寫的兩篇對照，這次已逐一對回兩篇原文，輪與詞彙表的相反說法各自引用。跨來源句（Seattle 豆袋與 Trade 風味輪對 Geisha、Bourbon 的風味、對「不是添加物」的說法、Coffee Hero 與 Trade 風味輪的日曬藍莓草莓）已逐一對回原文；負面句「SCA 沒有談處理法與品種」已對回 SCA 全文確認，限定在這兩個風味輪來源之內。
 - 檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；index 與 log 已更新，已重讀 tasting-notes、variety、processing-methods、index 改過的清單與標題，條目皆各自一行。
+
+## [2026-11-16] ingest | overview
+
+- 做：把 `wiki/overview.md` 的占位頁改寫成導覽，依學習目標分三組：看懂菜單（菜單飲品與沖煮方式入口頁及子頁）、看懂豆袋（豆袋入口頁、各欄位頁、豆種、杯測分數）、喝出差別（烘焙度、風味輪、風味描述）；每項只有連結加一句該頁講什麼。`index.md` 的總覽一行同步改寫。
+- 忠實度核對：發現 0 處；總覽沒有新的事實主張，只有導覽，每句描述對回 index.md 該頁摘要。
+- 檢查：`python scripts/check_wiki.py` 結果 `OK: 37 pages`；index 與 log 已更新。
