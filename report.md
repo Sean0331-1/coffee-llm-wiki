@@ -84,12 +84,12 @@
 | 13 | 烘焙日期：各家說的「最好喝期間」不一樣 | roast-date |
 | 14 | 烘焙度：淺、中、深 | roast-level |
 | 15 | 風味描述：袋上的藍莓不是加進去的 | tasting-notes、origin |
-| 16 | 風味輪：從中間往外讀 | flavor-wheel、cupping-score |
+| 16 | 風味輪：從中間往外讀 | flavor-wheel |
 | 17 | 手沖、義式、冷萃：菜單上的差別 | pour-over、brewing-methods、cold-brew |
 | 18 | 點餐決策樹：三個問題 | outputs/ordering-guide、roast-level、processing-methods、latte、flat-white、cortado、mocha、americano、cold-brew、pour-over |
 | 19 | 走進咖啡店的三個步驟 | espresso-drinks、reading-coffee-bags、outputs/ordering-guide |
 
-刻意不用的頁：`species.md`（對點餐與讀豆袋幫助小）、`cupping-score.md` 的分數區間（只借 SCAA 的名稱）；`sources/*` 不直接列，經由概念頁追溯（log `query | 簡報素材查詢`）。
+刻意不用的頁：`species.md`（對點餐與讀豆袋幫助小）、`cupping-score.md`（第 16 頁原本只借它的 SCAA 中文名稱，簡報審查後移除引用，名稱改用 ＊ 術語解釋）；`sources/*` 不直接列，經由概念頁追溯（log `query | 簡報素材查詢`）。
 
 ## 4. Loop／Graph 流程圖
 
@@ -242,7 +242,7 @@ flowchart TD
 | N3 批次 A–D | `check_wiki.py` | 全部 `OK`（`OK: 22` → `OK: 37 pages`），log 無失敗紀錄 | 0 | — |
 | N3 批次 A | 審查（約 40 處） | 數字比例全對 | 2 處跨來源綜合句 | 修正＋加規則 |
 | N3 批次 B | 審查（25 處） | 24 處屬實 | 1 處負面句＋1 處 markdown 破損 | 修正＋加規則 |
-| N3 批次 C、D | 審查 | 0 處 Important（C 34/34、D 17/17，出自審查紀錄） | 0 | — |
+| N3 批次 C、D | 審查 | 0 處 Important（C 34/34、D 17/17，log `check | 簡報審查與批次C/D 審查結果`） | 0 | — |
 | N4 Lint | 全站檢查 | `OK: 37 pages` | 4 處無來源陳述、1 處格式、先前延後的 14 條 Minor 仍在、6 項真矛盾、7 項缺口 | 依檢查點3：修 12 條 Minor 與無來源陳述，矛盾照錄 |
 | N6 大綱 | 引用、重點、術語、學習目標、矛盾 | 第 2、3 項不通過 | 6 處（3 處推論、3 個術語沒解釋） | 重寫大綱 |
 | N7 a | `check_slides.py`＋逐頁事實核對 | 17/19 頁通過 | 2 頁（第 4 頁過度概括、第 6 頁圖多畫了淋醬） | 只重生這兩頁 |
@@ -285,7 +285,7 @@ N3 的 54 處都不是 `check_wiki.py` 抓到的（log 中它沒有失敗紀錄�
 - **格式檢查前移：** 批次 B 審查發現 `index.md` 兩行黏在一起，而 `check_wiki.py` 偵測不到。之後的 ingest 都多一步「重讀改過的清單與標題，每個條目各自一行」（例如 log `ingest | about-coffee-brewing`），lint 也加了「格式問題」一項。
 - **規則延伸到 N6：** 寫點餐指南時，「只來自某來源」這類句子先用 grep 對照全部 concepts 與 sources 頁確認（log `outline | 簡報大綱`），是把 N3 的負面句規則用到下游。
 
-**效果（趨勢）：** 審查找到要修的問題：第一篇 11 處（Minor，但要求修）→ 批次 A 2 處 Important → 批次 B 2 處 → 批次 C 0 → 批次 D 0。自我核對自己抓到的數量：A 13、B 7、C 6、D 4。自我核對也開始抓到以前留下來的錯：NCA 烘焙 ingest 順手發現 `espresso.md` 一句既有的負面句不實並改掉（log `ingest | about-coffee-roasts`）。批次 C、D 審查「0 Important」在 log 沒有獨立一筆，出自審查紀錄；git 可佐證兩批之後都沒有修正 commit（批次 C 最後的 `e56892d` 之後是 `13b9c7b` 精簡來源，批次 D 最後的 `5b4d88d` 之後是 lint 修正 `1491445`）。
+**效果（趨勢）：** 審查找到要修的問題：第一篇 11 處（Minor，但要求修）→ 批次 A 2 處 Important → 批次 B 2 處 → 批次 C 0 → 批次 D 0。自我核對自己抓到的數量：A 13、B 7、C 6、D 4。自我核對也開始抓到以前留下來的錯：NCA 烘焙 ingest 順手發現 `espresso.md` 一句既有的負面句不實並改掉（log `ingest | about-coffee-roasts`）。批次 C、D 審查「0 Important」補記在 log `check | 簡報審查與批次C/D 審查結果`；git 也可佐證兩批之後都沒有修正 commit（批次 C 最後的 `e56892d` 之後是 `13b9c7b` 精簡來源，批次 D 最後的 `5b4d88d` 之後是 lint 修正 `1491445`）。
 
 ### 有沒有因此修改 workflow／graph？為什麼？
 

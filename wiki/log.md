@@ -462,3 +462,21 @@ updated: 2026-11-16
 - 產出：`report.md`，對應作業 6 項：主題與簡介、Wiki 連結與規模（39 頁：sources 11、concepts 23、outputs 2、index／overview／log 3）、簡報連結與 19 頁 ↔ wiki 頁對照表、實際 graph 的 mermaid 流程圖與文字說明、從本 log 摘錄的一次完整執行與檢查總表、反思。repo 與 GitHub Pages 網址先用 `{{REPO_URL}}`、`{{PAGES_URL}}` 占位，推上 GitHub 後再填；Obsidian graph view 截圖留位置由使用者補。
 - 反思的統計依本 log：N3 ingest 發現最多（忠實度自我核對 30 處、第一篇審查 11 處、檢查點2 自我再核 9 處、批次A 2 處、批次B 2 處，共 54 處），N6 大綱 18、N7 生成 11、N1 與 N2 各 1。批次C、D 審查 0 處 Important 沒有寫在本 log，報告中註明出自審查紀錄。
 - 檢查：報告中的數字逐一對回本 log 與 git 紀錄；`python scripts/check_wiki.py`、`python scripts/check_slides.py` 結果 `OK: 39 pages`、`OK: 19 slides`。
+## [2026-11-16] check | 簡報審查與批次C/D 審查結果
+
+補記三次獨立審查的結果（先前只記在 controller 的審查紀錄，沒有寫進 log）：
+
+- 批次 C ingest 審查：抽查 34 處陳述對原文，0 處 Important。
+- 批次 D ingest 審查：抽查 17 處陳述，0 處 Important。
+- 簡報審查：19／19 頁忠於所引用的 wiki 頁，0 處 Important，7 處 Minor：
+  1. 第 6 頁焦糖瑪奇朵的杯子層次是自己編的（濃縮畫在上方），和拿鐵杯不一致。
+  2. 第 6 頁「焦糖瑪奇朵是加了風味的拿鐵」被放在 Nespresso 台灣那一點底下，但這個提醒出自 Seattle 飲品（macchiato.md）。
+  3. 第 7 頁菜單板的表註提到 Cortado 沒有中文名，表裡卻沒有 Cortado 這一列。
+  4. 第 14 頁咖啡因那句沒有標來源（NCA）。
+  5. 第 16 頁 data-wiki 與頁尾列了 cupping-score.md，但這頁沒有用到。
+  6. 第 5 頁馥列白杯畫成濃縮比牛奶約 1:1.6，來源是牛奶約為濃縮的 2–3 倍（Nespresso 台灣；La Marzocco 配方 2 oz 對 4 oz）。
+  7. 手機 CSS 裡有一行不在任何規則內的多餘 `--cup-h:150px;`。
+- 7 處 Minor 本次全部修正：焦糖瑪奇朵改用與拿鐵相同的層次；把焦糖瑪奇朵拆成獨立一點並標 Seattle 飲品；第 7 頁表格加「Cortado｜—（該文未給中文名）」並把表註精簡成只說明中文寫法的出處；咖啡因句加「（NCA）」；第 16 頁移除 cupping-score.md；馥列白杯改為約 1:2；刪掉多餘的 CSS 行。
+- 修正後量測（每頁 `scrollHeight <= clientHeight`）：加 Cortado 一列後第 7 頁在 1280×720 一度高 745px，縮小表格列距、精簡表註後修好。1280×720、1366×768、1920×1080 三種尺寸 19 頁皆無溢出；375×812 無水平溢出；console 無錯誤。
+- 檢查：`python scripts/check_slides.py` → `OK: 19 slides`；`python scripts/check_wiki.py` → `OK: 39 pages`。
+- 補充：第 16 頁原本借 cupping-score.md 寫出 SCAA 的中文名稱「美國精品咖啡協會」；移除該引用後，這個中文名稱改標 ＊（術語解釋，非來源內容），讓頁面不再依賴未引用的頁。

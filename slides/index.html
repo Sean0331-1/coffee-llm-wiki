@@ -252,7 +252,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
 .board{padding:.8rem 1.1rem}
 .board h3{margin-bottom:.35rem}
 .board table{font-size:.82rem}
-.board td{padding:.24rem .4rem}
+.board td{padding:.18rem .4rem}
 #slide-7 ul.points{gap:.6rem}
 /* ---------- mobile ---------- */
 @media (max-width:760px), (max-aspect-ratio:4/5){
@@ -266,7 +266,6 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
   .cards3{grid-template-columns:1fr}
   .brew3{grid-template-columns:repeat(3,minmax(0,1fr))}
   ol.callouts{grid-template-columns:1fr}
-  --cup-h:150px;
   .cups{gap:.8rem 1rem}
   .trow{grid-template-columns:1fr}
   .qnode::after{display:none}
@@ -502,16 +501,17 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
     <ul class="points">
       <li><strong>傳統瑪奇朵</strong>：一份濃縮，上面一小坨奶泡，小杯。</li>
       <li><strong>現代咖啡店</strong>：常像做拿鐵一樣，加入蒸奶與微細奶泡。</li>
-      <li><strong>Nespresso 台灣的「拿鐵瑪奇朵」</strong>：以牛奶為主，把濃縮加進奶泡裡。<strong>焦糖瑪奇朵</strong>則是加了風味的拿鐵，又是另一杯。</li>
+      <li><strong>Nespresso 台灣的「拿鐵瑪奇朵」</strong>：以牛奶為主，把濃縮加進奶泡裡。</li>
+      <li><strong>焦糖瑪奇朵</strong>：Seattle 飲品提醒，它是加了風味的拿鐵，和傳統瑪奇朵是不同的飲品。</li>
       <li class="advice-li"><span class="tag advice">建議</span>點瑪奇朵之前，先問店員是哪一種。</li>
     </ul>
-    <figure class="viz" role="img" aria-label="同一張 Macchiato 名牌下並排三個杯子剖面：傳統版是小杯濃縮上一小坨奶泡；現代咖啡店版是小杯裡加了蒸奶與微細奶泡；Nespresso 台灣的拿鐵瑪奇朵是牛奶為主的高杯，濃縮加在奶泡中。角落另有一杯淡色的焦糖瑪奇朵，標示為另一杯：加風味的拿鐵。">
+    <figure class="viz" role="img" aria-label="同一張 Macchiato 名牌下並排三個杯子剖面：傳統版是小杯濃縮上一小坨奶泡；現代咖啡店版是小杯裡加了蒸奶與微細奶泡；Nespresso 台灣的拿鐵瑪奇朵是牛奶為主的高杯，濃縮加在奶泡中。角落另有一杯淡色、畫法與拿鐵相同的焦糖瑪奇朵，標示 Seattle 飲品說它是加風味的拿鐵。">
       <div aria-hidden="true" style="font-family:var(--serif);font-weight:900;letter-spacing:.2em;background:var(--espresso);color:var(--cream);padding:.3rem 1.2rem;border-radius:6px;font-size:1rem">MACCHIATO</div>
       <div class="cups" aria-hidden="true">
         <div class="cupitem"><div class="cupslot" data-cup="macchiato"></div><span class="name">傳統<small>Seattle 飲品 · La Marzocco</small></span></div>
         <div class="cupitem"><div class="cupslot" data-cup="macchiatoModern"></div><span class="name">現代咖啡店<small>La Marzocco</small></span></div>
         <div class="cupitem"><div class="cupslot" data-cup="latteMacchiato"></div><span class="name">拿鐵瑪奇朵<small>Nespresso 台灣</small></span></div>
-        <div class="cupitem faded" style="border-left:1.5px dashed var(--line);padding-left:1rem"><div class="cupslot" data-cup="caramel"></div><span class="name">焦糖瑪奇朵<small>另一杯：加風味的拿鐵</small></span></div>
+        <div class="cupitem faded" style="border-left:1.5px dashed var(--line);padding-left:1rem"><div class="cupslot" data-cup="caramel"></div><span class="name">焦糖瑪奇朵<small>Seattle 飲品：加風味的拿鐵</small></span></div>
       </div>
       <ul class="legend" aria-hidden="true"><li><i class="sw esp"></i>濃縮</li><li><i class="sw milk"></i>蒸奶</li><li><i class="sw micro"></i>微細奶泡</li><li><i class="sw foam"></i>奶泡</li></ul>
     </figure>
@@ -540,7 +540,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
       <div class="board">
         <h3>MENU · 菜單</h3>
         <table>
-          <caption class="small" style="caption-side:bottom;color:#C8D1C6;padding-top:.5rem;text-align:left">中文寫法依 Nespresso 台灣的用詞；Cortado 在該文沒有出現，所以沒有中文名。</caption>
+          <caption class="small" style="caption-side:bottom;color:#C8D1C6;padding-top:.5rem;text-align:left">中文寫法依 Nespresso 台灣的用詞。</caption>
           <thead><tr><th scope="col">英文</th><th scope="col">中文寫法</th></tr></thead>
           <tbody>
             <tr><td>Espresso</td><td>義式濃縮咖啡</td></tr>
@@ -548,6 +548,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
             <tr><td>Latte</td><td>拿鐵</td></tr>
             <tr><td>Cappuccino</td><td>卡布奇諾</td></tr>
             <tr class="hl"><td>Flat White</td><td>馥芮白／馥列白／平白咖啡／澳式白咖啡</td></tr>
+            <tr><td>Cortado</td><td>—（該文未給中文名）</td></tr>
             <tr><td>Mocha</td><td>摩卡</td></tr>
             <tr><td>Macchiato</td><td>拿鐵瑪奇朵（但見第 6 頁）</td></tr>
             <tr class="q"><td>？</td><td>沒看過的名字 → 問店員</td></tr>
@@ -881,7 +882,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
       <li><strong>淺焙</strong>：淺棕色，酸度（acidity，喝起來的酸味明亮程度＊）較明顯，較保留豆子原本的花果香。</li>
       <li><strong>中焙</strong>：酸度比淺焙低、甜味更突出，有較多焦糖香調。</li>
       <li><strong>深焙</strong>：黑亮、表面有油，苦味明顯、酸度低。</li>
-      <li>各家的「中焙」深淺不一定一樣；<strong>深焙味道濃，不代表咖啡因比較多</strong>。</li>
+      <li>各家的「中焙」深淺不一定一樣；<strong>深焙味道濃，不代表咖啡因比較多</strong>（NCA）。</li>
     </ul>
     <figure class="viz">
       <div class="panel" style="width:100%">
@@ -959,7 +960,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
 </section>
 
 <!-- ===================== 16 ===================== -->
-<section class="slide" id="slide-16" aria-label="第 16 頁：風味輪：從中間往外讀" data-wiki="wiki/concepts/flavor-wheel.md wiki/concepts/cupping-score.md">
+<section class="slide" id="slide-16" aria-label="第 16 頁：風味輪：從中間往外讀" data-wiki="wiki/concepts/flavor-wheel.md">
 <div class="slide-inner">
   <header>
     <p class="kicker"><b>15</b>喝出差別 · 風味輪</p>
@@ -967,7 +968,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
   </header>
   <div class="body split even">
     <ul class="points">
-      <li><strong>咖啡品嚐者風味輪（Coffee Taster's Flavor Wheel）</strong>：SCAA（美國精品咖啡協會）與 World Coffee Research（咖啡研究機構＊）合作的工具，用來描述咖啡的風味。</li>
+      <li><strong>咖啡品嚐者風味輪（Coffee Taster's Flavor Wheel）</strong>：SCAA（美國精品咖啡協會＊）與 World Coffee Research（咖啡研究機構＊）合作的工具，用來描述咖啡的風味。</li>
       <li><strong>從中心往外讀</strong>：中心最籠統（例如果香），越往外越具體（柑橘 → 葡萄柚），可以停在任何一層。</li>
       <li><strong>想不出詞時看顏色</strong>：只想到「像某種紅色水果」，就到紅色區找。</li>
       <li><strong>不必是專家</strong>：可以從平常吃的東西練習，例如細嚐一塊巧克力、一滴檸檬汁、一把堅果。</li>
@@ -979,7 +980,7 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
       <figcaption>自繪簡化示意，不是 SCA 原圖；只畫出 Wiki 提到的詞，空白格代表還有更多詞。</figcaption>
     </figure>
   </div>
-  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/flavor-wheel.md" title="wiki/concepts/flavor-wheel.md">風味輪</a><span class="sep">·</span><a href="../wiki/concepts/cupping-score.md" title="wiki/concepts/cupping-score.md">杯測分數與精品等級</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
+  <footer class="cite"><span class="lbl">出處：</span><a href="../wiki/concepts/flavor-wheel.md" title="wiki/concepts/flavor-wheel.md">風味輪</a><p class="star-note">＊ 括號內標 ＊ 的白話解釋為本 Wiki 或本簡報補充的術語說明，非來源內容。</p></footer>
 </div>
 </section>
 
@@ -1116,13 +1117,13 @@ ol.callouts small{color:var(--muted);display:block;font-size:.74rem}
     americano:      { kind: "cup",   w: 8,   h: 11,   layers: [["esp", 3.2], ["water", 7.2]] },
     cappuccino:     { kind: "cup",   w: 8.5, h: 9,    layers: [["esp", 2.9], ["milk", 2.9], ["foam", 2.9]] },
     latte:          { kind: "cup",   w: 9,   h: 14,   layers: [["esp", 2.6], ["milk", 10.2], ["micro", 0.9]] },
-    flatwhite:      { kind: "cup",   w: 8.5, h: 9,    layers: [["esp", 3.2], ["micro", 5.2], ["foam", 0.35]] },
+    flatwhite:      { kind: "cup",   w: 8.5, h: 9,    layers: [["esp", 2.8], ["micro", 5.6], ["foam", 0.35]] },
     cortado:        { kind: "glass", w: 6,   h: 6.5,  layers: [["esp", 3], ["milk", 3], ["foam", 0.25]] },
     mocha:          { kind: "cup",   w: 9,   h: 14,   layers: [["choc", 1.8], ["esp", 2.4], ["milk", 9.5]], cream: true },
     macchiato:      { kind: "demi",  w: 6,   h: 5,    layers: [["esp", 4]], dollop: true },
     macchiatoModern:{ kind: "demi",  w: 6.5, h: 6,    layers: [["esp", 2.8], ["milk", 2.3], ["micro", 0.6]] },
     latteMacchiato: { kind: "glass", w: 7,   h: 14,   layers: [["milk", 7.5], ["lm", 2.6], ["foam", 3.5]] },
-    caramel:        { kind: "glass", w: 7,   h: 13,   layers: [["milk", 9], ["esp", 1.8], ["foam", 1.6]] }
+    caramel:        { kind: "cup",   w: 9,   h: 14,   layers: [["esp", 2.6], ["milk", 10.2], ["micro", 0.9]] }
   };
   function sideX(cx, w, wb, top, y) { // x of left wall at height y
     var t = (y - top) / (BASE - top);
